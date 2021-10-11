@@ -18,6 +18,8 @@ function setup() {
 
   // grab a reference to the marker that we set up on the HTML side (connect to it using its 'id')
   marker = world.getMarker('patt2');
+  
+  marker1 = world.getMarker('patt3');
 
   // create some geometry to add to our marker
   // the marker is 1 meter x 1 meter, with the origin at the center
@@ -75,6 +77,61 @@ marker.addChild( container );
     asset:'honeysuckle'
   });
   container.addChild( plane5 );
+
+
+
+  
+  container1 = new Box({
+    x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
+});
+marker1.addChild( container1 );
+// intent behing this 'container" box was that *it* would rotate to face the camera using a single line of code,
+// rather than rotating every plane contained in the box individually.
+// but the coordinate system in A-Frame is weird... still haven't figured out how to make the container rotate as expected
+// toward the camer, around the Y axis
+
+  plane6 = new Plane({
+    x:-2.0, y:-0.5, z:1.0,
+    red:255, green:0, blue:0,
+    width:0.5, height:1,
+    asset:'honeysuckle'
+  });
+  container1.addChild( plane6 );
+
+  plane7 = new Plane({
+    x:1.5, y:0.0, z:1.0,
+    red:0, green:0, blue:255,
+    width:0.5, height:1,
+    asset:'honeysuckle'
+  });
+  container1.addChild( plane7 );
+
+  plane8 = new Plane({
+    x:-1.0, y:-0.25, z:1.0,
+    //red:0, green:0, blue:255,
+    width:0.5, height:1,
+    asset:'p5graphics' 
+    // this plane is textured by a p5.graphics object
+    // https://p5js.org/reference/#/p5.Graphics
+    // find the simple code drawing random ellipsed in the draw loop below
+  });
+  container1.addChild( plane8 );
+
+  plane9 = new Plane({
+    x:0.5, y:-0.25, z:1.0,
+    red:128, green:128, blue:128,
+    width:0.5, height:1,
+    asset:'honeysuckle'
+  });
+  container1.addChild( plane9 );
+
+  plane10 = new Plane({
+    x:0, y:-0.75, z:1.0,
+    red:255, green:128, blue:0,
+    width:0.5, height:1,
+    asset:'honeysuckle'
+  });
+  container1.addChild( plane10 );
 }
 
 
