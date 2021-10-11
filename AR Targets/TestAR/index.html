@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+      <!-- create your content here. just a box for now -->
+      <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
+      <!-- define a camera which will move according to the marker position -->
+      <a-text value="BOO!" position= '.5 0 0' rotation='-90 0 0'></a-text>
+      <a-image src="Ghost Kid.gif" rotation='-90 0 0' ></a-image>
+      <a-marker-camera preset='hiro'></a-marker-camera>
+      <a-marker-camera type='pattern' url='pattern-HS3.patt'></a-marker-camera>
+      <a-marker-camera type='pattern' url='pattern-HS2.patt'></a-marker-camera>
+      <a-marker-camera type='pattern' url='pattern-HS1.patt'></a-marker-camera>
+
+
+    </a-scene>
+  </body>
+</html>
