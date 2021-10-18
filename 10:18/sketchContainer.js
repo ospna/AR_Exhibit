@@ -15,12 +15,12 @@ let sprouts;
 
 function setup() {
 
-    p5graphics = createGraphics(400,400).id('p5graphics');
+    p5graphics = createGraphics(600, 600).id('p5graphics');
     angleMode(degrees);
-    // createCanvas(400, 400);
+    createCanvas(600, 600);
     sprouts = [];
     parts = [];
-    p5graphics.createVine();
+    createVine();
 
     let rotationRange = 10;
 
@@ -84,6 +84,7 @@ function draw() {
 
     p5graphics.bezier(x1, y1, x2, y2, x3, y3, x4, y4);
     p5graphics.fill(255);
+    text(width + " "  + height)
 
     for (let s = 0; s < sprouts.length; s++) {
       p5graphics.circle(sprouts[s][0], sprouts[s][1], 5);
