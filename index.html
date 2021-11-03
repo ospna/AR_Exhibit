@@ -18,6 +18,12 @@
     <!-- <script src="part.js"></script> -->
     <script src="sketchContainer.js"></script>
 
+    <!-- Button Interactions -->
+    <script src="functions.js"></script>
+
+    <!-- CSS Stylesheet -->
+    <link rel='stylesheet' type='text/css' href="style.css">
+
     
 
     <!-- Custom Styles -->
@@ -26,41 +32,6 @@
             margin: 0px;
             overflow: hidden;
         }
-
-        /* shows a warning message when the screen is rotated into portrait mode -- necessary to prevent issues on mobile devices */
-        /* @media screen and (orientation:portrait) {
-            #portrait_warning {
-                position: fixed;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                background: white;
-                z-index: 1000;
-                display: block;
-            }
-        } */
-
-        /* hides the rotational warning when the screen is in landscape mode */
-        @media screen and (orientation:landscape) {
-            #portrait_warning {
-                display: none;
-            }
-        }
-
-        .debug {
-            position: absolute;
-            top: 2%;
-            right: 2%;
-            width: 10%;
-            height: 5%;
-            background-color: darkgrey;
-            border: black;
-            z-index: 1000;
-            display: block;
-        }
-
     </style>
 
 </head>
@@ -78,6 +49,41 @@
         <!-- set up graphics we want to use as assets, same as in A-Frame VR-->
         <a-assets>
             <img src="images/honeysuckle.jpg" id="honeysuckle">
+
+            <!-- Radial Petal Orientation -->
+            <img src="images/AR Media/Radial/radial_pendulus_large-01.svg" id="radial_pendulus_large-01">
+            <img src="images/AR Media/Radial/radial_pendulus_medium-01.svg" id="radial_pendulus_medium-01">
+            <img src="images/AR Media/Radial/radial_pendulus_small-01.svg" id="radial_pendulus_small-01">
+
+            <img src="images/AR Media/Radial/radial_upright_large-01.svg" id="radial_upright_large-01">
+            <img src="images/AR Media/Radial/radial_upright_medium-01.svg" id="radial_upright_medium-01">
+            <img src="images/AR Media/Radial/radial_upright_small-01.svg" id="radial_upright_small-01">
+            
+            <!-- 2+2+1 Petal Orientation -->
+            <img src="images/AR Media/221/221_pendulus_large-01.svg" id="221_pendulus_large-01">
+            <img src="images/AR Media/221/221_pendulus_medium-01.svg" id="221_pendulus_medium-01">
+            <img src="images/AR Media/221/221_pendulus_small-01.svg" id="221_pendulus_small-01">
+
+            <img src="images/AR Media/221/221_upright_large-01.svg" id="221_upright_large-01">
+            <img src="images/AR Media/221/221_upright_medium-01.svg" id="221_upright_medium-01">
+            <img src="images/AR Media/221/221_upright_small-01.svg" id="221_upright_small-01">
+
+            <!-- 4+1 Petal Orientation -->
+            <img src="images/AR Media/41/41_pendulus_large-01.svg" id="41_pendulus_large-01">
+            <img src="images/AR Media/41/41_pendulus_medium-01.svg" id="41_pendulus_medium-01">
+            <img src="images/AR Media/41/41_pendulus_small-01.svg" id="41_pendulus_small-01">
+
+            <img src="images/AR Media/41/41_upright_large-01.svg" id="41_upright_large-01">
+            <img src="images/AR Media/41/41_upright_medium-01.svg" id="41_upright_medium-01">
+            <img src="images/AR Media/41/41_upright_small-01.svg" id="41_upright_small-01">
+
+            <!-- Unfused Leaf Fusion -->
+            <img src="images/AR Media/unfused_leaves-01.svg" id="unfused_leaves-01">
+
+            <!-- Fused Leaf Fusion -->
+            <img src="images/AR Media/fused_leaves-01.svg" id="fused_leaves-01">
+
+            <!-- <img src="images/honeysuckle.jpg" id="honeysuckle"> -->
         </a-assets>
 
         <!-- set up all of the AR markers we will be working with along with links to their 'pattern' files -->
@@ -88,6 +94,28 @@
         <a-marker id="patt2" type="pattern" url="markers/pattern-HS2.patt"></a-marker>
         <a-marker id="patt3" type="pattern" url="markers/pattern-HS3.patt"></a-marker>
 
+        <header>
+            <div class="logo">
+               <a> BYOH </a>
+               <br>
+                <!--<button class="logo-button"> BYOH </button>-->
+            </div>
+        </header>
+
+        <div class="navButtons">
+            <button class="size-button"> Size </button>
+            <button class="petal-button"> Petal </button>
+            <button class="flower-button"> Flower </button>
+            <button class="leaf-button"> Leaf </button>
+            <button class="growth-button"> Growth </button>
+            <button class="color-button"> Color </button>
+        </div>
+
+        <div class="buttons">
+            <button id="radial-button"></button>
+            <button id="two21-button"></button>
+            <button id="four1-button"></button>
+        </div>
 
         <a-entity camera></a-entity>
     </a-scene>
