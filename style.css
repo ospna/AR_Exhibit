@@ -202,8 +202,8 @@ nav ul
     margin: 0 auto;
 }
 
-#small-scale-button {
-    border-radius: 8px;
+.small-scale-button {
+    border-radius: 6px;
     border: black;
     background:url('images/pattern-HS2.png');
     background-size: cover;
@@ -213,8 +213,8 @@ nav ul
     margin-left: 2em;
 }
 
-#medium-scale-button {
-    border-radius: 8px;
+.medium-scale-button {
+    border-radius: 6px;
     border: black;
     background:url('images/pattern-HS2.png');
     background-size: cover;
@@ -224,8 +224,8 @@ nav ul
     margin-left: 2em;
 }
 
-#large-scale-button {
-    border-radius: 8px;
+.large-scale-button {
+    border-radius: 6px;
     border: black;
     background:url('images/pattern-HS2.png');
     background-size: cover;
@@ -236,7 +236,7 @@ nav ul
 }
 
 .radial-button {
-    border-radius: 2px;
+    border-radius: 6px;
     border: black;
     background:url('images/pattern-radial1.png');
     background-size: cover;
@@ -247,8 +247,8 @@ nav ul
 }
 
 
-#two21-button {
-    border-radius: 8px;
+.two21-button {
+    border-radius: 6px;
     border: black;
     background:url('images/pattern-221.png');
     background-size: cover;
@@ -258,8 +258,8 @@ nav ul
     margin-left: 2em;
 }
 
-#four1-button {
-    border-radius: 8px;
+.four1-button {
+    border-radius: 6px;
     border: black;
     background:url('images/pattern-41.png');
     background-size: cover;
