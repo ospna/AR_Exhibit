@@ -235,7 +235,7 @@ nav ul
     margin-left: 2em;
 }
 
-#radial-button {
+.radial-button {
     border-radius: 8px;
     border: black;
     background:url('images/pattern-radial1.png');
