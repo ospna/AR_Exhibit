@@ -35,19 +35,19 @@ window.onload = function () {
         // or you can just open links, trigger actions...
         alert("Honeysuckle Color"); 
       })
-      document.getElementById(".small-scale-button").addEventListener("click", function () {
+      document.querySelector(".small-scale-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
         alert("Small Honeysuckle!"); 
       })
-      document.getElementById(".medium-scale-button").addEventListener("click", function () {
+      document.querySelector(".medium-scale-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
         alert("Medium Honeysuckle!");
       })
-      document.getElementById(".large-scale-button").addEventListener("click", function () {
+      document.querySelector(".large-scale-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
