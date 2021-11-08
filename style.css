@@ -196,7 +196,7 @@ nav ul
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1500;
     float: left;
     transform: translate(-50%, -50%);
     margin: 0 auto;
@@ -262,6 +262,52 @@ nav ul
     border-radius: 6px;
     border: black;
     background:url('images/pattern-41.png');
+    background-size: cover;
+    color: black;
+    width: 8em;
+    height: 8em;
+    margin-left: 2em;
+}
+
+.pendulus-button {
+    border-radius: 6px;
+    border: black;
+    background:url('images/pattern-flowers-pendulus.png');
+    background-size: cover;
+    color: black;
+    width: 8em;
+    height: 8em;
+    margin-left: 2em;
+}
+
+.upright-button {
+    border-radius: 6px;
+    border: black;
+    background:url('images/pattern-flowers_erect.png');
+    background-size: cover;
+    color: black;
+    width: 8em;
+    height: 8em;
+    margin-left: 2em;
+}
+
+.fused-button {
+    border-radius: 6px;
+    border: black;
+    /* background:url('images/'); */
+    background-color: tan;
+    background-size: cover;
+    color: black;
+    width: 8em;
+    height: 8em;
+    margin-left: 2em;
+}
+
+.unfused-button {
+    border-radius: 6px;
+    border: black;
+    /* background:url('images/'); */
+    background-color: thistle;
     background-size: cover;
     color: black;
     width: 8em;
