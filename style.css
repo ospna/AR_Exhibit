@@ -58,7 +58,9 @@ nav
 {
     display: flex;
     text-align: center;
-    font-family: "Dosis", sans-serif;
+    font-family: funkydori, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -99,6 +101,9 @@ nav ul
     padding: 10px 0;
     text-decoration: none;
     color: white;
+    font-family: funkydori,sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
   
 .logo a{
