@@ -99,14 +99,17 @@ nav ul
     font-family: funkydori, sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin-top:10px;
+    margin-top: 15px;
 }
 
 .navButtons a{
-    font-size: .75rem;
+    font-size: 1rem;
     font-family: funkydori, sans-serif;
     font-weight: 400;
     font-style: normal;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 
@@ -125,6 +128,10 @@ nav ul
 .logo a{
     text-decoration: none;
     color: white;
+    font-size: 2.5rem;
+    font-family: funkydori,sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .logo-button {
@@ -150,10 +157,6 @@ nav ul
     width: 6em;
     height: 3em;
     margin-left: .5em;
-    font-size: .75rem;
-    font-family: funkydori, sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
 
 .petal-button {
@@ -164,10 +167,6 @@ nav ul
     width: 6em;
     height: 3em;
     margin-left: .5em;
-    font-size: .75rem;
-    font-family: funkydori, sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
 
 .flower-button {
@@ -178,10 +177,6 @@ nav ul
     width: 6em;
     height: 3em;
     margin-left: .5em;
-    font-size: .75rem;
-    font-family: funkydori, sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
 
 .leaf-button {
@@ -192,10 +187,6 @@ nav ul
     width: 6em;
     height: 3em;
     margin-left: .5em;
-    font-size: .75rem;
-    font-family: funkydori, sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
 
 /*
@@ -219,10 +210,6 @@ nav ul
     width: 6em;
     height: 3em;
     margin-left: .5em;
-    font-size: .75rem;
-    font-family: funkydori, sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
 
 .petalOrientButtons {
