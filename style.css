@@ -366,7 +366,7 @@ nav ul
 .fused-button {
     border-radius: 6px;
     border: black;
-    background:url('images/AR Media/fused_leaves-01.svg');
+    background:url('images/fused-leaves.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -377,7 +377,7 @@ nav ul
 .unfused-button {
     border-radius: 6px;
     border: black;
-    background:url('images/AR Media/unfused_leaves-01.svg');
+    background:url('images/unfused-leaves.png');
     background-size: cover;
     color: black;
     width: 8em;
