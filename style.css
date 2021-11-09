@@ -87,6 +87,7 @@ nav ul
 .navButtons {
     position: fixed;
     left: 50%;
+    top: 10%;
     width: 8em;
     height: 6em;
     display: flex;
@@ -143,6 +144,9 @@ nav ul
     height: 3em;
     margin-left: .5em;
     font-size: .75rem;
+    font-family: funkydori, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .petal-button {
@@ -154,6 +158,9 @@ nav ul
     height: 3em;
     margin-left: .5em;
     font-size: .75rem;
+    font-family: funkydori, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .flower-button {
@@ -165,6 +172,9 @@ nav ul
     height: 3em;
     margin-left: .5em;
     font-size: .75rem;
+    font-family: funkydori, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .leaf-button {
@@ -176,6 +186,9 @@ nav ul
     height: 3em;
     margin-left: .5em;
     font-size: .75rem;
+    font-family: funkydori, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /*
@@ -200,6 +213,9 @@ nav ul
     height: 3em;
     margin-left: .5em;
     font-size: .75rem;
+    font-family: funkydori, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .petalOrientButtons {
