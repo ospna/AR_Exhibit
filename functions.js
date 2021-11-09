@@ -93,63 +93,70 @@ window.onload = function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert("Small Honeysuckle!"); 
+        alert("You will be building a Small Honeysuckle!"); 
       });
 
       document.querySelector(".medium-scale-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert("Medium Honeysuckle!");
+        alert("You will be building a Medium Honeysuckle!");
       });
 
       document.querySelector(".large-scale-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert("Large Honeysuckle!");
+        alert("You will be building a Large Honeysuckle!");
       });
 
       document.querySelector(".radial-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert("You chose the Radial petal orientation"); 
+        alert("You chose the Radial Petal Orientation!"); 
       });
 
       document.querySelector(".two21-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert("You chose the 2+2+1 petal orientation"); 
+        alert("You chose the 2+2+1 Petal Orientation!"); 
       });
       
       document.querySelector(".four1-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert("You chose the 4+1 petal orientation"); 
+        alert("You chose the 4+1 Petal Orientation!"); 
       });
 
       document.querySelector(".pendulus-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert("You chose the Pendulus flower orientation"); 
+        alert("Your honeysuckle will have a Pendulus Flower Orientation!"); 
       });
 
       document.querySelector(".upright-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert("You chose the Pendulus flower orientation"); 
+        alert("Your honeysuckle will have an Upright Flower Orientation!"); 
       });
 
       document.querySelector(".fused-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert("Your honeysuckle will have Fused leaves"); 
+        alert("Your honeysuckle will have Fused leaves!"); 
+      });
+
+      document.querySelector(".unfused-button").addEventListener("click", function () {
+        // here you can change also a-scene or a-entity properties, like
+        // changing your 3D model source, size, position and so on
+        // or you can just open links, trigger actions...
+        alert("Your honeysuckle will have Unfused leaves!"); 
       });
 
       document.querySelector(".red-button").addEventListener("click", function () {
