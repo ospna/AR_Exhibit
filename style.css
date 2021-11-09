@@ -301,7 +301,7 @@ nav ul
 .small-scale-button {
     border-radius: 6px;
     border: black;
-    background:url('images/pattern-HS2.png');
+    background:url('images/small-size.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -312,7 +312,7 @@ nav ul
 .medium-scale-button {
     border-radius: 6px;
     border: black;
-    background:url('images/pattern-HS2.png');
+    background:url('images/medium-size.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -323,7 +323,7 @@ nav ul
 .large-scale-button {
     border-radius: 6px;
     border: black;
-    background:url('images/pattern-HS2.png');
+    background:url('images/large-size.png');
     background-size: cover;
     color: black;
     width: 8em;
