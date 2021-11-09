@@ -165,6 +165,7 @@ nav ul
     font-size: .75rem;
 }
 
+/*
 .growth-button {
     border-radius: 2px;
     border: black;
@@ -175,6 +176,7 @@ nav ul
     margin-left: .5em;
     font-size: .75rem;
 }
+*/
 
 .color-button {
     border-radius: 2px;
@@ -387,7 +389,6 @@ nav ul
     border-radius: 6px;
     border: black;
     background-color: red;
-    background-size: cover;
     color: black;
     width: 8em;
     height: 8em;
@@ -398,7 +399,6 @@ nav ul
     border-radius: 6px;
     border: black;
     background-color:blue;
-    background-size: cover;
     color: black;
     width: 8em;
     height: 8em;

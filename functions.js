@@ -1,9 +1,7 @@
 window.onload = function () {
 
       document.querySelector(".size-button").addEventListener("click", function () {
-        // here you can change also a-scene or a-entity properties, like
-        // changing your 3D model source, size, position and so on
-        // or you can just open links, trigger actions...
+        // size tab 
         alert("Change Size"); 
         document.querySelector(".sizeButtons").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.display = "flex";
@@ -18,9 +16,7 @@ window.onload = function () {
       });
 
       document.querySelector(".petal-button").addEventListener("click", function () {
-        // here you can change also a-scene or a-entity properties, like
-        // changing your 3D model source, size, position and so on
-        // or you can just open links, trigger actions...
+        // petal orientation tab
         alert("Petal Orientation"); 
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
@@ -35,9 +31,7 @@ window.onload = function () {
       });
 
       document.querySelector(".flower-button").addEventListener("click", function () {
-        // here you can change also a-scene or a-entity properties, like
-        // changing your 3D model source, size, position and so on
-        // or you can just open links, trigger actions...
+        // flower orientation tab
         alert("Flower Orientation"); 
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
@@ -52,9 +46,7 @@ window.onload = function () {
       });
 
       document.querySelector(".leaf-button").addEventListener("click", function () {
-        // here you can change also a-scene or a-entity properties, like
-        // changing your 3D model source, size, position and so on
-        // or you can just open links, trigger actions...
+        // leaf fusion tab
         alert("Leaf Fusion"); 
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
@@ -66,9 +58,9 @@ window.onload = function () {
         document.querySelector(".leafFusionButtons").style.display = "flex";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
-      })
-      ;
+      });
 
+      /*
       document.querySelector(".growth-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
@@ -80,11 +72,10 @@ window.onload = function () {
         document.querySelector(".leafFusionButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.visibility = "hidden";
       });
+      */
 
       document.querySelector(".color-button").addEventListener("click", function () {
-        // here you can change also a-scene or a-entity properties, like
-        // changing your 3D model source, size, position and so on
-        // or you can just open links, trigger actions...
+        // color tab
         alert("Honeysuckle Color"); 
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
@@ -174,4 +165,4 @@ window.onload = function () {
         // or you can just open links, trigger actions...
         alert("Your honeysuckle is now blue!"); 
       });
-  }
+    }
