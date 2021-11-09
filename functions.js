@@ -159,17 +159,38 @@ window.onload = function () {
         alert("Your honeysuckle will have Unfused leaves!"); 
       });
 
+      document.querySelector(".yellow-button").addEventListener("click", function () {
+        // here you can change also a-scene or a-entity properties, like
+        // changing your 3D model source, size, position and so on
+        // or you can just open links, trigger actions...
+        alert("Your honeysuckle will be yellow!"); 
+      });
+
+      document.querySelector(".white-button").addEventListener("click", function () {
+        // here you can change also a-scene or a-entity properties, like
+        // changing your 3D model source, size, position and so on
+        // or you can just open links, trigger actions...
+        alert("Your honeysuckle will be white!"); 
+      });
+
       document.querySelector(".red-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert("Your honeysuckle is now red!"); 
+        alert("Your honeysuckle will be red!"); 
       });
 
-      document.querySelector(".blue-button").addEventListener("click", function () {
+      document.querySelector(".pink-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert("Your honeysuckle is now blue!"); 
+        alert("Your honeysuckle will be pink!"); 
+      });
+
+      document.querySelector(".orange-button").addEventListener("click", function () {
+        // here you can change also a-scene or a-entity properties, like
+        // changing your 3D model source, size, position and so on
+        // or you can just open links, trigger actions...
+        alert("Your honeysuckle will be orange!"); 
       });
     }
