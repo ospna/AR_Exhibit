@@ -202,8 +202,7 @@ nav ul
     margin: 0 auto;
 }
 .buttons a{
-    float:left;
-    display: inline-flex;
+    display: inline-block;
     align-items:center;
     text-align: center;
     text-decoration: none;
