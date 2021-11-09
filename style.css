@@ -385,22 +385,52 @@ nav ul
     margin-left: 2em;
 }
 
+.yellow-button {
+    border-radius: 6px;
+    border: black;
+    background-color: yellow;
+    color: black;
+    width: 6em;
+    height: 6em;
+    margin-left: 2em;
+}
+
+.white-button {
+    border-radius: 6px;
+    border: black;
+    background-color: white;
+    color: black;
+    width: 6em;
+    height: 6em;
+    margin-left: 2em;
+}
+
 .red-button {
     border-radius: 6px;
     border: black;
     background-color: red;
     color: black;
-    width: 8em;
-    height: 8em;
+    width: 6em;
+    height: 6em;
     margin-left: 2em;
 }
 
-.blue-button {
+.pink-button {
     border-radius: 6px;
     border: black;
-    background-color:blue;
+    background-color:pink;
     color: black;
-    width: 8em;
-    height: 8em;
+    width: 6em;
+    height: 6em;
+    margin-left: 2em;
+}
+
+.orange-button {
+    border-radius: 6px;
+    border: black;
+    background-color:orange;
+    color: black;
+    width: 6em;
+    height: 6em;
     margin-left: 2em;
 }
