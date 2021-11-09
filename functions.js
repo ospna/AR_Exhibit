@@ -5,11 +5,16 @@ window.onload = function () {
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
         alert("Change Size"); 
-        document.querySelector(".sizeButtons").style.visibility = 'visible';
-        document.querySelector(".petalOrientButtons").style.visibility = 'hidden';
-        document.querySelector(".flowerOrientButtons").style.visibility = 'hidden';
-        document.querySelector(".leafFusionButtons").style.visibility = 'hidden';
-        document.querySelector(".colorButtons").style.visibility = 'hidden';
+        document.querySelector(".sizeButtons").style.visibility = "visible";
+        document.querySelector(".sizeButtons").style.display = "flex";
+        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+        document.querySelector(".petalOrientButtons").style.display = "none";
+        document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+        document.querySelector(".flowerOrientButtons").style.display = "none";
+        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+        document.querySelector(".leafFusionButtons").style.display = "none";
+        document.querySelector(".colorButtons").style.visibility = "hidden";
+        document.querySelector(".colorButtons").style.display = "none";
       });
 
       document.querySelector(".petal-button").addEventListener("click", function () {
@@ -17,11 +22,16 @@ window.onload = function () {
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
         alert("Petal Orientation"); 
-        document.querySelector(".sizeButtons").style.visibility = 'hidden';
-        document.querySelector(".petalOrientButtons").style.visibility = 'visible';
-        document.querySelector(".flowerOrientButtons").style.visibility = 'hidden';
-        document.querySelector(".leafFusionButtons").style.visibility = 'hidden';
-        document.querySelector(".colorButtons").style.visibility = 'hidden';
+        document.querySelector(".sizeButtons").style.visibility = "hidden";
+        document.querySelector(".sizeButtons").style.display = "none";
+        document.querySelector(".petalOrientButtons").style.visibility = "visible";
+        document.querySelector(".petalOrientButtons").style.display = "flex";
+        document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+        document.querySelector(".flowerOrientButtons").style.display = "none";
+        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+        document.querySelector(".leafFusionButtons").style.display = "none";
+        document.querySelector(".colorButtons").style.visibility = "hidden";
+        document.querySelector(".colorButtons").style.display = "none";
       });
 
       document.querySelector(".flower-button").addEventListener("click", function () {
@@ -29,11 +39,16 @@ window.onload = function () {
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
         alert("Flower Orientation"); 
-        document.querySelector(".sizeButtons").style.visibility = 'hidden';
-        document.querySelector(".petalOrientButtons").style.visibility = 'hidden';
-        document.querySelector(".flowerOrientButtons").style.visibility = 'visible';
-        document.querySelector(".leafFusionButtons").style.visibility = 'hidden';
-        document.querySelector(".colorButtons").style.visibility = 'hidden';
+        document.querySelector(".sizeButtons").style.visibility = "hidden";
+        document.querySelector(".sizeButtons").style.display = "none";
+        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+        document.querySelector(".petalOrientButtons").style.display = "none";
+        document.querySelector(".flowerOrientButtons").style.visibility = "visible";
+        document.querySelector(".flowerOrientButtons").style.display = "flex";
+        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+        document.querySelector(".leafFusionButtons").style.display = "none";
+        document.querySelector(".colorButtons").style.visibility = "hidden";
+        document.querySelector(".colorButtons").style.display = "none";
       });
 
       document.querySelector(".leaf-button").addEventListener("click", function () {
@@ -41,11 +56,16 @@ window.onload = function () {
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
         alert("Leaf Fusion"); 
-        document.querySelector(".sizeButtons").style.visibility = 'hidden';
-        document.querySelector(".petalOrientButtons").style.visibility = 'hidden';
-        document.querySelector(".flowerOrientButtons").style.visibility = 'hidden';
-        document.querySelector(".leafFusionButtons").style.visibility = 'visible';
-        document.querySelector(".colorButtons").style.visibility = 'hidden';
+        document.querySelector(".sizeButtons").style.visibility = "hidden";
+        document.querySelector(".sizeButtons").style.display = "none";
+        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+        document.querySelector(".petalOrientButtons").style.display = "none";
+        document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+        document.querySelector(".flowerOrientButtons").style.display = "none";
+        document.querySelector(".leafFusionButtons").style.visibility = "visible";
+        document.querySelector(".leafFusionButtons").style.display = "flex";
+        document.querySelector(".colorButtons").style.visibility = "hidden";
+        document.querySelector(".colorButtons").style.display = "none";
       })
       ;
 
@@ -54,11 +74,11 @@ window.onload = function () {
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
         alert("Growth Habit"); 
-        document.querySelector(".sizeButtons").style.visibility = 'hidden';
-        document.querySelector(".petalOrientButtons").style.visibility = 'hidden';
-        document.querySelector(".flowerOrientButtons").style.visibility = 'hidden';
-        document.querySelector(".leafFusionButtons").style.visibility = 'hidden';
-        document.querySelector(".colorButtons").style.visibility = 'hidden';
+        document.querySelector(".sizeButtons").style.visibility = "hidden";
+        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+        document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+        document.querySelector(".colorButtons").style.visibility = "hidden";
       });
 
       document.querySelector(".color-button").addEventListener("click", function () {
@@ -66,11 +86,16 @@ window.onload = function () {
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
         alert("Honeysuckle Color"); 
-        document.querySelector(".sizeButtons").style.visibility = 'hidden';
-        document.querySelector(".petalOrientButtons").style.visibility = 'hidden';
-        document.querySelector(".flowerOrientButtons").style.visibility = 'hidden';
-        document.querySelector(".leafFusionButtons").style.visibility = 'hidden';
-        document.querySelector(".colorButtons").style.visibility = 'visible';
+        document.querySelector(".sizeButtons").style.visibility = "hidden";
+        document.querySelector(".sizeButtons").style.display = "none";
+        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+        document.querySelector(".petalOrientButtons").style.display = "none";
+        document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+        document.querySelector(".flowerOrientButtons").style.display = "none";
+        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+        document.querySelector(".leafFusionButtons").style.display = "none";
+        document.querySelector(".colorButtons").style.visibility = "visible";
+        document.querySelector(".colorButtons").style.display = "flex";
       });
 
       document.querySelector(".small-scale-button").addEventListener("click", function () {
