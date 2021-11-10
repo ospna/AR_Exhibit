@@ -17,6 +17,21 @@ let parts;
 
 let leaf, flower;
 
+// arrays for buttons/UI
+var leafShape = [leaf];
+var leafSize = [60, 40, 80];
+var flowerShape = [flower];
+var flowerSize = [60, 40, 80];
+var flowerUp = [true, false];
+
+// variables for contructors
+var setLeafShape;
+var setLeafSize;
+var setFlowerShape;
+var setFlowerSize;
+var setFlowerDown;
+
+
 function preload(){
   leaf = loadImage("images/leaf.svg");
   flower = loadImage("images/flower.svg");
@@ -42,6 +57,8 @@ function setup() {
         sprouts[s][1],
         60,
         60,
+        // setLeafSize,
+        // setLeafSize,
         -rotationRange + random(2 * rotationRange),
         false,
         true
@@ -50,10 +67,13 @@ function setup() {
       p = new Part(
         "leaf",
         leaf,
+        // setLeafShape,
         sprouts[s][0],
         sprouts[s][1],
         60,
         60,
+        // setLeafSize,
+        // setLeafSize,
         -rotationRange + random(2 * rotationRange),
         true,
         true
@@ -65,13 +85,17 @@ function setup() {
       p = new Part(
         "flower",
         flower,
+        //setFlowerShape,
         sprouts[s][0],
         sprouts[s][1],
         60,
         60,
+        // setFlowerSize,
+        // setFlowerSize,
         -rotationRange + random(2 * rotationRange),
         true,
         false
+        //setFlowerDown
       );
       parts.push(p);
     }
