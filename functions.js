@@ -1,3 +1,21 @@
+// Script has to be before the a-scene. It runs oddly or breaks the scene completely
+    // Should multiple objects be allowed at a time here? The BYOH system will have 1 trait at a time. How many traits will be choosable?
+
+    function setup () { // *** getItem(X); needs to be in the setup() function for p5js. This is a requirement.
+
+      setLeafShape = getItem('setLeafShape'); // On the first run through, getItem will run. If getItem hasn't been saved before, it will start as null.
+      setLeafSize = getItem('setLeafSize');
+      setFlowerShape = getItem('setFlowerShape');
+      setFlowerSize = getItem('setFlowerSize');
+      setFlowerDown = getItem('setFlowerDown');
+      
+      // for(i = 0; i++; i < leafShape.length - 1) {
+      //   if (setLeafShape === leafShape[i]) {
+      //     setLeafShape = leafShape[i];
+      //   }
+      // }
+    }
+
 window.onload = function () {
 
       document.querySelector(".size-button").addEventListener("click", function () {
@@ -193,4 +211,57 @@ window.onload = function () {
         // or you can just open links, trigger actions...
         alert("Your honeysuckle will be orange!"); 
       });
+
+      /* CODE FOR ATTRIBUTING SETTING */
+      
+      /* this refers to the red-box-button class and adds an event to the class that makes 
+      document.querySelector('.red-button').addEventListener("click", function () {
+        alert("Box will become Red"); // alert("string") is great for debugging and also holds up the code from running further
+        document.querySelector('#box').setAttribute('color', '#DB4F40'); // Selects the object "red-box" by it's ID and changes the attribute 'visible' to the value 'false'.
+        colorVal = 'red'; // After changing the value of the box, it's variable needs to be updated too.
+        storeItem('colorVal', colorVal); // This stores the value as a 'Key' and then the 'data'. Using getItem will read the key and equal a value
+      });
+
+      // // this refers to the blue-box-button. It is not currently set up to do anything.
+      // document.querySelector('.blue-button').addEventListener("click", function () {
+      //   alert("Box will become Blue");
+      //   document.querySelector('#box').setAttribute('color','#2A37AD');
+      //   colorVal = 'blue';
+      //   storeItem('colorVal', colorVal);
+      // });
+
+      // document.querySelector(".big-button").addEventListener("click", function () {
+      //   alert("Box will be big");
+      //   document.querySelector('#box').setAttribute('depth', '1');
+      //   document.querySelector('#box').setAttribute('height', '1');
+      //   document.querySelector('#box').setAttribute('width', '1');
+      //   sizeVal = 'big';
+      //   storeItem('sizeVal', sizeVal);
+      // });
+
+      // document.querySelector('.small-button').addEventListener("click", function () {
+      //   alert("Box will be small");
+      //   document.querySelector('#box').setAttribute('depth', '0.5');
+      //   document.querySelector('#box').setAttribute('height', '0.5');
+      //   document.querySelector('#box').setAttribute('width', '0.5');
+      //   sizeVal = 'small';
+      //   storeItem('sizeVal', sizeVal);
+      // })
+
+    // AFRAME.registerComponent('color', { //Only works outside of window.onload. did not work inside of window.onload
+    //   init: function () {
+    //     this.el.sceneEl.addEventListener('markerFound', () => {
+    //   window.location = '/test-ar-target-color.html';
+    //   })
+    // }
+    // });
+
+    // AFRAME.registerComponent('size', { //Only works outside of window.onload. did not work inside of window.onload
+    //   init: function () {
+    //     this.el.sceneEl.addEventListener('markerFound', () => {
+    //   window.location = '/test-ar-target-size.html';
+    //   })
+    // }
+    // });
+    */
     }
