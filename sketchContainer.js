@@ -55,6 +55,7 @@ function setup() {
       p = new Part(
         "leaf",
         leaf,
+        //setLeafShape,
         sprouts[s][0],
         sprouts[s][1],
         60,
