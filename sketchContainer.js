@@ -17,6 +17,7 @@ let parts;
 
 let leaf, flower;
 
+/*
 // arrays for buttons/UI
 var leafShape = [leaf];
 var leafSize = [60, 40, 80];
@@ -30,6 +31,7 @@ var setLeafSize;
 var setFlowerShape;
 var setFlowerSize;
 var setFlowerDown;
+*/
 
 
 function preload(){

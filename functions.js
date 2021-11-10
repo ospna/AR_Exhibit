@@ -1,6 +1,7 @@
 // Script has to be before the a-scene. It runs oddly or breaks the scene completely
     // Should multiple objects be allowed at a time here? The BYOH system will have 1 trait at a time. How many traits will be choosable?
 
+    /*
     function setup () { // *** getItem(X); needs to be in the setup() function for p5js. This is a requirement.
 
       setLeafShape = getItem('setLeafShape'); // On the first run through, getItem will run. If getItem hasn't been saved before, it will start as null.
@@ -15,6 +16,7 @@
       //   }
       // }
     }
+    */
 
 window.onload = function () {
 
@@ -213,7 +215,7 @@ window.onload = function () {
       });
 
       /* CODE FOR ATTRIBUTING SETTING */
-      
+
       /* this refers to the red-box-button class and adds an event to the class that makes 
       document.querySelector('.red-button').addEventListener("click", function () {
         alert("Box will become Red"); // alert("string") is great for debugging and also holds up the code from running further
