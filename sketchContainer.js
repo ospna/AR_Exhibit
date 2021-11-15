@@ -74,10 +74,10 @@ var setFlowerDown;
 */
 
 function preload(){
-  leaf = setLeafType;
+  //leaf = setLeafType;
   flower = setFlowerType;
-  
-  //leaf = loadImage("images/leaaf.svg");
+
+  leaf = loadImage("images/leaf.svg");
   //flower = loadImage("images/flower.svg");
 }
 
