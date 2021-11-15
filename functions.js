@@ -22,7 +22,7 @@ window.onload = function () {
 
       document.querySelector(".size-button").addEventListener("click", function () {
         // size tab 
-        alert("Change Size"); 
+        alert("Change Size Tab"); 
         document.querySelector(".sizeButtons").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.display = "flex";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -37,7 +37,7 @@ window.onload = function () {
 
       document.querySelector(".petal-button").addEventListener("click", function () {
         // petal orientation tab
-        alert("Petal Orientation"); 
+        alert("Petal Orientation Tab"); 
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "visible";
@@ -52,7 +52,7 @@ window.onload = function () {
 
       document.querySelector(".flower-button").addEventListener("click", function () {
         // flower orientation tab
-        alert("Flower Orientation"); 
+        alert("Flower Orientation Tab"); 
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -67,7 +67,7 @@ window.onload = function () {
 
       document.querySelector(".leaf-button").addEventListener("click", function () {
         // leaf fusion tab
-        alert("Leaf Fusion"); 
+        alert("Leaf Fusion Tab"); 
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -96,7 +96,7 @@ window.onload = function () {
 
       document.querySelector(".color-button").addEventListener("click", function () {
         // color tab
-        alert("Honeysuckle Color"); 
+        alert("Honeysuckle Color Tab"); 
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -109,6 +109,12 @@ window.onload = function () {
         document.querySelector(".colorButtons").style.display = "flex";
       });
 
+
+
+
+      // ---------------------------- Size Buttons --------------------------------------------- //
+
+      
       document.querySelector(".small-scale-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
@@ -129,6 +135,12 @@ window.onload = function () {
         // or you can just open links, trigger actions...
         alert("You will be building a Large Honeysuckle!");
       });
+
+
+
+
+      // ---------------------------- Petal Orientation Buttons --------------------------------------------- //
+
 
       document.querySelector(".radial-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
@@ -151,6 +163,12 @@ window.onload = function () {
         alert("You chose the 4+1 Petal Orientation!"); 
       });
 
+
+
+
+      // ---------------------------- Flower Orientation Buttons -------------------------------------------- //
+
+
       document.querySelector(".pendulus-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
@@ -165,6 +183,12 @@ window.onload = function () {
         alert("Your honeysuckle will have an Upright Flower Orientation!"); 
       });
 
+
+
+
+      // ---------------------------- Leaf Fusion Buttons --------------------------------------------------- //
+
+
       document.querySelector(".fused-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
@@ -178,6 +202,12 @@ window.onload = function () {
         // or you can just open links, trigger actions...
         alert("Your honeysuckle will have Unfused leaves!"); 
       });
+
+
+
+
+      // ------------------------------- Color Buttons ---------------------------------------------------- //
+
 
       document.querySelector(".yellow-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
@@ -213,6 +243,9 @@ window.onload = function () {
         // or you can just open links, trigger actions...
         alert("Your honeysuckle will be orange!"); 
       });
+
+
+
 
       /* CODE FOR ATTRIBUTING SETTING */
 
