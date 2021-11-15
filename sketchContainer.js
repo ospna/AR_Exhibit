@@ -15,14 +15,49 @@ let sprouts;
 
 let parts;
 
-//let leaf, flower;
+let leaf, flower;
 
-let flower;
+var setLeafType;
 
-// leaf variable
-var leaf = document.getElementById('leafImage');
+var setFlowerType;
 
 /*
+<img src="images/AR Media/Radial/radial_pendulus_large-01.svg" id="radial_pendulus_large-01">
+            <img src="images/AR Media/Radial/radial_pendulus_medium-01.svg" id="radial_pendulus_medium-01">
+            <img src="images/AR Media/Radial/radial_pendulus_small-01.svg" id="radial_pendulus_small-01">
+
+            <img src="images/AR Media/Radial/radial_upright_large-01.svg" id="radial_upright_large-01">
+            <img src="images/AR Media/Radial/radial_upright_medium-01.svg" id="radial_upright_medium-01">
+            <img src="images/AR Media/Radial/radial_upright_small-01.svg" id="radial_upright_small-01">
+            
+            <!-- 2+2+1 Petal Orientation -->
+            <img src="images/AR Media/221/221_pendulus_large-01.svg" id="221_pendulus_large-01">
+            <img src="images/AR Media/221/221_pendulus_medium-01.svg" id="221_pendulus_medium-01">
+            <img src="images/AR Media/221/221_pendulus_small-01.svg" id="221_pendulus_small-01">
+
+            <img src="images/AR Media/221/221_upright_large-01.svg" id="221_upright_large-01">
+            <img src="images/AR Media/221/221_upright_medium-01.svg" id="221_upright_medium-01">
+            <img src="images/AR Media/221/221_upright_small-01.svg" id="221_upright_small-01">
+
+            <!-- 4+1 Petal Orientation -->
+            <img src="images/AR Media/41/41_pendulus_large-01.svg" id="41_pendulus_large-01">
+            <img src="images/AR Media/41/41_pendulus_medium-01.svg" id="41_pendulus_medium-01">
+            <img src="images/AR Media/41/41_pendulus_small-01.svg" id="41_pendulus_small-01">
+
+            <img src="images/AR Media/41/41_upright_large-01.svg" id="41_upright_large-01">
+            <img src="images/AR Media/41/41_upright_medium-01.svg" id="41_upright_medium-01">
+            <img src="images/AR Media/41/41_upright_small-01.svg" id="41_upright_small-01">
+
+            <!-- Unfused Leaf Fusion -->
+            <img src="images/AR Media/unfused_leaves-01.svg" id="unfused_leaves-01">
+
+            <!-- Fused Leaf Fusion -->
+            <img src="images/AR Media/fused_leaves-01.svg" id="fused_leaves-01">
+              
+            </img>
+*
+
+
 // arrays for buttons/UI
 var leafShape = [leaf];
 var leafSize = [60, 40, 80];
@@ -39,8 +74,11 @@ var setFlowerDown;
 */
 
 function preload(){
-  leaf = document.getElementById('leafImage').src=("images/leaf.svg");
-  flower = loadImage("images/flower.svg");
+  leaf = setLeafType;
+  flower = setFlowerType;
+  
+  //leaf = loadImage("images/leaaf.svg");
+  //flower = loadImage("images/flower.svg");
 }
 
 function setup() {
