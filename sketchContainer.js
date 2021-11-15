@@ -55,8 +55,6 @@ var setFlowerType;
             <img src="images/AR Media/fused_leaves-01.svg" id="fused_leaves-01">
               
             </img>
-*
-
 
 // arrays for buttons/UI
 var leafShape = [leaf];
@@ -75,10 +73,10 @@ var setFlowerDown;
 
 function preload(){
   //leaf = setLeafType;
-  flower = setFlowerType;
+  //flower = setFlowerType;
 
   leaf = loadImage("images/leaf.svg");
-  //flower = loadImage("images/flower.svg");
+  flower = loadImage("images/flower.svg");
 }
 
 function setup() {
