@@ -147,6 +147,8 @@ window.onload = function () {
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
         alert("You chose the Radial Petal Orientation!"); 
+
+        document.getElementById('leafImage').src="images/AR Media/Radial/radial_pendulus_large-01.svg";
       });
 
       document.querySelector(".two21-button").addEventListener("click", function () {
@@ -154,6 +156,7 @@ window.onload = function () {
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
         alert("You chose the 2+2+1 Petal Orientation!"); 
+        document.getElementById('myImageID').src="images/AR Media/221/221_pendulus_large-01.svg";
       });
       
       document.querySelector(".four1-button").addEventListener("click", function () {
@@ -161,6 +164,7 @@ window.onload = function () {
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
         alert("You chose the 4+1 Petal Orientation!"); 
+        document.getElementById('myImageID').src="images/AR Media/41/41_pendulus_large-01.svg";
       });
 
 

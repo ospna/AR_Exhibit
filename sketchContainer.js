@@ -15,7 +15,12 @@ let sprouts;
 
 let parts;
 
-let leaf, flower;
+//let leaf, flower;
+
+let flower;
+
+// leaf variable
+var leaf = document.getElementById('leafImage');
 
 /*
 // arrays for buttons/UI
@@ -33,9 +38,8 @@ var setFlowerSize;
 var setFlowerDown;
 */
 
-
 function preload(){
-  leaf = loadImage("images/leaf.svg");
+  leaf = document.getElementById('leafImage').src=("images/leaf.svg");
   flower = loadImage("images/flower.svg");
 }
 
