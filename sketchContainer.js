@@ -227,7 +227,6 @@ function draw() {
     //let normalRot4 = degrees(rot4.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
    // let normalRot5 = degrees(rot5.z);
 
-
     p5graphics.noFill();
     p5graphics.strokeWeight(4);
     p5graphics.stroke(0, 200, 0);
@@ -264,7 +263,7 @@ function draw() {
     
 
     plane3.rotateY(normalRot);
-    plane3.rotateY(normalRot2)
+    plane3.rotateY(normalRot2);
 
   if (marker1.isVisible() == true) 
   {
