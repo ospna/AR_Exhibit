@@ -46,8 +46,8 @@ window.onload = function () {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
       //});
-  };
-
+  }
+  
   if (marker2.isVisible() == true) 
   {
      // document.querySelector(".petal-button").addEventListener("click", function () {
@@ -64,7 +64,7 @@ window.onload = function () {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
      // })
-  };
+  }
 
   //if (marker.isVisible() == true) 
   //{
