@@ -280,6 +280,7 @@ function draw() {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
         setup();
+        draw();
   }
   if (marker2.isVisible() == true) 
   {
@@ -296,6 +297,7 @@ function draw() {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
         setup();
+        draw();
   }
   /*
   if (marker3.isVisible() == true)  // FLOWER TAB
