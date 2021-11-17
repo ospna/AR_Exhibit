@@ -167,10 +167,11 @@ container = new Box({
 
 marker1.addChild( container );
 marker2.addChild( container );
-marker3.addChild( container );
-marker4.addChild( container );
-marker5.addChild( container );
-marker6.addChild( container );
+
+//marker3.addChild( container );
+//marker4.addChild( container );
+//marker5.addChild( container );
+//marker6.addChild( container );
 
 // intent behing this 'container" box was that *it* would rotate to face the camera using a single line of code,
 // rather than rotating every plane contained in the box individually.
@@ -197,16 +198,18 @@ function draw() {
     // get the rotation of the AR marker relative to the camera,
     // which allows us to rotate the objects attached to that marker toward the camera
     let rot = marker1.tag.object3D.rotation;
-    let rot2 = marker2.tag.object3D.rotation;
-    let rot3 = marker1.tag.object3D.rotation;
-    let rot4 = marker2.tag.object3D.rotation;
-    let rot5 = marker1.tag.object3D.rotation;
+    let rot = marker2.tag.object3D.rotation;
+
+    //let rot3 = marker3.tag.object3D.rotation;
+   // let rot4 = marker4.tag.object3D.rotation;
+   // let rot5 = marker5.tag.object3D.rotation;
+   // let rot6 = marker6.tag.object3D.rotation;
 
     let normalRot = degrees(rot.z);
-    let normalRot2 = degrees(rot2.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
-    let normalRot3 = degrees(rot3.z);
-    let normalRot4 = degrees(rot4.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
-    let normalRot5 = degrees(rot5.z);
+    //let normalRot2 = degrees(rot2.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
+    //let normalRot3 = degrees(rot3.z);
+    //let normalRot4 = degrees(rot4.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
+   // let normalRot5 = degrees(rot5.z);
 
 
     p5graphics.noFill();
@@ -248,6 +251,8 @@ function draw() {
 
   if (marker1.isVisible() == true) 
   {
+        document.querySelector(".size-button").style.visibility = "hidden"
+        document.querySelector(".size-button").style.display = "none";
         document.querySelector(".sizeButtons").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.display = "flex";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -261,6 +266,8 @@ function draw() {
   }
   if (marker2.isVisible() == true) 
   {
+        document.querySelector(".petal-button").style.visibility = "hidden";
+        document.querySelector(".petal-button").style.display = "none";
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "visible";
@@ -272,21 +279,26 @@ function draw() {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
   }
-  if (marker3.isVisible() == true) 
+  /*
+  if (marker3.isVisible() == true)  // FLOWER TAB
   {
-        document.querySelector(".sizeButtons").style.visibility = "hidden";
-        document.querySelector(".sizeButtons").style.display = "none";
-        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
-        document.querySelector(".petalOrientButtons").style.display = "none";
-        document.querySelector(".flowerOrientButtons").style.visibility = "visible";
-        document.querySelector(".flowerOrientButtons").style.display = "flex";
-        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
-        document.querySelector(".leafFusionButtons").style.display = "none";
-        document.querySelector(".colorButtons").style.visibility = "hidden";
-        document.querySelector(".colorButtons").style.display = "none";
+      document.querySelector(".flower-button").style.visibility = "hidden";
+      document.querySelector(".flower-button").style.display = "none";
+      document.querySelector(".sizeButtons").style.visibility = "hidden";
+      document.querySelector(".sizeButtons").style.display = "none";
+      document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+      document.querySelector(".petalOrientButtons").style.display = "none";
+      document.querySelector(".flowerOrientButtons").style.visibility = "visible";
+      document.querySelector(".flowerOrientButtons").style.display = "flex";
+      document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+      document.querySelector(".leafFusionButtons").style.display = "none";
+      document.querySelector(".colorButtons").style.visibility = "hidden";
+      document.querySelector(".colorButtons").style.display = "none";
   }
-  if (marker4.isVisible() == true) 
+  if (marker4.isVisible() == true)  // LEAF FUSION TAB
   {
+      document.querySelector(".leaf-button").style.visibility = "hidden";
+      document.querySelector(".leaf-button").style.display = "none";
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -298,39 +310,36 @@ function draw() {
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
   }
-  if (marker5.isVisible() == true) 
-  //{ 
-      document.querySelector(".color-button").addEventListener("click", function () {
-        // color tab
-        alert("Honeysuckle Color Tab"); 
-        document.querySelector(".sizeButtons").style.visibility = "hidden";
-        document.querySelector(".sizeButtons").style.display = "none";
-        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
-        document.querySelector(".petalOrientButtons").style.display = "none";
-        document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
-        document.querySelector(".flowerOrientButtons").style.display = "none";
-        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
-        document.querySelector(".leafFusionButtons").style.display = "none";
-        document.querySelector(".colorButtons").style.visibility = "visible";
-        document.querySelector(".colorButtons").style.display = "flex";
-      });
-  /*if (marker6.isVisible() == true) 
-  //{ 
-      document.querySelector(".color-button").addEventListener("click", function () {
-        // color tab
-        alert("Honeysuckle Color Tab"); 
-        document.querySelector(".sizeButtons").style.visibility = "hidden";
-        document.querySelector(".sizeButtons").style.display = "none";
-        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
-        document.querySelector(".petalOrientButtons").style.display = "none";
-        document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
-        document.querySelector(".flowerOrientButtons").style.display = "none";
-        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
-        document.querySelector(".leafFusionButtons").style.display = "none";
-        document.querySelector(".colorButtons").style.visibility = "visible";
-        document.querySelector(".colorButtons").style.display = "flex";
-      });
- // } */
+  if (marker5.isVisible() == true)  // COLOR TAB
+  { 
+      document.querySelector(".color-button").style.visibility = "hidden";
+      document.querySelector(".color-button").style.display = "none";
+      document.querySelector(".sizeButtons").style.visibility = "hidden";
+      document.querySelector(".sizeButtons").style.display = "none";
+      document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+      document.querySelector(".petalOrientButtons").style.display = "none";
+      document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+      document.querySelector(".flowerOrientButtons").style.display = "none";
+      document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+      document.querySelector(".leafFusionButtons").style.display = "none";
+      document.querySelector(".colorButtons").style.visibility = "visible";
+      document.querySelector(".colorButtons").style.display = "flex";
+  )
+  if (marker6.isVisible() == true) // GROWTH TAB
+  { 
+      document.querySelector(".growth-button").style.visibility = "hidden";
+      document.querySelector(".growth-button").style.display = "none";
+      document.querySelector(".sizeButtons").style.visibility = "hidden";
+      document.querySelector(".sizeButtons").style.display = "none";
+      document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+      document.querySelector(".petalOrientButtons").style.display = "none";
+      document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+      document.querySelector(".flowerOrientButtons").style.display = "none";
+      document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+      document.querySelector(".leafFusionButtons").style.display = "none";
+      document.querySelector(".colorButtons").style.visibility = "visible";
+      document.querySelector(".colorButtons").style.display = "flex";
+  }*/
   else
   {
         document.querySelector(".sizeButtons").style.visibility = "hidden";
