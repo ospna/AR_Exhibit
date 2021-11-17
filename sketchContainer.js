@@ -161,7 +161,6 @@ container = new Box({
     x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
 
-/*
 marker1.addChild( container );
 
 container2 = new Box({
@@ -169,7 +168,6 @@ container2 = new Box({
 });
 
 marker2.addChild( container2 );
-*/
 
 // intent behing this 'container" box was that *it* would rotate to face the camera using a single line of code,
 // rather than rotating every plane contained in the box individually.
@@ -193,7 +191,7 @@ function draw() {
 
     world.clearDrawingCanvas();
 
-    if (marker1.isVisible() == true) 
+  if (marker1.isVisible() == true) 
   {
       //document.querySelector(".size-button").addEventListener("click", function () {
         // size tab 
