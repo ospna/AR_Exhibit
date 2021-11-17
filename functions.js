@@ -18,10 +18,20 @@
     }
     */
 
+/* create variables to hold our markers
+var markerPatt2;
+
+function setup () {    
+  marker = world.getMarker('patt2');
+}
+*/
+
 var setLeafType;
 
 window.onload = function () {
 
+  if (marker1.isVisible() == true) 
+  {
       document.querySelector(".size-button").addEventListener("click", function () {
         // size tab 
         alert("Change Size Tab"); 
@@ -36,7 +46,10 @@ window.onload = function () {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
       });
+  }
 
+  if (marker2.isVisible() == true) 
+  {
       document.querySelector(".petal-button").addEventListener("click", function () {
         // petal orientation tab
         alert("Petal Orientation Tab"); 
@@ -51,7 +64,10 @@ window.onload = function () {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
       });
+  }
 
+  //if (marker.isVisible() == true) 
+  //{
       document.querySelector(".flower-button").addEventListener("click", function () {
         // flower orientation tab
         alert("Flower Orientation Tab"); 
@@ -66,7 +82,10 @@ window.onload = function () {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
       });
+    //}
 
+   // if (marker.isVisible() == true) 
+    //{
       document.querySelector(".leaf-button").addEventListener("click", function () {
         // leaf fusion tab
         alert("Leaf Fusion Tab"); 
@@ -81,6 +100,7 @@ window.onload = function () {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
       });
+    //}
 
       /*
       document.querySelector(".growth-button").addEventListener("click", function () {
@@ -96,6 +116,8 @@ window.onload = function () {
       });
       */
 
+ // if (marker.isVisible() == true) 
+  //{ 
       document.querySelector(".color-button").addEventListener("click", function () {
         // color tab
         alert("Honeysuckle Color Tab"); 
@@ -110,6 +132,7 @@ window.onload = function () {
         document.querySelector(".colorButtons").style.visibility = "visible";
         document.querySelector(".colorButtons").style.display = "flex";
       });
+ // }
 
 
 

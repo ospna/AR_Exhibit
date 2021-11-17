@@ -2,7 +2,7 @@
 var world;
 
 // create a variable to hold our marker
-var marker;
+var marker1, marker2, marker3;
 
 // create variables to hold each plane
 var plane1, plane2, plane3, plane4, plane5;
@@ -147,8 +147,10 @@ function setup() {
   world = new World('ARScene');
 
   // grab a reference to the marker that we set up on the HTML side (connect to it using its 'id')
-  marker = world.getMarker('patt2');
-  marker2 = world.getMarker('hiro');
+  marker1 = world.getMarker('patt1');
+  marker2 = world.getMarker('patt2');
+  //marker3 = world.getMarker('hiro');
+
 
   // create some geometry to add to our marker
   // the marker is 1 meter x 1 meter, with the origin at the center
@@ -159,13 +161,15 @@ container = new Box({
     x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
 
-marker.addChild( container );
+/*
+marker1.addChild( container );
 
 container2 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
 
 marker2.addChild( container2 );
+*/
 
 // intent behing this 'container" box was that *it* would rotate to face the camera using a single line of code,
 // rather than rotating every plane contained in the box individually.
