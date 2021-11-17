@@ -149,7 +149,7 @@ function setup() {
   // grab a reference to the marker that we set up on the HTML side (connect to it using its 'id')
   marker1 = world.getMarker('patt1');
   marker2 = world.getMarker('patt2');
-  //marker3 = world.getMarker('patt3');
+  marker3 = world.getMarker('patt3');
   //marker4 = world.getMarker('patt4');
   //marker5 = world.getMarker('patt5');
   //marker6 = world.getMarker('patt6');
@@ -169,8 +169,13 @@ container2 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
 
+container2 = new Box({
+  x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
+});
+
 marker1.addChild( container );
 marker2.addChild( container2 );
+marker3.addChild( container3 );
 
 //marker3.addChild( container );
 //marker4.addChild( container );
@@ -203,6 +208,17 @@ marker2.addChild( container2 );
     // find the simple code drawing random ellipsed in the draw loop below
   });
   container2.addChild( plane2 );
+
+  plane3 = new Plane({
+    x:0, y:0, z:1.0,
+    //red:0, green:0, blue:255,
+    width:1, height:1,
+    asset:'p5graphics' 
+    // this plane is textured by a p5.graphics object
+    // https://p5js.org/reference/#/p5.Graphics
+    // find the simple code drawing random ellipsed in the draw loop below
+  });
+  container3.addChild( plane3 );
 }
 
 
@@ -214,14 +230,15 @@ function draw() {
     // which allows us to rotate the objects attached to that marker toward the camera
     let rot = marker1.tag.object3D.rotation;
     let rot2 = marker2.tag.object3D.rotation;
+    let rot3 = marker3.tag.object3D.rotation;
 
-    //let rot3 = marker3.tag.object3D.rotation;
    // let rot4 = marker4.tag.object3D.rotation;
    // let rot5 = marker5.tag.object3D.rotation;
    // let rot6 = marker6.tag.object3D.rotation;
 
     let normalRot = degrees(rot.z);
     let normalRot2 = degrees(rot2.z);
+    let normalRot3 = degrees(rot3.z);
     //let normalRot2 = degrees(rot2.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
     //let normalRot3 = degrees(rot3.z);
     //let normalRot4 = degrees(rot4.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
@@ -267,8 +284,7 @@ function draw() {
 
   if (marker1.isVisible() == true) 
   {
-        document.querySelector(".size-button").style.visibility = "hidden";
-        document.querySelector(".size-button").style.display = "none";
+        document.querySelector(".size-button").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.display = "flex";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -283,8 +299,7 @@ function draw() {
   }
   if (marker2.isVisible() == true) 
   {
-        document.querySelector(".petal-button").style.visibility = "hidden";
-        document.querySelector(".petal-button").style.display = "none";
+        document.querySelector(".petal-button").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "visible";
@@ -297,11 +312,9 @@ function draw() {
         document.querySelector(".colorButtons").style.display = "none";
         plane2.rotateY(normalRot2);
   }
-  /*
   if (marker3.isVisible() == true)  // FLOWER TAB
   {
-      document.querySelector(".flower-button").style.visibility = "hidden";
-      document.querySelector(".flower-button").style.display = "none";
+      document.querySelector(".flower-button").style.visibility = "visible";
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -312,7 +325,9 @@ function draw() {
       document.querySelector(".leafFusionButtons").style.display = "none";
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
+      plane3.rotateY(normalRot3);
   }
+  /*
   if (marker4.isVisible() == true)  // LEAF FUSION TAB
   {
       document.querySelector(".leaf-button").style.visibility = "hidden";
