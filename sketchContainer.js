@@ -281,7 +281,7 @@ function draw() {
 
     plane1.rotateY(normalRot);
     plane2.rotateY(normalRot2);
-    plane3.rotateY(normalRot2);
+    plane3.rotateY(normalRot3);
 
   if (marker1.isVisible() == true) 
   {
