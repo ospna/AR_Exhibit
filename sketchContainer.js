@@ -193,6 +193,41 @@ function draw() {
 
     world.clearDrawingCanvas();
 
+    if (marker1.isVisible() == true) 
+  {
+      //document.querySelector(".size-button").addEventListener("click", function () {
+        // size tab 
+        //alert("Change Size Tab"); 
+        document.querySelector(".sizeButtons").style.visibility = "visible";
+        document.querySelector(".sizeButtons").style.display = "flex";
+        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+        document.querySelector(".petalOrientButtons").style.display = "none";
+        document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+        document.querySelector(".flowerOrientButtons").style.display = "none";
+        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+        document.querySelector(".leafFusionButtons").style.display = "none";
+        document.querySelector(".colorButtons").style.visibility = "hidden";
+        document.querySelector(".colorButtons").style.display = "none";
+      //});
+  }
+  if (marker2.isVisible() == true) 
+  {
+     // document.querySelector(".petal-button").addEventListener("click", function () {
+        // petal orientation tab
+       // alert("Petal Orientation Tab"); 
+        document.querySelector(".sizeButtons").style.visibility = "hidden";
+        document.querySelector(".sizeButtons").style.display = "none";
+        document.querySelector(".petalOrientButtons").style.visibility = "visible";
+        document.querySelector(".petalOrientButtons").style.display = "flex";
+        document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+        document.querySelector(".flowerOrientButtons").style.display = "none";
+        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+        document.querySelector(".leafFusionButtons").style.display = "none";
+        document.querySelector(".colorButtons").style.visibility = "hidden";
+        document.querySelector(".colorButtons").style.display = "none";
+     // })
+  }
+
     // get the rotation of the AR marker relative to the camera,
     // which allows us to rotate the objects attached to that marker toward the camera
     let rot = marker.tag.object3D.rotation;
