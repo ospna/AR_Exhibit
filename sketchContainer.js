@@ -267,7 +267,7 @@ function draw() {
 
   if (marker1.isVisible() == true) 
   {
-        document.querySelector(".size-button").style.visibility = "hidden"
+        document.querySelector(".size-button").style.visibility = "hidden";
         document.querySelector(".size-button").style.display = "none";
         document.querySelector(".sizeButtons").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.display = "flex";
