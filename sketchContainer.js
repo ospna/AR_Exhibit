@@ -193,7 +193,7 @@ function draw() {
 
     // get the rotation of the AR marker relative to the camera,
     // which allows us to rotate the objects attached to that marker toward the camera
-    let rot = marker.tag.object3D.rotation;
+    let rot = marker1.tag.object3D.rotation;
     let rot2 = marker2.tag.object3D.rotation;
     let normalRot = degrees(rot.z);
     let normalRot2 = degrees(rot2.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
