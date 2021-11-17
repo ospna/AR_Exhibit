@@ -279,6 +279,7 @@ function draw() {
         document.querySelector(".leafFusionButtons").style.display = "none";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
+        setup();
   }
   if (marker2.isVisible() == true) 
   {
@@ -294,6 +295,7 @@ function draw() {
         document.querySelector(".leafFusionButtons").style.display = "none";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
+        setup();
   }
   /*
   if (marker3.isVisible() == true)  // FLOWER TAB
