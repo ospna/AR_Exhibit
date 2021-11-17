@@ -279,14 +279,14 @@ function draw() {
     // so have to rotate the individual objects (planes) instead
     
 
-    plane1.rotateY(normalRot);
-    plane2.rotateY(normalRot2);
-    plane3.rotateY(normalRot3);
+    //plane1.rotateY(normalRot);
+    //plane2.rotateY(normalRot2);
+    //plane3.rotateY(normalRot3);
 
   if (marker1.isVisible() == true) 
   {
-        document.querySelector(".size-button").style.visibility = "visible";
-        document.querySelector(".size-button").style.display = "flex";
+        //document.querySelector(".size-button").style.visibility = "visible";
+        //document.querySelector(".size-button").style.display = "flex";
         document.querySelector(".sizeButtons").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.display = "flex";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -297,11 +297,12 @@ function draw() {
         document.querySelector(".leafFusionButtons").style.display = "none";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
+        plane1.rotateY(normalRot);
   }
   if (marker2.isVisible() == true) 
   {
-        document.querySelector(".petal-button").style.visibility = "visible";
-        document.querySelector(".petal-button").style.display = "flex";
+        //document.querySelector(".petal-button").style.visibility = "visible";
+        //document.querySelector(".petal-button").style.display = "flex";
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "visible";
@@ -312,11 +313,12 @@ function draw() {
         document.querySelector(".leafFusionButtons").style.display = "none";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
+        plane2.rotateY(normalRot2);
   }
   if (marker3.isVisible() == true)  // FLOWER TAB
   {
-      document.querySelector(".flower-button").style.visibility = "visible";
-      document.querySelector(".flower-button").style.display = "flex";
+      //document.querySelector(".flower-button").style.visibility = "visible";
+      //document.querySelector(".flower-button").style.display = "flex";
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -327,6 +329,7 @@ function draw() {
       document.querySelector(".leafFusionButtons").style.display = "none";
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
+      plane3.rotateY(normalRot3);
   }
   /*
   if (marker4.isVisible() == true)  // LEAF FUSION TAB
