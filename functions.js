@@ -32,9 +32,9 @@ window.onload = function () {
 
   if (marker1.isVisible() == true) 
   {
-      document.querySelector(".size-button").addEventListener("click", function () {
+      //document.querySelector(".size-button").addEventListener("click", function () {
         // size tab 
-        alert("Change Size Tab"); 
+        //alert("Change Size Tab"); 
         document.querySelector(".sizeButtons").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.display = "flex";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -45,14 +45,14 @@ window.onload = function () {
         document.querySelector(".leafFusionButtons").style.display = "none";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
-      });
-  }
+      //});
+  };
 
   if (marker2.isVisible() == true) 
   {
-      document.querySelector(".petal-button").addEventListener("click", function () {
+     // document.querySelector(".petal-button").addEventListener("click", function () {
         // petal orientation tab
-        alert("Petal Orientation Tab"); 
+       // alert("Petal Orientation Tab"); 
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "visible";
@@ -63,8 +63,8 @@ window.onload = function () {
         document.querySelector(".leafFusionButtons").style.display = "none";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
-      });
-  }
+     // })
+  };
 
   //if (marker.isVisible() == true) 
   //{
