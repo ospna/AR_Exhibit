@@ -285,6 +285,7 @@ function draw() {
   if (marker1.isVisible() == true) 
   {
         document.querySelector(".size-button").style.visibility = "visible";
+        document.querySelector(".size-button").style.display = "flex";
         document.querySelector(".sizeButtons").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.display = "flex";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -300,6 +301,7 @@ function draw() {
   if (marker2.isVisible() == true) 
   {
         document.querySelector(".petal-button").style.visibility = "visible";
+        document.querySelector(".petal-button").style.display = "flex";
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "visible";
@@ -315,6 +317,7 @@ function draw() {
   if (marker3.isVisible() == true)  // FLOWER TAB
   {
       document.querySelector(".flower-button").style.visibility = "visible";
+      document.querySelector(".flower-button").style.display = "flex";
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
