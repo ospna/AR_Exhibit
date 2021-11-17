@@ -262,8 +262,8 @@ function draw() {
     // so have to rotate the individual objects (planes) instead
     
 
-    plane3.rotateY(normalRot);
-    plane3.rotateY(normalRot2);
+    //plane1.rotateY(normalRot);
+    //plane2.rotateY(normalRot2);
 
   if (marker1.isVisible() == true) 
   {
@@ -279,8 +279,7 @@ function draw() {
         document.querySelector(".leafFusionButtons").style.display = "none";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
-        setup();
-        draw();
+        plane1.rotateY(normalRot);
   }
   if (marker2.isVisible() == true) 
   {
@@ -296,8 +295,7 @@ function draw() {
         document.querySelector(".leafFusionButtons").style.display = "none";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
-        setup();
-        draw();
+        plane2.rotateY(normalRot2);
   }
   /*
   if (marker3.isVisible() == true)  // FLOWER TAB
