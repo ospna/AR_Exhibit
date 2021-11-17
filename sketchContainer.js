@@ -169,7 +169,7 @@ container2 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
 
-container2 = new Box({
+container3 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
 
