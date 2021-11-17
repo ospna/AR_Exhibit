@@ -66,7 +66,7 @@ window.onload = function () {
         document.querySelector(".colorButtons").style.display = "none";
      // })
   }
-  */
+
 
   //if (marker.isVisible() == true) 
   //{
@@ -116,7 +116,6 @@ window.onload = function () {
         document.querySelector(".leafFusionButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.visibility = "hidden";
       });
-      */
 
  // if (marker.isVisible() == true) 
   //{ 
@@ -135,6 +134,7 @@ window.onload = function () {
         document.querySelector(".colorButtons").style.display = "flex";
       });
  // }
+ */
 
 
 

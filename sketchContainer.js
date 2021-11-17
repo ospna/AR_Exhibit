@@ -149,6 +149,10 @@ function setup() {
   // grab a reference to the marker that we set up on the HTML side (connect to it using its 'id')
   marker1 = world.getMarker('patt1');
   marker2 = world.getMarker('patt2');
+  //marker3 = world.getMarker('patt3');
+  //marker4 = world.getMarker('patt4');
+  //marker5 = world.getMarker('patt5');
+  //marker6 = world.getMarker('patt6');
   //marker3 = world.getMarker('hiro');
 
 
@@ -162,12 +166,11 @@ container = new Box({
 });
 
 marker1.addChild( container );
-
-container2 = new Box({
-  x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
-});
-
-marker2.addChild( container2 );
+marker2.addChild( container );
+marker3.addChild( container );
+marker4.addChild( container );
+marker5.addChild( container );
+marker6.addChild( container );
 
 // intent behing this 'container" box was that *it* would rotate to face the camera using a single line of code,
 // rather than rotating every plane contained in the box individually.
@@ -195,8 +198,15 @@ function draw() {
     // which allows us to rotate the objects attached to that marker toward the camera
     let rot = marker1.tag.object3D.rotation;
     let rot2 = marker2.tag.object3D.rotation;
+    let rot3 = marker1.tag.object3D.rotation;
+    let rot4 = marker2.tag.object3D.rotation;
+    let rot5 = marker1.tag.object3D.rotation;
+
     let normalRot = degrees(rot.z);
     let normalRot2 = degrees(rot2.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
+    let normalRot3 = degrees(rot3.z);
+    let normalRot4 = degrees(rot4.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
+    let normalRot5 = degrees(rot5.z);
 
 
     p5graphics.noFill();
@@ -238,9 +248,6 @@ function draw() {
 
   if (marker1.isVisible() == true) 
   {
-      //document.querySelector(".size-button").addEventListener("click", function () {
-        // size tab 
-        //alert("Change Size Tab"); 
         document.querySelector(".sizeButtons").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.display = "flex";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -251,13 +258,9 @@ function draw() {
         document.querySelector(".leafFusionButtons").style.display = "none";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
-      //});
   }
   if (marker2.isVisible() == true) 
   {
-     // document.querySelector(".petal-button").addEventListener("click", function () {
-        // petal orientation tab
-       // alert("Petal Orientation Tab"); 
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "visible";
@@ -268,8 +271,66 @@ function draw() {
         document.querySelector(".leafFusionButtons").style.display = "none";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
-     // })
   }
+  if (marker3.isVisible() == true) 
+  {
+        document.querySelector(".sizeButtons").style.visibility = "hidden";
+        document.querySelector(".sizeButtons").style.display = "none";
+        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+        document.querySelector(".petalOrientButtons").style.display = "none";
+        document.querySelector(".flowerOrientButtons").style.visibility = "visible";
+        document.querySelector(".flowerOrientButtons").style.display = "flex";
+        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+        document.querySelector(".leafFusionButtons").style.display = "none";
+        document.querySelector(".colorButtons").style.visibility = "hidden";
+        document.querySelector(".colorButtons").style.display = "none";
+  }
+  if (marker4.isVisible() == true) 
+  {
+      document.querySelector(".sizeButtons").style.visibility = "hidden";
+      document.querySelector(".sizeButtons").style.display = "none";
+      document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+      document.querySelector(".petalOrientButtons").style.display = "none";
+      document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+      document.querySelector(".flowerOrientButtons").style.display = "none";
+      document.querySelector(".leafFusionButtons").style.visibility = "visible";
+      document.querySelector(".leafFusionButtons").style.display = "flex";
+      document.querySelector(".colorButtons").style.visibility = "hidden";
+      document.querySelector(".colorButtons").style.display = "none";
+  }
+  if (marker5.isVisible() == true) 
+  //{ 
+      document.querySelector(".color-button").addEventListener("click", function () {
+        // color tab
+        alert("Honeysuckle Color Tab"); 
+        document.querySelector(".sizeButtons").style.visibility = "hidden";
+        document.querySelector(".sizeButtons").style.display = "none";
+        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+        document.querySelector(".petalOrientButtons").style.display = "none";
+        document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+        document.querySelector(".flowerOrientButtons").style.display = "none";
+        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+        document.querySelector(".leafFusionButtons").style.display = "none";
+        document.querySelector(".colorButtons").style.visibility = "visible";
+        document.querySelector(".colorButtons").style.display = "flex";
+      });
+  /*if (marker6.isVisible() == true) 
+  //{ 
+      document.querySelector(".color-button").addEventListener("click", function () {
+        // color tab
+        alert("Honeysuckle Color Tab"); 
+        document.querySelector(".sizeButtons").style.visibility = "hidden";
+        document.querySelector(".sizeButtons").style.display = "none";
+        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+        document.querySelector(".petalOrientButtons").style.display = "none";
+        document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+        document.querySelector(".flowerOrientButtons").style.display = "none";
+        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+        document.querySelector(".leafFusionButtons").style.display = "none";
+        document.querySelector(".colorButtons").style.visibility = "visible";
+        document.querySelector(".colorButtons").style.display = "flex";
+      });
+ // } */
   else
   {
         document.querySelector(".sizeButtons").style.visibility = "hidden";
