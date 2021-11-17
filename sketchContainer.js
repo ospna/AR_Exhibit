@@ -198,7 +198,7 @@ function draw() {
     // get the rotation of the AR marker relative to the camera,
     // which allows us to rotate the objects attached to that marker toward the camera
     let rot = marker1.tag.object3D.rotation;
-    let rot = marker2.tag.object3D.rotation;
+    let rot2 = marker2.tag.object3D.rotation;
 
     //let rot3 = marker3.tag.object3D.rotation;
    // let rot4 = marker4.tag.object3D.rotation;
@@ -206,6 +206,7 @@ function draw() {
    // let rot6 = marker6.tag.object3D.rotation;
 
     let normalRot = degrees(rot.z);
+    let normalRot2 = degrees(rot2.z);
     //let normalRot2 = degrees(rot2.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
     //let normalRot3 = degrees(rot3.z);
     //let normalRot4 = degrees(rot4.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
@@ -248,6 +249,7 @@ function draw() {
     
 
     plane3.rotateY(normalRot);
+    plane3.rotateY(normalRot2)
 
   if (marker1.isVisible() == true) 
   {
@@ -342,6 +344,8 @@ function draw() {
   }*/
   else
   {
+        document.querySelector(".navButtons").style.visibility = "hidden";
+        document.querySelector(".navButtons").style.display = "none";
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -353,7 +357,6 @@ function draw() {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
   }
-
 }
 
 function createVine() {
