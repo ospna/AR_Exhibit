@@ -165,8 +165,12 @@ container = new Box({
     x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
 
+container2 = new Box({
+  x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
+});
+
 marker1.addChild( container );
-marker2.addChild( container );
+marker2.addChild( container2 );
 
 //marker3.addChild( container );
 //marker4.addChild( container );
@@ -178,7 +182,7 @@ marker2.addChild( container );
 // but the coordinate system in A-Frame is weird... still haven't figured out how to make the container rotate as expected
 // toward the camer, around the Y axis
 
-  plane3 = new Plane({
+  plane1 = new Plane({
     x:0, y:0, z:1.0,
     //red:0, green:0, blue:255,
     width:1, height:1,
@@ -187,7 +191,18 @@ marker2.addChild( container );
     // https://p5js.org/reference/#/p5.Graphics
     // find the simple code drawing random ellipsed in the draw loop below
   });
-  container.addChild( plane3 );
+  container.addChild( plane1 );
+
+  plane2 = new Plane({
+    x:0, y:0, z:1.0,
+    //red:0, green:0, blue:255,
+    width:1, height:1,
+    asset:'p5graphics' 
+    // this plane is textured by a p5.graphics object
+    // https://p5js.org/reference/#/p5.Graphics
+    // find the simple code drawing random ellipsed in the draw loop below
+  });
+  container2.addChild( plane2 );
 }
 
 
