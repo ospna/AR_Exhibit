@@ -287,6 +287,8 @@ function draw() {
   {
         //document.querySelector(".size-button").style.visibility = "visible";
         //document.querySelector(".size-button").style.display = "flex";
+        document.querySelector(".navButtons").style.visibility = "visible";
+        document.querySelector(".navButtons").style.display = "flex";
         document.querySelector(".sizeButtons").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.display = "flex";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -303,6 +305,8 @@ function draw() {
   {
         //document.querySelector(".petal-button").style.visibility = "visible";
         //document.querySelector(".petal-button").style.display = "flex";
+        document.querySelector(".navButtons").style.visibility = "visible";
+        document.querySelector(".navButtons").style.display = "flex";
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "visible";
@@ -319,6 +323,8 @@ function draw() {
   {
       //document.querySelector(".flower-button").style.visibility = "visible";
       //document.querySelector(".flower-button").style.display = "flex";
+      document.querySelector(".navButtons").style.visibility = "visible";
+      document.querySelector(".navButtons").style.display = "flex";
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
