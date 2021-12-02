@@ -114,11 +114,11 @@ function setup() {
   world = new World('ARScene');
 
   // grab a reference to the marker that we set up on the HTML side (connect to it using its 'id')
-  marker1 = world.getMarker('patt-size');
-  marker2 = world.getMarker('patt-pet-orient');
-  marker3 = world.getMarker('patt-flow-orient');
-  marker4 = world.getMarker('patt-fusion');
-  marker5 = world.getMarker('patt-color');
+  marker1 = world.getMarker('patt1');
+  marker2 = world.getMarker('patt2');
+  marker3 = world.getMarker('patt3');
+  marker4 = world.getMarker('patt4');
+  marker5 = world.getMarker('patt5');
 
 
   // create some geometry to add to our marker
