@@ -110,6 +110,7 @@ nav ul
     align-items: center;
     text-align: center;
     justify-content: center;
+    z-index: 1000;
 }
 
 
@@ -123,6 +124,7 @@ nav ul
     padding: 5px 0;
     text-decoration: none;
     color: white;
+    z-index: 1000;
 }
   
 .logo a{
@@ -132,6 +134,7 @@ nav ul
     font-family: funkydori,sans-serif;
     font-weight: 700;
     font-style: normal;
+    z-index: 1000;
 }
 
 .logo-button {
@@ -147,6 +150,7 @@ nav ul
     height: 6em;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .size-button {
@@ -157,6 +161,7 @@ nav ul
     width: 6em;
     height: 3em;
     margin-left: .5em;
+    z-index: 1000;
 }
 
 .petal-button {
@@ -167,6 +172,7 @@ nav ul
     width: 6em;
     height: 3em;
     margin-left: .5em;
+    z-index: 1000;
 }
 
 .flower-button {
@@ -177,6 +183,7 @@ nav ul
     width: 6em;
     height: 3em;
     margin-left: .5em;
+    z-index: 1000;
 }
 
 .leaf-button {
@@ -187,6 +194,7 @@ nav ul
     width: 6em;
     height: 3em;
     margin-left: .5em;
+    z-index: 1000;
 }
 
 /*
@@ -210,6 +218,7 @@ nav ul
     width: 6em;
     height: 3em;
     margin-left: .5em;
+    z-index: 1000;
 }
 
 .petalOrientButtons {
