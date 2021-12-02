@@ -43,7 +43,9 @@ window.onload = function ()
         alert("You will be building a Large Honeysuckle!");
       });
 
+
       // ---------------------------- Petal Orientation Buttons --------------------------------------------- //
+
 
       document.querySelector(".radial-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
@@ -72,8 +74,6 @@ window.onload = function ()
       });
 
 
-
-
       // ---------------------------- Flower Orientation Buttons -------------------------------------------- //
 
 
@@ -92,8 +92,6 @@ window.onload = function ()
       });
 
 
-
-
       // ---------------------------- Leaf Fusion Buttons --------------------------------------------------- //
 
 
@@ -110,8 +108,6 @@ window.onload = function ()
         // or you can just open links, trigger actions...
         alert("Your honeysuckle will have Unfused leaves!"); 
       });
-
-
 
 
       // ------------------------------- Color Buttons ---------------------------------------------------- //
@@ -151,8 +147,6 @@ window.onload = function ()
         // or you can just open links, trigger actions...
         alert("Your honeysuckle will be orange!"); 
       });
-
-
 
 
       /* CODE FOR ATTRIBUTING SETTING */
