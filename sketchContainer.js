@@ -2,7 +2,7 @@
 var world;
 
 // create a variable to hold our marker
-var marker1, marker2, marker3;
+var marker1, marker2, marker3, marker4, marker5;
 
 // create variables to hold each plane
 var plane1, plane2, plane3, plane4, plane5;
@@ -22,40 +22,6 @@ var setLeafType;
 var setFlowerType;
 
 /*
-<img src="images/AR Media/Radial/radial_pendulus_large-01.svg" id="radial_pendulus_large-01">
-            <img src="images/AR Media/Radial/radial_pendulus_medium-01.svg" id="radial_pendulus_medium-01">
-            <img src="images/AR Media/Radial/radial_pendulus_small-01.svg" id="radial_pendulus_small-01">
-
-            <img src="images/AR Media/Radial/radial_upright_large-01.svg" id="radial_upright_large-01">
-            <img src="images/AR Media/Radial/radial_upright_medium-01.svg" id="radial_upright_medium-01">
-            <img src="images/AR Media/Radial/radial_upright_small-01.svg" id="radial_upright_small-01">
-            
-            <!-- 2+2+1 Petal Orientation -->
-            <img src="images/AR Media/221/221_pendulus_large-01.svg" id="221_pendulus_large-01">
-            <img src="images/AR Media/221/221_pendulus_medium-01.svg" id="221_pendulus_medium-01">
-            <img src="images/AR Media/221/221_pendulus_small-01.svg" id="221_pendulus_small-01">
-
-            <img src="images/AR Media/221/221_upright_large-01.svg" id="221_upright_large-01">
-            <img src="images/AR Media/221/221_upright_medium-01.svg" id="221_upright_medium-01">
-            <img src="images/AR Media/221/221_upright_small-01.svg" id="221_upright_small-01">
-
-            <!-- 4+1 Petal Orientation -->
-            <img src="images/AR Media/41/41_pendulus_large-01.svg" id="41_pendulus_large-01">
-            <img src="images/AR Media/41/41_pendulus_medium-01.svg" id="41_pendulus_medium-01">
-            <img src="images/AR Media/41/41_pendulus_small-01.svg" id="41_pendulus_small-01">
-
-            <img src="images/AR Media/41/41_upright_large-01.svg" id="41_upright_large-01">
-            <img src="images/AR Media/41/41_upright_medium-01.svg" id="41_upright_medium-01">
-            <img src="images/AR Media/41/41_upright_small-01.svg" id="41_upright_small-01">
-
-            <!-- Unfused Leaf Fusion -->
-            <img src="images/AR Media/unfused_leaves-01.svg" id="unfused_leaves-01">
-
-            <!-- Fused Leaf Fusion -->
-            <img src="images/AR Media/fused_leaves-01.svg" id="fused_leaves-01">
-              
-            </img>
-
 // arrays for buttons/UI
 var leafShape = [leaf];
 var leafSize = [60, 40, 80];
@@ -87,6 +53,7 @@ function setup() {
     sprouts = [];
     parts = [];
     createVine();
+    draw();
 
     let rotationRange = 10;
     let p;
@@ -147,13 +114,11 @@ function setup() {
   world = new World('ARScene');
 
   // grab a reference to the marker that we set up on the HTML side (connect to it using its 'id')
-  marker1 = world.getMarker('patt1');
-  marker2 = world.getMarker('patt2');
-  marker3 = world.getMarker('patt3');
-  //marker4 = world.getMarker('patt4');
-  //marker5 = world.getMarker('patt5');
-  //marker6 = world.getMarker('patt6');
-  //marker3 = world.getMarker('hiro');
+  marker1 = world.getMarker('patt-size');
+  marker2 = world.getMarker('patt-pet-orient');
+  marker3 = world.getMarker('patt-flow-orient');
+  marker4 = world.getMarker('patt-fusion');
+  marker5 = world.getMarker('patt-color');
 
 
   // create some geometry to add to our marker
@@ -161,8 +126,8 @@ function setup() {
   // the x-axis runs left and right
   // -0.5, 0, -0.5 is the top left corner
 
-container = new Box({
-    x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
+container1 = new Box({
+  x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
 
 container2 = new Box({
@@ -173,14 +138,19 @@ container3 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
 
-marker1.addChild( container );
+container4 = new Box({
+  x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
+});
+
+container5 = new Box({
+  x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
+});
+
+marker1.addChild( container1 );
 marker2.addChild( container2 );
 marker3.addChild( container3 );
-
-//marker3.addChild( container );
-//marker4.addChild( container );
-//marker5.addChild( container );
-//marker6.addChild( container );
+marker4.addChild( container4 );
+marker5.addChild( container5 );
 
 // intent behing this 'container" box was that *it* would rotate to face the camera using a single line of code,
 // rather than rotating every plane contained in the box individually.
@@ -196,7 +166,7 @@ marker3.addChild( container3 );
     // https://p5js.org/reference/#/p5.Graphics
     // find the simple code drawing random ellipsed in the draw loop below
   });
-  container.addChild( plane1 );
+  container1.addChild( plane1 );
 
   plane2 = new Plane({
     x:0, y:0, z:1.0,
@@ -219,8 +189,29 @@ marker3.addChild( container3 );
     // find the simple code drawing random ellipsed in the draw loop below
   });
   container3.addChild( plane3 );
-}
 
+  plane4 = new Plane({
+    x:0, y:0, z:1.0,
+    //red:0, green:0, blue:255,
+    width:1, height:1,
+    asset:'p5graphics' 
+    // this plane is textured by a p5.graphics object
+    // https://p5js.org/reference/#/p5.Graphics
+    // find the simple code drawing random ellipsed in the draw loop below
+  });
+  container4.addChild( plane4 );
+
+  plane5 = new Plane({
+    x:0, y:0, z:1.0,
+    //red:0, green:0, blue:255,
+    width:1, height:1,
+    asset:'p5graphics' 
+    // this plane is textured by a p5.graphics object
+    // https://p5js.org/reference/#/p5.Graphics
+    // find the simple code drawing random ellipsed in the draw loop below
+  });
+  container5.addChild( plane5 );
+}
 
 function draw() {
 
@@ -228,21 +219,17 @@ function draw() {
 
     // get the rotation of the AR marker relative to the camera,
     // which allows us to rotate the objects attached to that marker toward the camera
-    let rot = marker1.tag.object3D.rotation;
+    let rot1 = marker1.tag.object3D.rotation;
     let rot2 = marker2.tag.object3D.rotation;
     let rot3 = marker3.tag.object3D.rotation;
+    let rot4 = marker4.tag.object3D.rotation;
+    let rot5 = marker5.tag.object3D.rotation;
 
-   // let rot4 = marker4.tag.object3D.rotation;
-   // let rot5 = marker5.tag.object3D.rotation;
-   // let rot6 = marker6.tag.object3D.rotation;
-
-    let normalRot = degrees(rot.z);
+    let normalRot1 = degrees(rot1.z);
     let normalRot2 = degrees(rot2.z);
     let normalRot3 = degrees(rot3.z);
-    //let normalRot2 = degrees(rot2.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
-    //let normalRot3 = degrees(rot3.z);
-    //let normalRot4 = degrees(rot4.z);// + Math.ceil(-1 * degrees(rot.y) / 360) * 360;
-   // let normalRot5 = degrees(rot5.z);
+    let normalRot4 = degrees(rot4.z);
+    let normalRot5 = degrees(rot5.z);
 
     p5graphics.noFill();
     p5graphics.strokeWeight(4);
@@ -272,16 +259,16 @@ function draw() {
 
     //var markerRotation = marker.getRotationY();
 
-    
-
+  
     // container.rotateY(normalRot);
     // should be able to just rotate the containing box, but it ain't working
     // so have to rotate the individual objects (planes) instead
     
-
-    plane1.rotateY(normalRot);
+    plane1.rotateY(normalRot1);
     plane2.rotateY(normalRot2);
     plane3.rotateY(normalRot3);
+    plane4.rotateY(normalRot4);
+    plane5.rotateY(normalRot5);
 
   if (marker1.isVisible() == true) // SIZE TAB
   {
@@ -321,7 +308,7 @@ function draw() {
         document.querySelector(".colorButtons").style.display = "none";
         */
   }
-  if (marker3.isVisible() == true)  // FLOWER TAB
+  if (marker3.isVisible() == true)  // FLOWER ORIENTATION TAB
   {
       //document.querySelector(".flower-button").style.visibility = "visible";
       //document.querySelector(".flower-button").style.display = "flex";
@@ -342,26 +329,38 @@ function draw() {
       document.querySelector(".colorButtons").style.display = "none";
       */
   }
-  /*
   if (marker4.isVisible() == true)  // LEAF FUSION TAB
   {
+    /*
       document.querySelector(".leaf-button").style.visibility = "hidden";
       document.querySelector(".leaf-button").style.display = "none";
+      */
+      document.querySelector(".navButtons").style.visibility = "visible";
+      document.querySelector(".navButtons").style.display = "flex";
+      /*
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
       document.querySelector(".petalOrientButtons").style.display = "none";
       document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
       document.querySelector(".flowerOrientButtons").style.display = "none";
+      */
       document.querySelector(".leafFusionButtons").style.visibility = "visible";
       document.querySelector(".leafFusionButtons").style.display = "flex";
+      /*
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
+      */
   }
   if (marker5.isVisible() == true)  // COLOR TAB
   { 
+    /*
       document.querySelector(".color-button").style.visibility = "hidden";
       document.querySelector(".color-button").style.display = "none";
+      */
+      document.querySelector(".navButtons").style.visibility = "visible";
+      document.querySelector(".navButtons").style.display = "flex";
+      /*
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -370,24 +369,10 @@ function draw() {
       document.querySelector(".flowerOrientButtons").style.display = "none";
       document.querySelector(".leafFusionButtons").style.visibility = "hidden";
       document.querySelector(".leafFusionButtons").style.display = "none";
+      */
       document.querySelector(".colorButtons").style.visibility = "visible";
       document.querySelector(".colorButtons").style.display = "flex";
-  )
-  if (marker6.isVisible() == true) // GROWTH TAB
-  { 
-      document.querySelector(".growth-button").style.visibility = "hidden";
-      document.querySelector(".growth-button").style.display = "none";
-      document.querySelector(".sizeButtons").style.visibility = "hidden";
-      document.querySelector(".sizeButtons").style.display = "none";
-      document.querySelector(".petalOrientButtons").style.visibility = "hidden";
-      document.querySelector(".petalOrientButtons").style.display = "none";
-      document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
-      document.querySelector(".flowerOrientButtons").style.display = "none";
-      document.querySelector(".leafFusionButtons").style.visibility = "hidden";
-      document.querySelector(".leafFusionButtons").style.display = "none";
-      document.querySelector(".colorButtons").style.visibility = "visible";
-      document.querySelector(".colorButtons").style.display = "flex";
-  }*/
+  }
   else
   {
         document.querySelector(".navButtons").style.visibility = "hidden";

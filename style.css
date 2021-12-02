@@ -307,10 +307,12 @@ nav ul
 */
 
 
+/* ---------------------------- Size Buttons --------------------------------------------- */
+
 .small-scale-button {
     border-radius: 6px;
     border: black;
-    background:url('images/small-size.png');
+    background:url('images/size_buttons/small.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -321,7 +323,7 @@ nav ul
 .medium-scale-button {
     border-radius: 6px;
     border: black;
-    background:url('images/medium-size.png');
+    background:url('images/size_buttons/medium.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -332,7 +334,7 @@ nav ul
 .large-scale-button {
     border-radius: 6px;
     border: black;
-    background:url('images/large-size.png');
+    background:url('images/size_buttons/large.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -340,10 +342,12 @@ nav ul
     margin-left: 2em;
 }
 
+/* ---------------------------- Petal Orientation Buttons --------------------------------------------- */
+
 .radial-button {
     border-radius: 6px;
     border: black;
-    background:url('images/pattern-radial1.png');
+    background:url('images/petal_orient_buttons/radial.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -354,7 +358,7 @@ nav ul
 .two21-button {
     border-radius: 6px;
     border: black;
-    background:url('images/pattern-221.png');
+    background:url('images/petal_orient_buttons/2-2-1.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -365,7 +369,7 @@ nav ul
 .four1-button {
     border-radius: 6px;
     border: black;
-    background:url('images/pattern-41.png');
+    background:url('images/petal_orient_buttons/4-1.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -373,10 +377,12 @@ nav ul
     margin-left: 2em;
 }
 
+/* ---------------------------- Flower Orientation Buttons --------------------------------------------- */
+
 .pendulus-button {
     border-radius: 6px;
     border: black;
-    background:url('images/pattern-flowers-pendulus.png');
+    background:url('images/flower_orient_buttons/pendulus.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -387,7 +393,7 @@ nav ul
 .upright-button {
     border-radius: 6px;
     border: black;
-    background:url('images/pattern-flowers_erect.png');
+    background:url('images/flower_orient_buttons/upright.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -395,10 +401,12 @@ nav ul
     margin-left: 2em;
 }
 
+/* ---------------------------- Leaf Fusion Buttons --------------------------------------------- */
+
 .fused-button {
     border-radius: 6px;
     border: black;
-    background:url('images/fused-leaves.png');
+    background:url('images/leaf_fusion_buttons/fused.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -409,7 +417,7 @@ nav ul
 .unfused-button {
     border-radius: 6px;
     border: black;
-    background:url('images/unfused-leaves.png');
+    background:url('images/leaf_fusion_buttons/unfused.png');
     background-size: cover;
     color: black;
     width: 8em;
@@ -417,40 +425,24 @@ nav ul
     margin-left: 2em;
 }
 
-.yellow-button {
-    border-radius: 6px;
-    border: black;
-    background-color: yellow;
-    color: black;
-    width: 6em;
-    height: 6em;
-    margin-left: 1em;
-}
+/* ---------------------------- Color Buttons --------------------------------------------- */
 
 .white-button {
     border-radius: 6px;
     border: black;
-    background-color: white;
+    background:url('images/color_buttons/white.png');
+    background-size: cover;
     color: black;
     width: 6em;
     height: 6em;
     margin-left: 1em;
 }
 
-.red-button {
+.yellow-button {
     border-radius: 6px;
     border: black;
-    background-color: red;
-    color: black;
-    width: 6em;
-    height: 6em;
-    margin-left: 1em;
-}
-
-.pink-button {
-    border-radius: 6px;
-    border: black;
-    background-color:pink;
+    background:url('images/color_buttons/yellow.png');
+    background-size: cover;
     color: black;
     width: 6em;
     height: 6em;
@@ -460,7 +452,63 @@ nav ul
 .orange-button {
     border-radius: 6px;
     border: black;
-    background-color:orange;
+    background:url('images/color_buttons/orange.png');
+    background-size: cover;
+    color: black;
+    width: 6em;
+    height: 6em;
+    margin-left: 1em;
+}
+
+.pink-button {
+    border-radius: 6px;
+    border: black;
+    background:url('images/color_buttons/pink.png');
+    background-size: cover;
+    color: black;
+    width: 6em;
+    height: 6em;
+    margin-left: 1em;
+}
+
+.red-button {
+    border-radius: 6px;
+    border: black;
+    background:url('images/color_buttons/red.png');
+    background-size: cover;
+    color: black;
+    width: 6em;
+    height: 6em;
+    margin-left: 1em;
+}
+
+.purple-button {
+    border-radius: 6px;
+    border: black;
+    background:url('images/color_buttons/purple.png');
+    background-size: cover;
+    color: black;
+    width: 6em;
+    height: 6em;
+    margin-left: 1em;
+}
+
+.blue-button {
+    border-radius: 6px;
+    border: black;
+    background:url('images/color_buttons/blue.png');
+    background-size: cover;
+    color: black;
+    width: 6em;
+    height: 6em;
+    margin-left: 1em;
+}
+
+.green-button {
+    border-radius: 6px;
+    border: black;
+    background:url('images/color_buttons/yellow.png');
+    background-size: cover;
     color: black;
     width: 6em;
     height: 6em;

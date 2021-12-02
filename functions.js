@@ -21,7 +21,6 @@
 window.onload = function () 
 {
       // ---------------------------- Size Buttons --------------------------------------------- //
-
       
       document.querySelector(".small-scale-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
@@ -44,11 +43,7 @@ window.onload = function ()
         alert("You will be building a Large Honeysuckle!");
       });
 
-
-
-
       // ---------------------------- Petal Orientation Buttons --------------------------------------------- //
-
 
       document.querySelector(".radial-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
