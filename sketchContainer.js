@@ -2,7 +2,7 @@
 var world;
 
 // create a variable to hold our marker
-var marker1, marker2, marker3, marker4, marker5;
+var marker1, marker2, marker3, marker4, marker5, marker6;
 
 // create variables to hold each plane
 var plane1, plane2, plane3, plane4, plane5;
@@ -53,7 +53,6 @@ function setup() {
     sprouts = [];
     parts = [];
     createVine();
-    draw();
 
     let rotationRange = 10;
     let p;
@@ -119,6 +118,7 @@ function setup() {
   marker3 = world.getMarker('patt3');
   marker4 = world.getMarker('patt4');
   marker5 = world.getMarker('patt5');
+  marker6 = world.getMarker('patt6');
 
 
   // create some geometry to add to our marker
