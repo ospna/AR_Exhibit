@@ -57,6 +57,7 @@ function setup() {
     markerLeaf = world.getMarker('patt4');
     markerColor = world.getMarker('patt5');
 
+    /*
     p5graphics = createGraphics(600, 600).id('p5graphics');
     angleMode(degrees);
     createCanvas(600, 600);
@@ -123,6 +124,7 @@ function setup() {
   // the marker is 1 meter x 1 meter, with the origin at the center
   // the x-axis runs left and right
   // -0.5, 0, -0.5 is the top left corner
+  */
 
 container1 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
