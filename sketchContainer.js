@@ -57,7 +57,6 @@ function setup() {
     markerLeaf = world.getMarker('patt4');
     markerColor = world.getMarker('patt5');
 
-    /*
     p5graphics = createGraphics(600, 600).id('p5graphics');
     angleMode(degrees);
     createCanvas(600, 600);
@@ -124,7 +123,6 @@ function setup() {
   // the marker is 1 meter x 1 meter, with the origin at the center
   // the x-axis runs left and right
   // -0.5, 0, -0.5 is the top left corner
-  */
 
 container1 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
@@ -263,12 +261,6 @@ function draw() {
     // container.rotateY(normalRot);
     // should be able to just rotate the containing box, but it ain't working
     // so have to rotate the individual objects (planes) instead
-    
-    plane1.rotateY(normalRot1);
-    plane2.rotateY(normalRot2);
-    plane3.rotateY(normalRot3);
-    plane4.rotateY(normalRot4);
-    plane5.rotateY(normalRot5);
 
   if (markerSize.isVisible() == true) // SIZE TAB
   {
@@ -284,6 +276,7 @@ function draw() {
         document.querySelector(".leafFusionButtons").style.display = "none";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
+        plane1.rotateY(normalRot1);
   }
   if (markerPetal.isVisible() == true) // PETAL ORIENTATION TAB
   {
@@ -299,6 +292,7 @@ function draw() {
         document.querySelector(".leafFusionButtons").style.display = "none";
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
+        plane2.rotateY(normalRot2);
   }
   if (markerFlower.isVisible() == true)  // FLOWER ORIENTATION TAB
   {
@@ -314,6 +308,7 @@ function draw() {
       document.querySelector(".leafFusionButtons").style.display = "none";
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
+      plane3.rotateY(normalRot3);
   }
   if (markerLeaf.isVisible() == true)  // LEAF FUSION TAB
   {
@@ -331,6 +326,7 @@ function draw() {
       document.querySelector(".leafFusionButtons").style.display = "flex";
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
+      plane4.rotateY(normalRot4);
   }
   if (markerColor.isVisible() == true)  // COLOR TAB
   { 
@@ -348,6 +344,7 @@ function draw() {
       document.querySelector(".leafFusionButtons").style.display = "none";
       document.querySelector(".colorButtons").style.visibility = "visible";
       document.querySelector(".colorButtons").style.display = "flex";
+      plane5.rotateY(normalRot5);
   }
   else
   {
