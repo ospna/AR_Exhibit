@@ -328,12 +328,13 @@ function draw() {
       document.querySelector(".colorButtons").style.display = "none";
       plane4.rotateY(normalRot4);
   }
+  /*
   if (markerColor.isVisible() == true)  // COLOR TAB
   { 
     /*
       document.querySelector(".color-button").style.visibility = "hidden";
       document.querySelector(".color-button").style.display = "none";
-      */
+      /
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -345,7 +346,7 @@ function draw() {
       document.querySelector(".colorButtons").style.visibility = "visible";
       document.querySelector(".colorButtons").style.display = "flex";
       plane5.rotateY(normalRot5);
-  }
+  } */
   else
   {
       document.querySelector(".navButtons").style.visibility = "hidden";
