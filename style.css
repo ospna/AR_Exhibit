@@ -275,10 +275,8 @@ nav ul
     width: 50em;
     height: 5em;
     display: grid;
-    grid-template-columns: 8em 8em 8em 8em;
-    grid-column-gap: 10px;
-    grid-row-gap: 20px;
-    justify-content: center;
+    grid-template-columns: 6em 6em 6em 6em;
+    grid-row-gap: 1em;
     justify-content: center;
     align-items: center;
     z-index: 1500;
