@@ -371,18 +371,18 @@ function draw() {
   }
   else
   {
-        document.querySelector(".navButtons").style.visibility = "hidden";
-        document.querySelector(".navButtons").style.display = "none";
-        document.querySelector(".sizeButtons").style.visibility = "hidden";
-        document.querySelector(".sizeButtons").style.display = "none";
-        document.querySelector(".petalOrientButtons").style.visibility = "hidden";
-        document.querySelector(".petalOrientButtons").style.display = "none";
-        document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
-        document.querySelector(".flowerOrientButtons").style.display = "none";
-        document.querySelector(".leafFusionButtons").style.visibility = "hidden";
-        document.querySelector(".leafFusionButtons").style.display = "none";
-        document.querySelector(".colorButtons").style.visibility = "hidden";
-        document.querySelector(".colorButtons").style.display = "none";
+      document.querySelector(".navButtons").style.visibility = "hidden";
+      document.querySelector(".navButtons").style.display = "none";
+      document.querySelector(".sizeButtons").style.visibility = "hidden";
+      document.querySelector(".sizeButtons").style.display = "none";
+      document.querySelector(".petalOrientButtons").style.visibility = "hidden";
+      document.querySelector(".petalOrientButtons").style.display = "none";
+      document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
+      document.querySelector(".flowerOrientButtons").style.display = "none";
+      document.querySelector(".leafFusionButtons").style.visibility = "hidden";
+      document.querySelector(".leafFusionButtons").style.display = "none";
+      document.querySelector(".colorButtons").style.visibility = "hidden";
+      document.querySelector(".colorButtons").style.display = "none";
   }
 }
 

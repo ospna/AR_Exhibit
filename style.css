@@ -197,19 +197,6 @@ nav ul
     z-index: 1000;
 }
 
-/*
-.growth-button {
-    border-radius: 2px;
-    border: black;
-    background: gold;
-    color: black;
-    width: 6em;
-    height: 3em;
-    margin-left: .5em;
-    font-size: .75rem;
-}
-*/
-
 .color-button {
     border-radius: 2px;
     border: black;
