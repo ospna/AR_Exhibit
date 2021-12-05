@@ -351,8 +351,8 @@ function draw() {
       plane5.rotateY(normalRot5);
   };
 
-  /*
-  if(markerSize && markerPetal && markerFlower && markerLeaf && markerColor == null)
+  
+  if(markerSize.isVisible() == false && markerPetal.isVisible() == false && markerFlower.isVisible() == false && markerLeaf.isVisible() == false && markerColor.isVisible() == false)
   {
       document.querySelector(".navButtons").style.visibility = "hidden";
       document.querySelector(".navButtons").style.display = "none";
@@ -366,8 +366,7 @@ function draw() {
       document.querySelector(".leafFusionButtons").style.display = "none";
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
-  }
-  */
+  };
 }
 
 function createVine() {
