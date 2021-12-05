@@ -274,6 +274,7 @@ nav ul
     bottom: 5%;
     width: 50em;
     height: 5em;
+    display: grid;
     grid-template-columns: 8em 8em 8em 8em;
     grid-column-gap: 10px;
     grid-row-gap: 20px;
