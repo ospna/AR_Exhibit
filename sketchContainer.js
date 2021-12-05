@@ -347,7 +347,7 @@ function draw() {
       document.querySelector(".leafFusionButtons").style.visibility = "hidden";
       document.querySelector(".leafFusionButtons").style.display = "none";
       document.querySelector(".colorButtons").style.visibility = "visible";
-      document.querySelector(".colorButtons").style.display = "flex";
+      document.querySelector(".colorButtons").style.display = "grid";
       plane5.rotateY(normalRot5);
   };
 
