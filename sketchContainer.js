@@ -2,7 +2,7 @@
 var world;
 
 // create a variable to hold our marker
-var marker1, marker2, marker3, marker4, marker5, marker6;
+var markerSize, markerPetal, markerFlower, markerLeaf, markerColor;
 
 // create variables to hold each plane
 var plane1, plane2, plane3, plane4, plane5;
@@ -46,6 +46,16 @@ function preload(){
 }
 
 function setup() {
+
+    // create our world (this also creates a p5 canvas for us)
+    world = new World('ARScene');
+
+    // grab a reference to the marker that we set up on the HTML side (connect to it using its 'id')
+    markerSize = world.getMarker('patt1');
+    markerPetal = world.getMarker('patt2');
+    markerFlower = world.getMarker('patt3');
+    markerLeaf = world.getMarker('patt4');
+    markerColor = world.getMarker('patt5');
 
     p5graphics = createGraphics(600, 600).id('p5graphics');
     angleMode(degrees);
@@ -109,18 +119,6 @@ function setup() {
       parts.push(p);
     }
 
-  // create our world (this also creates a p5 canvas for us)
-  world = new World('ARScene');
-
-  // grab a reference to the marker that we set up on the HTML side (connect to it using its 'id')
-  marker1 = world.getMarker('patt1');
-  marker2 = world.getMarker('patt2');
-  marker3 = world.getMarker('patt3');
-  marker4 = world.getMarker('patt4');
-  marker5 = world.getMarker('patt5');
-  marker6 = world.getMarker('patt6');
-
-
   // create some geometry to add to our marker
   // the marker is 1 meter x 1 meter, with the origin at the center
   // the x-axis runs left and right
@@ -148,11 +146,11 @@ container5 = new Box({
 });
 */
 
-marker1.addChild( container1 );
-marker2.addChild( container1 );
-marker3.addChild( container1 );
-marker4.addChild( container1 );
-marker5.addChild( container1 );
+markerSize.addChild( container1 );
+markerPetal.addChild( container1 );
+markerFlower.addChild( container1 );
+markerLeaf.addChild( container1 );
+markerColor.addChild( container1 );
 
 // intent behing this 'container" box was that *it* would rotate to face the camera using a single line of code,
 // rather than rotating every plane contained in the box individually.
@@ -280,12 +278,10 @@ function draw() {
     plane5.rotateY(normalRot5);
     */
 
-  if (marker1.isVisible() == true) // SIZE TAB
+  if (markerSize.isVisible() == true) // SIZE TAB
   {
         //document.querySelector(".size-button").style.visibility = "visible";
         //document.querySelector(".size-button").style.display = "flex";
-        document.querySelector(".navButtons").style.visibility = "visible";
-        document.querySelector(".navButtons").style.display = "flex";
         document.querySelector(".sizeButtons").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.display = "flex";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -297,12 +293,10 @@ function draw() {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
   }
-  if (marker2.isVisible() == true) // PETAL ORIENTATION TAB
+  if (markerPetal.isVisible() == true) // PETAL ORIENTATION TAB
   {
         //document.querySelector(".petal-button").style.visibility = "visible";
         //document.querySelector(".petal-button").style.display = "flex";
-        document.querySelector(".navButtons").style.visibility = "visible";
-        document.querySelector(".navButtons").style.display = "flex";
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "visible";
@@ -314,12 +308,10 @@ function draw() {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
   }
-  if (marker3.isVisible() == true)  // FLOWER ORIENTATION TAB
+  if (markerFlower.isVisible() == true)  // FLOWER ORIENTATION TAB
   {
       //document.querySelector(".flower-button").style.visibility = "visible";
       //document.querySelector(".flower-button").style.display = "flex";
-      document.querySelector(".navButtons").style.visibility = "visible";
-      document.querySelector(".navButtons").style.display = "flex";
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -331,14 +323,12 @@ function draw() {
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
   }
-  if (marker4.isVisible() == true)  // LEAF FUSION TAB
+  if (markerLeaf.isVisible() == true)  // LEAF FUSION TAB
   {
     /*
       document.querySelector(".leaf-button").style.visibility = "hidden";
       document.querySelector(".leaf-button").style.display = "none";
       */
-      document.querySelector(".navButtons").style.visibility = "visible";
-      document.querySelector(".navButtons").style.display = "flex";
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -350,14 +340,12 @@ function draw() {
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
   }
-  if (marker5.isVisible() == true)  // COLOR TAB
+  if (markerColor.isVisible() == true)  // COLOR TAB
   { 
     /*
       document.querySelector(".color-button").style.visibility = "hidden";
       document.querySelector(".color-button").style.display = "none";
       */
-      document.querySelector(".navButtons").style.visibility = "visible";
-      document.querySelector(".navButtons").style.display = "flex";
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
