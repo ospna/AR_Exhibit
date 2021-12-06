@@ -18,6 +18,14 @@
     }
     */
 
+    //let leaf;
+
+    //let flower;
+
+    //var setLeafType;
+
+    //var setFlowerType;
+
     window.onload = function () 
     {
           // ---------------------------- Size Buttons --------------------------------------------- //
@@ -27,20 +35,28 @@
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("You will be building a Small Honeysuckle!"); 
+
+            leaf = loadImage("images/leaf.svg");
           });
+
           document.querySelector(".medium-scale-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("You will be building a Medium Honeysuckle!");
           });
+
           document.querySelector(".large-scale-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("You will be building a Large Honeysuckle!");
           });
+
+
           // ---------------------------- Petal Orientation Buttons --------------------------------------------- //
+
+
           document.querySelector(".radial-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
@@ -48,6 +64,7 @@
             alert("You chose the Radial Petal Orientation!"); 
             setFlowerType = loadImage("images/AR Media/Radial/radial_pendulus_large-01.svg");
           });
+
           document.querySelector(".two21-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
@@ -63,75 +80,96 @@
             alert("You chose the 4+1 Petal Orientation!"); 
             setFlowerType = loadImage("images/AR Media/41/41_pendulus_large-01.svg");
           });
+
+
           // ---------------------------- Flower Orientation Buttons -------------------------------------------- //
+
+
           document.querySelector(".pendulus-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have a Pendulus Flower Orientation!"); 
           });
+
           document.querySelector(".upright-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have an Upright Flower Orientation!"); 
           });
+
+
           // ---------------------------- Leaf Fusion Buttons --------------------------------------------------- //
+
+
           document.querySelector(".fused-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Fused leaves!"); 
           });
+
           document.querySelector(".unfused-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Unfused leaves!"); 
           });
+
+
           // ------------------------------- Color Buttons ---------------------------------------------------- //
+
+
           document.querySelector(".white-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will be white!"); 
           });
+
           document.querySelector(".yellow-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will be yellow!"); 
           });
+
           document.querySelector(".orange-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will be orange!"); 
           });
+
           document.querySelector(".pink-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will be pink!"); 
           });
+
           document.querySelector(".red-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will be red!"); 
           });
+
           document.querySelector(".purple-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will be purple!"); 
           });
+
           document.querySelector(".blue-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will be blue!"); 
           });
+
           document.querySelector(".green-button").addEventListener("click", function () {
             // here you can change also a-scene or a-entity properties, like
             // changing your 3D model source, size, position and so on
