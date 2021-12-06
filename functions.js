@@ -47,14 +47,14 @@ window.onload = function ()
       // ---------------------------- Petal Orientation Buttons --------------------------------------------- //
 
 
-      // document.querySelector(".radial-button").addEventListener("click", function () {
-      //   // here you can change also a-scene or a-entity properties, like
-      //   // changing your 3D model source, size, position and so on
-      //   // or you can just open links, trigger actions...
-      //   alert("You chose the Radial Petal Orientation!"); 
+      document.querySelector(".radial-button").addEventListener("click", function () {
+        // here you can change also a-scene or a-entity properties, like
+        // changing your 3D model source, size, position and so on
+        // or you can just open links, trigger actions...
+        alert("You chose the Radial Petal Orientation!"); 
 
-      //   setFlowerType = loadImage("images/AR Media/Radial/radial_pendulus_large-01.svg");
-      // });
+        setFlowerType = loadImage("images/AR Media/Radial/radial_pendulus_large-01.svg");
+      });
 
       document.querySelector(".two21-button").addEventListener("click", function () {
         // here you can change also a-scene or a-entity properties, like
