@@ -506,8 +506,9 @@ window.onload = function ()
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
         alert("You chose the Radial Petal Orientation!"); 
-
-        addParts(loadImage("images/leaf.svg"), loagImage("images/AR Media/Radial/radial_pendulus_large-01.svg"));
+        leaf = loadImage("images/leaf.svg");
+        flower = loadImage("images/AR Media/Radial/radial_pendulus_large-01.svg");
+        addParts(leaf, flower);
       });
 
       document.querySelector(".two21-button").addEventListener("click", function () {
