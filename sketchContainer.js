@@ -1,12 +1,18 @@
 // create a variable to hold our world object
 var world;
+
 // create a variable to hold our marker
 var markerSize, markerPetal, markerFlower, markerLeaf, markerColor;
+
 // create variables to hold each plane
 var plane1, plane2, plane3, plane4, plane5;
+
 let p5graphics;
+
 let x1, x2, x3, x4, y1, y2, y3, y4, r, posNeg;
+
 let sprouts;
+
 let parts;
 
 let leaf, flower;
@@ -16,6 +22,7 @@ let bounceAmount, bounceRate, previousRotation;
 var setLeafType;
 
 var setFlowerType;
+
 /*
 // arrays for buttons/UI
 var leafShape = [leaf];
@@ -30,12 +37,14 @@ var setFlowerShape;
 var setFlowerSize;
 var setFlowerDown;
 */
+
 function preload(){
   //leaf = setLeafType;
   //flower = setFlowerType;
   leaf = loadImage("images/leaf.svg");
   flower = loadImage("images/flower.svg");
 }
+
 function setup() {
     // create our world (this also creates a p5 canvas for us)
     world = new World('ARScene');
@@ -108,6 +117,7 @@ function setup() {
   // the marker is 1 meter x 1 meter, with the origin at the center
   // the x-axis runs left and right
   // -0.5, 0, -0.5 is the top left corner
+  
 container1 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
