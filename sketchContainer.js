@@ -69,58 +69,6 @@ function setup() {
     let rotationRange = 10;
     let p;
 
-    for (let s = 0; s < sprouts.length; s++) {
-      p = new Part(
-        "leaf",
-        leaf,
-        //setLeafShape,
-        sprouts[s][0],
-        sprouts[s][1],
-        60,
-        60,
-        // setLeafSize,
-        // setLeafSize,
-        -rotationRange + random(2 * rotationRange),
-        false,
-        true
-      );
-      parts.push(p);
-      p = new Part(
-        "leaf",
-        leaf,
-        // setLeafShape,
-        sprouts[s][0],
-        sprouts[s][1],
-        60,
-        60,
-        // setLeafSize,
-        // setLeafSize,
-        -rotationRange + random(2 * rotationRange),
-        true,
-        true
-      );
-      parts.push(p);
-    }
-    //draw flowers separately and after leaves to appear in front
-    for (let s = 0; s < sprouts.length; s++) {
-      p = new Part(
-        "flower",
-        flower,
-        //setFlowerShape,
-        sprouts[s][0],
-        sprouts[s][1],
-        60,
-        60,
-        // setFlowerSize,
-        // setFlowerSize,
-        -rotationRange + random(2 * rotationRange),
-        true,
-        false
-        //setFlowerDown
-      );
-      parts.push(p);
-    }
-
   // create some geometry to add to our marker
   // the marker is 1 meter x 1 meter, with the origin at the center
   // the x-axis runs left and right
@@ -211,6 +159,70 @@ markerColor.addChild( container5 );
     // find the simple code drawing random ellipsed in the draw loop below
   });
   container5.addChild( plane5 );
+
+  addParts(leaf, flower);
+}
+
+window.onload = function() {
+  document.querySelector(".radial-button").addEventListener("click", function () {
+    addParts(loadImage("images/leaf.svg"), loagImage("images/AR Media/Radial/radial_pendulus_large-01.svg"));
+  });
+}
+
+function addParts(l, f){
+  parts = [];
+
+  for (let s = 0; s < sprouts.length; s++) {
+    p = new Part(
+      "leaf",
+      l,
+      //setLeafShape,
+      sprouts[s][0],
+      sprouts[s][1],
+      60,
+      60,
+      // setLeafSize,
+      // setLeafSize,
+      -rotationRange + random(2 * rotationRange),
+      false,
+      true
+    );
+    parts.push(p);
+    p = new Part(
+      "leaf",
+      l,
+      // setLeafShape,
+      sprouts[s][0],
+      sprouts[s][1],
+      60,
+      60,
+      // setLeafSize,
+      // setLeafSize,
+      -rotationRange + random(2 * rotationRange),
+      true,
+      true
+    );
+    parts.push(p);
+  }
+  //draw flowers separately and after leaves to appear in front
+  for (let s = 0; s < sprouts.length; s++) {
+    p = new Part(
+      "flower",
+      f,
+      //setFlowerShape,
+      sprouts[s][0],
+      sprouts[s][1],
+      60,
+      60,
+      // setFlowerSize,
+      // setFlowerSize,
+      -rotationRange + random(2 * rotationRange),
+      true,
+      false
+      //setFlowerDown
+    );
+    parts.push(p);
+  }
 }
 
 function draw() {
