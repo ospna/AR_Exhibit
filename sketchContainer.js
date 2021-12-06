@@ -163,11 +163,6 @@ markerColor.addChild( container5 );
   addParts(leaf, flower);
 }
 
-window.onload = function() {
-  document.querySelector(".radial-button").addEventListener("click", function () {
-    addParts(loadImage("images/leaf.svg"), loagImage("images/AR Media/Radial/radial_pendulus_large-01.svg"));
-  });
-}
 
 function addParts(l, f){
   parts = [];
@@ -512,7 +507,7 @@ window.onload = function ()
         // or you can just open links, trigger actions...
         alert("You chose the Radial Petal Orientation!"); 
 
-        setFlowerType = loadImage("images/AR Media/Radial/radial_pendulus_large-01.svg");
+        addParts(loadImage("images/leaf.svg"), loagImage("images/AR Media/Radial/radial_pendulus_large-01.svg"));
       });
 
       document.querySelector(".two21-button").addEventListener("click", function () {
