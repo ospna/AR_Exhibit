@@ -23,6 +23,9 @@
     //var setLeafType;
     //var setFlowerType;
 
+    //let leaf;
+    //let flower;
+
     window.onload = function () 
     {
           // ---------------------------- Size Buttons --------------------------------------------- //
@@ -33,7 +36,8 @@
             // or you can just open links, trigger actions...
             alert("You will be building a Small Honeysuckle!"); 
 
-            //leaf = loadImage("images/leaf.svg");
+            flower = loadImage("images/AR Media/Radial/radial_pendulus_small-01.svg");
+
           });
 
           document.querySelector(".medium-scale-button").addEventListener("click", function () {
@@ -41,6 +45,8 @@
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("You will be building a Medium Honeysuckle!");
+
+            flower = loadImage("images/AR Media/Radial/radial_pendulus_medium-01.svg");
           });
 
           document.querySelector(".large-scale-button").addEventListener("click", function () {
@@ -48,6 +54,8 @@
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("You will be building a Large Honeysuckle!");
+
+            flower = loadImage("images/AR Media/Radial/radial_pendulus_large-01.svg");
           });
 
 
@@ -59,7 +67,8 @@
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("You chose the Radial Petal Orientation!"); 
-            setFlowerType = loadImage("images/AR Media/Radial/radial_pendulus_large-01.svg");
+
+            flower = loadImage("images/AR Media/Radial/radial_pendulus_large-01.svg");
           });
 
           document.querySelector(".two21-button").addEventListener("click", function () {
@@ -67,7 +76,8 @@
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("You chose the 2+2+1 Petal Orientation!"); 
-            setFlowerType = loadImage("images/AR Media/221/221_pendulus_large-01.svg");
+
+            flower = loadImage("images/AR Media/221/221_pendulus_large-01.svg");
           });
           
           document.querySelector(".four1-button").addEventListener("click", function () {
@@ -75,7 +85,8 @@
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("You chose the 4+1 Petal Orientation!"); 
-            setFlowerType = loadImage("images/AR Media/41/41_pendulus_large-01.svg");
+
+            flower = loadImage("images/AR Media/41/41_pendulus_large-01.svg");
           });
 
 
@@ -94,6 +105,8 @@
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have an Upright Flower Orientation!"); 
+
+            flower = loadImage("images/AR Media/Radial/radial_upright_large-01.svg");
           });
 
 
@@ -105,6 +118,8 @@
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Fused leaves!"); 
+
+            leaf = loadImage("images/AR Media/fused_leaves-01.svg");
           });
 
           document.querySelector(".unfused-button").addEventListener("click", function () {
@@ -112,6 +127,8 @@
             // changing your 3D model source, size, position and so on
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Unfused leaves!"); 
+
+            leaf = loadImage("images/AR Media/unfused_leaves-01.svg");
           });
 
 

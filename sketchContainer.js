@@ -66,7 +66,8 @@ function setup() {
     let rotationRange = 10;
     let p;
 
-    for (let s = 0; s < sprouts.length; s++) {
+    for (let s = 0; s < sprouts.length; s++) 
+    {
       p = new Part(
         //"leaf",
         leaf,
@@ -82,8 +83,9 @@ function setup() {
         true
       );
       parts.push(p);
+
       p = new Part(
-       // "leaf",
+        //"leaf",
         leaf,
         // setLeafShape,
         sprouts[s][0],
@@ -97,6 +99,7 @@ function setup() {
         true
       );
       parts.push(p);
+
     }
     //draw flowers separately and after leaves to appear in front
     for (let s = 0; s < sprouts.length; s++) {
@@ -373,6 +376,7 @@ function createVine() {
   y2 = (y4 - y1) / 3 + y1;
   y3 = y4 - (y4 - y1) / 3;
   let steps = 4; // number of sprout points between bottom-most and top-most point
+  
   for (let i = 0; i <= steps; i++) {
     let t = i / steps;
     let x = bezierPoint(x1, x2, x3, x4, t);
@@ -383,7 +387,7 @@ function createVine() {
 
 class Part {
   constructor(
-    name,
+    //name,
     img,
     posX,
     posY,
@@ -394,7 +398,7 @@ class Part {
     isDown,
     color
   ) {
-    this.name = name;
+    //this.name = name;
     this.img = img;
     this.posX = posX;
     this.posY = posY;
@@ -404,13 +408,17 @@ class Part {
     this.isRight = isRight;
     this.isDown = isDown;
     this.color = color;
+
     bounceAmount = 1 + random(2, 4);
     print("bounceAmount: " + bounceAmount);
+
     bounceRate = random(-0.025, 0.025);
     print("bounceRate: " + bounceRate);
+
     if (isRight == false) {
       bounceRate = -bounceRate;
     }
+
     // if (isRight == true) {
     //   bounceRate = .02;
     // } else {
