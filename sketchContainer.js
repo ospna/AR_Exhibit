@@ -45,11 +45,11 @@ var setFlowerDown;
 function preload(){
   //flower = setFlowerType;
   leaf = loadImage("images/leaf.svg");
-  leaf = setLeafType;
+  setLeafType = leaf;
   flower = loadImage("images/flower.svg");
 
   unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
-  letfusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
+  fusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
 }
 
 function setup() {
