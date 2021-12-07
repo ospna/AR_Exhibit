@@ -46,6 +46,7 @@ function preload(){
   //flower = setFlowerType;
   leaf = loadImage("images/leaf.svg");
   setLeafShape = leaf;
+  
   flower = loadImage("images/flower.svg");
 
   unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
@@ -56,6 +57,7 @@ function setup() {
 
     // create our world (this also creates a p5 canvas for us)
     world = new World('ARScene');
+
     // grab a reference to the marker that we set up on the HTML side (connect to it using its 'id')
     markerSize = world.getMarker('patt1');
     markerPetal = world.getMarker('patt2');
