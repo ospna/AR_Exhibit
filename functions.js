@@ -29,8 +29,6 @@
     //var setLeafShape;
     //let fusedLeaves, unfusedLeaves;
 
-    import { fusedLeaves, unfusedLeaves, setLeafShape } from './sketchContainer.js';
-
     window.onload = function () 
     {
           // ---------------------------- Size Buttons --------------------------------------------- //

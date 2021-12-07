@@ -25,8 +25,6 @@ let bounceAmount, bounceRate, previousRotation;
 
 var setLeafShape;
 
-export { fusedLeaves, unfusedLeaves, setLeafShape };
-
 /*
 // arrays for buttons/UI
 var leafShape = [leaf];
