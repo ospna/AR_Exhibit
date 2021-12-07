@@ -40,14 +40,22 @@ var setFlowerSize;
 var setFlowerDown;
 */
 
+/*
 function preload(){
   //flower = setFlowerType;
   leaf = loadImage("images/leaf.svg");
-  setLeafShape = leaf;
   flower = loadImage("images/flower.svg");
 
   unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
   fusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
+}
+*/
+
+function preloadImage(url)
+{
+    var img = new Image();
+    img.src = url;
+    url = setLeafShape;
 }
 
 function setup() {
@@ -71,6 +79,7 @@ function setup() {
 
     let rotationRange = 10;
     var p;
+    setLeafShape = leaf;
 
     for (let s = 0; s < sprouts.length; s++) 
     {

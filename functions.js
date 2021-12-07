@@ -125,6 +125,7 @@
             parts.setLeafShape = fusedLeaves;
             p.setLeafShape = fusedLeaves;
             setLeafShape = fusedLeaves;
+            preloadImage("images/AR Media/fused_leaves-01.svg");
           });
 
           document.querySelector(".unfused-button").addEventListener("click", function () {
@@ -136,6 +137,7 @@
             parts.setLeafShape = unfusedLeaves;
             p.setLeafShape = unfusedLeaves;
             setLeafShape = unfusedLeaves;
+            preloadImage("images/AR Media/unfused_leaves-01.svg");
           });
 
 
