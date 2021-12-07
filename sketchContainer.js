@@ -15,7 +15,7 @@ let sprouts;
 
 let parts;
 
-let leaf, flower, fusedLeaves, unfusedLeaves;
+var leaf, flower, fusedLeaves, unfusedLeaves;
 
 let bounceAmount, bounceRate, previousRotation;
 
@@ -70,7 +70,7 @@ function setup() {
     createVine();
 
     let rotationRange = 10;
-    let p;
+    var p;
 
     for (let s = 0; s < sprouts.length; s++) 
     {

@@ -122,7 +122,9 @@
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Fused leaves!"); 
 
+            parts.setLeafShape = fusedLeaves;
             p.setLeafShape = fusedLeaves;
+            setLeafShape = fusedLeaves;
           });
 
           document.querySelector(".unfused-button").addEventListener("click", function () {
@@ -131,7 +133,9 @@
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Unfused leaves!"); 
 
+            parts.setLeafShape = unfusedLeaves;
             p.setLeafShape = unfusedLeaves;
+            setLeafShape = unfusedLeaves;
           });
 
 
