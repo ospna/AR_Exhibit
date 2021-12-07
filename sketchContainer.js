@@ -15,13 +15,17 @@ let sprouts;
 
 let parts;
 
-let leaf, flower;
+let leaf, flower, fusedLeaves, unfusedLeaves;
 
 let bounceAmount, bounceRate, previousRotation;
 
-var setLeafType;
+var leafType;
 
-var setFlowerType;
+var flowerType;
+
+var setLeafShape;
+
+
 
 /*
 // arrays for buttons/UI
@@ -41,8 +45,11 @@ var setFlowerDown;
 function preload(){
   //leaf = setLeafType;
   //flower = setFlowerType;
-  //leaf = loadImage("images/leaf.svg");
-  //flower = loadImage("images/flower.svg");
+  leaf = loadImage("images/leaf.svg");
+  flower = loadImage("images/flower.svg");
+
+  unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
+  fusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
 }
 
 function setup() {
@@ -70,8 +77,8 @@ function setup() {
     {
       p = new Part(
         //"leaf",
-        leaf,
-        //setLeafShape,
+        //leaf,
+        setLeafShape,
         sprouts[s][0],
         sprouts[s][1],
         60,
@@ -86,8 +93,8 @@ function setup() {
 
       p = new Part(
         //"leaf",
-        leaf,
-        // setLeafShape,
+        //leaf,
+        setLeafShape,
         sprouts[s][0],
         sprouts[s][1],
         60,
