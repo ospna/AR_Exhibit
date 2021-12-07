@@ -46,6 +46,7 @@ function preload(){
 }
 
 function setup() {
+
     // create our world (this also creates a p5 canvas for us)
     world = new World('ARScene');
     // grab a reference to the marker that we set up on the HTML side (connect to it using its 'id')
@@ -54,14 +55,17 @@ function setup() {
     markerFlower = world.getMarker('patt3');
     markerLeaf = world.getMarker('patt4');
     markerColor = world.getMarker('patt5');
+
     p5graphics = createGraphics(600, 600).id('p5graphics');
     angleMode(degrees);
     createCanvas(600, 600);
     sprouts = [];
     parts = [];
     createVine();
+
     let rotationRange = 10;
     let p;
+
     for (let s = 0; s < sprouts.length; s++) {
       p = new Part(
         "leaf",
@@ -111,13 +115,15 @@ function setup() {
         false
         //setFlowerDown
       );
+
       parts.push(p);
     }
+
   // create some geometry to add to our marker
   // the marker is 1 meter x 1 meter, with the origin at the center
   // the x-axis runs left and right
   // -0.5, 0, -0.5 is the top left corner
-  
+
 container1 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
@@ -206,7 +212,9 @@ markerColor.addChild( container5 );
 
 }
 function draw() {
+
     world.clearDrawingCanvas();
+    
     // get the rotation of the AR marker relative to the camera,
     // which allows us to rotate the objects attached to that marker toward the camera
     let rot1 = markerSize.tag.object3D.rotation;

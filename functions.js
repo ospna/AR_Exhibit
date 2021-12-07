@@ -19,11 +19,8 @@
     */
 
     //let leaf;
-
     //let flower;
-
     //var setLeafType;
-
     //var setFlowerType;
 
     window.onload = function () 
@@ -36,7 +33,7 @@
             // or you can just open links, trigger actions...
             alert("You will be building a Small Honeysuckle!"); 
 
-            leaf = loadImage("images/leaf.svg");
+            //leaf = loadImage("images/leaf.svg");
           });
 
           document.querySelector(".medium-scale-button").addEventListener("click", function () {
