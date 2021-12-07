@@ -44,7 +44,6 @@ function preload(){
   //flower = setFlowerType;
   leaf = loadImage("images/leaf.svg");
   setLeafShape = leaf;
-
   flower = loadImage("images/flower.svg");
 
   unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
