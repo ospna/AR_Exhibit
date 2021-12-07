@@ -69,7 +69,6 @@
             alert("You chose the Radial Petal Orientation!"); 
 
             flower = loadImage("images/AR Media/Radial/radial_pendulus_large-01.svg");
-            this.flower = flower;
           });
 
           document.querySelector(".two21-button").addEventListener("click", function () {
@@ -79,7 +78,6 @@
             alert("You chose the 2+2+1 Petal Orientation!"); 
 
             flower = loadImage("images/AR Media/221/221_pendulus_large-01.svg");
-            this.flower = flower;
           });
           
           document.querySelector(".four1-button").addEventListener("click", function () {
@@ -89,7 +87,6 @@
             alert("You chose the 4+1 Petal Orientation!"); 
 
             flower = loadImage("images/AR Media/41/41_pendulus_large-01.svg");
-            this.flower = flower;
           });
 
 
@@ -110,7 +107,6 @@
             alert("Your honeysuckle will have an Upright Flower Orientation!"); 
 
             flower = loadImage("images/AR Media/Radial/radial_upright_large-01.svg");
-            this.flower = flower;
           });
 
 

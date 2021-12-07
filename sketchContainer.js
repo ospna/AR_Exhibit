@@ -45,7 +45,7 @@ var setFlowerDown;
 function preload(){
   //flower = setFlowerType;
   leaf = loadImage("images/leaf.svg");
-  setLeafType = leaf;
+  setLeafShape = leaf;
   flower = loadImage("images/flower.svg");
 
   unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
@@ -395,7 +395,7 @@ function createVine() {
 class Part {
   constructor(
     //name,
-    src,
+    img,
     posX,
     posY,
     width,
@@ -406,7 +406,7 @@ class Part {
     color
   ) {
     //this.name = name;
-    this.src = src;
+    this.img = img;
     this.posX = posX;
     this.posY = posY;
     this.width = width;
@@ -445,7 +445,7 @@ class Part {
     // if (this.name == "flower") {
     //   this.bounce();
     // }
-    p5graphics.image(this.src, 0, 0, this.width, this.height);
+    p5graphics.image(this.img, 0, 0, this.width, this.height);
     p5graphics.pop();
   }
   bounce() {
