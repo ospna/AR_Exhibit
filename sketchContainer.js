@@ -19,13 +19,13 @@ let leaf, flower, fusedLeaves, unfusedLeaves;
 
 let bounceAmount, bounceRate, previousRotation;
 
-var leafType;
+//var leafType;
 
-var flowerType;
+//var flowerType;
 
 var setLeafShape;
 
-
+export { fusedLeaves, unfusedLeaves, setLeafShape };
 
 /*
 // arrays for buttons/UI
@@ -46,7 +46,7 @@ function preload(){
   //flower = setFlowerType;
   leaf = loadImage("images/leaf.svg");
   setLeafShape = leaf;
-  
+
   flower = loadImage("images/flower.svg");
 
   unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");

@@ -29,6 +29,8 @@
     //var setLeafShape;
     //let fusedLeaves, unfusedLeaves;
 
+    import { fusedLeaves, unfusedLeaves, setLeafShape } from './sketchContainer.js';
+
     window.onload = function () 
     {
           // ---------------------------- Size Buttons --------------------------------------------- //
@@ -122,7 +124,7 @@
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Fused leaves!"); 
 
-            this.setLeafShape = fusedLeaves;
+            setLeafShape = fusedLeaves;
           });
 
           document.querySelector(".unfused-button").addEventListener("click", function () {
@@ -131,7 +133,7 @@
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Unfused leaves!"); 
 
-            this.setLeafShape = unfusedLeaves;
+            setLeafShape = unfusedLeaves;
           });
 
 
