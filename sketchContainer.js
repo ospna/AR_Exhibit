@@ -41,8 +41,8 @@ var setFlowerDown;
 function preload(){
   //leaf = setLeafType;
   //flower = setFlowerType;
-  leaf = loadImage("images/leaf.svg");
-  flower = loadImage("images/flower.svg");
+  //leaf = loadImage("images/leaf.svg");
+  //flower = loadImage("images/flower.svg");
 }
 
 function setup() {
