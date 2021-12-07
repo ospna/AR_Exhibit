@@ -68,7 +68,7 @@ function setup() {
 
     for (let s = 0; s < sprouts.length; s++) {
       p = new Part(
-        "leaf",
+        //"leaf",
         leaf,
         //setLeafShape,
         sprouts[s][0],
@@ -83,7 +83,7 @@ function setup() {
       );
       parts.push(p);
       p = new Part(
-        "leaf",
+       // "leaf",
         leaf,
         // setLeafShape,
         sprouts[s][0],
@@ -101,7 +101,7 @@ function setup() {
     //draw flowers separately and after leaves to appear in front
     for (let s = 0; s < sprouts.length; s++) {
       p = new Part(
-        "flower",
+        //"flower",
         flower,
         //setFlowerShape,
         sprouts[s][0],
@@ -214,7 +214,7 @@ markerColor.addChild( container5 );
 function draw() {
 
     world.clearDrawingCanvas();
-    
+
     // get the rotation of the AR marker relative to the camera,
     // which allows us to rotate the objects attached to that marker toward the camera
     let rot1 = markerSize.tag.object3D.rotation;
