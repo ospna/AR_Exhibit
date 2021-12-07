@@ -26,8 +26,8 @@
     //let leaf;
     //let flower;
 
-    var setLeafShape;
-    let fusedLeaves, unfusedLeaves;
+    //var setLeafShape;
+    //let fusedLeaves, unfusedLeaves;
 
     window.onload = function () 
     {
@@ -122,8 +122,7 @@
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Fused leaves!"); 
 
-            fusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
-            setLeafShape = fusedLeaves;
+            this.setLeafShape = fusedLeaves;
           });
 
           document.querySelector(".unfused-button").addEventListener("click", function () {
@@ -132,8 +131,7 @@
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Unfused leaves!"); 
 
-            unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
-            setLeafShape = unfusedLeaves;
+            this.setLeafShape = unfusedLeaves;
           });
 
 
