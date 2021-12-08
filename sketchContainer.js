@@ -368,11 +368,10 @@ function draw() {
 
 function addBYOHComponents()
 {
-  sprouts = [];
+  
   parts = [];
 
   let rotationRange = 10;
-  var p;
   
   for (let s = 0; s < sprouts.length; s++) 
     {
@@ -431,6 +430,8 @@ function addBYOHComponents()
 }
 
 function createVine() {
+  sprouts = [];
+
   x1 = width / 2; // starts in middle near bottom of sketch
   // bezier control points at a random distance from middle to the left or right
   let posNeg = random([-1,1]);
