@@ -65,64 +65,7 @@ function setup() {
     // parts = [];
     
     createVine();
-    addBYOHComponents();
-
-    /*
-    for (let s = 0; s < sprouts.length; s++) 
-    {
-      p = new Part(
-        //"leaf",
-        //leaf,
-        setLeafShape,
-        sprouts[s][0],
-        sprouts[s][1],
-        60,
-        60,
-        // setLeafSize,
-        // setLeafSize,
-        -rotationRange + random(2 * rotationRange),
-        false,
-        true
-      );
-      parts.push(p);
-
-      p = new Part(
-        //"leaf",
-        //leaf,
-        setLeafShape,
-        sprouts[s][0],
-        sprouts[s][1],
-        60,
-        60,
-        // setLeafSize,
-        // setLeafSize,
-        -rotationRange + random(2 * rotationRange),
-        true,
-        true
-      );
-      parts.push(p);
-    }
-
-    //draw flowers separately and after leaves to appear in front
-    for (let s = 0; s < sprouts.length; s++) {
-      p = new Part(
-        //"flower",
-        flower,
-        //setFlowerShape,
-        sprouts[s][0],
-        sprouts[s][1],
-        60,
-        60,
-        // setFlowerSize,
-        // setFlowerSize,
-        -rotationRange + random(2 * rotationRange),
-        true,
-        false
-        //setFlowerDown
-      );
-      parts.push(p);
-    }
-    */
+    addBYOHComponents(setLeafShape);
 
   // create some geometry to add to our marker
   // the marker is 1 meter x 1 meter, with the origin at the center
@@ -368,7 +311,6 @@ function draw() {
 
 function addBYOHComponents(setLeafShape)
 {
-  
   parts = [];
 
   let rotationRange = 10;
