@@ -159,6 +159,7 @@ markerColor.addChild( container5 );
   container5.addChild( plane5 );
 
 }
+
 function draw() {
 
     world.clearDrawingCanvas();

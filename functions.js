@@ -133,7 +133,7 @@
             addBYOHComponents.setLeafShape = fusedLeaves;
             setLeafShape = fusedLeaves;
             */
-            addBYOHComponents.setLeafShape = fusedLeaves;
+            //addBYOHComponents.setLeafShape = fusedLeaves;
           });
 
           document.querySelector(".unfused-button").addEventListener("click", function () {
@@ -148,7 +148,7 @@
             return setLeafShape;
             */
 
-            addBYOHComponents.setLeafShape = fusedLeaves;
+            //addBYOHComponents.setLeafShape = unfusedLeaves;
           });
 
 
