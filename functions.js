@@ -123,6 +123,8 @@
             alert("Your honeysuckle will have Fused leaves!"); 
 
             //p.setLeafShape = fusedLeaves;
+            addBYOHComponents(setLeafShape) = fusedLeaves;
+            addBYOHComponents.setLeafShape = fusedLeaves;
             setLeafShape = fusedLeaves;
           });
 
@@ -132,6 +134,7 @@
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Unfused leaves!"); 
 
+            addBYOHComponents.setLeafShape = unfusedLeaves;
             setLeafShape = unfusedLeaves;
           });
 

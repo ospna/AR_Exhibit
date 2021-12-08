@@ -19,13 +19,7 @@ var leaf, flower, fusedLeaves, unfusedLeaves;
 
 let bounceAmount, bounceRate, previousRotation;
 
-//var leafType;
-
-//var flowerType;
-
 var setLeafShape;
-
-var p;
 
 /*
 // arrays for buttons/UI
@@ -52,15 +46,6 @@ function preload()
   fusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
 }
 
-/*
-function preloadImage(url)
-{
-    var img = new Image();
-    img.src = url;
-    url = setLeafShape;
-}
-*/
-
 function setup() {
 
     // create our world (this also creates a p5 canvas for us)
@@ -78,8 +63,7 @@ function setup() {
     createCanvas(600, 600);
     sprouts = [];
     parts = [];
-    addLeaves();
-    addFlowers();
+    addBYOHComponents();
     createVine();
 
     /*
@@ -381,12 +365,11 @@ function draw() {
   };
 }
 
-function addLeaves()
+function addBYOHComponents()
 {
   let rotationRange = 10;
-  //var p;
-  //var setLeafShape
-
+  var p;
+  
   for (let s = 0; s < sprouts.length; s++) 
     {
       p = new Part(
@@ -421,13 +404,7 @@ function addLeaves()
       );
       parts.push(p);
     }
-}
-
-function addFlowers()
-{
-  let rotationRange = 10;
-  //var p;
-
+    
   //draw flowers separately and after leaves to appear in front
   for (let s = 0; s < sprouts.length; s++) {
     p = new Part(
@@ -448,7 +425,6 @@ function addFlowers()
     parts.push(p);
   }
 }
-
 
 function createVine() {
   x1 = width / 2; // starts in middle near bottom of sketch
