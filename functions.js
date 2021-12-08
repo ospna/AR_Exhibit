@@ -133,9 +133,7 @@
             addBYOHComponents.setLeafShape = fusedLeaves;
             setLeafShape = fusedLeaves;
             */
-            addBYOHComponents(setLeafShape);
-            setLeafShape = fusedLeaves;
-            return setLeafShape;
+            addBYOHComponents.setLeafShape = fusedLeaves;
           });
 
           document.querySelector(".unfused-button").addEventListener("click", function () {
@@ -144,9 +142,13 @@
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Unfused leaves!"); 
 
+            /*
             addBYOHComponents(setLeafShape);
             setLeafShape = unfusedLeaves;
             return setLeafShape;
+            */
+
+            addBYOHComponents.setLeafShape = fusedLeaves;
           });
 
 

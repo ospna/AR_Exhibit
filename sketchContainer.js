@@ -65,7 +65,7 @@ function setup() {
     // parts = [];
     
     createVine();
-    addBYOHComponents(setLeafShape);
+    addBYOHComponents();
 
   // create some geometry to add to our marker
   // the marker is 1 meter x 1 meter, with the origin at the center
@@ -309,7 +309,7 @@ function draw() {
   };
 }
 
-function addBYOHComponents(setLeafShape)
+function addBYOHComponents()
 {
   parts = [];
 
