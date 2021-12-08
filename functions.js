@@ -29,6 +29,12 @@
     //var setLeafShape;
     //let fusedLeaves, unfusedLeaves;
 
+    function preload()
+    {
+      unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
+      fusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
+    }
+
     window.onload = function () 
     {
           // ---------------------------- Size Buttons --------------------------------------------- //
@@ -122,10 +128,14 @@
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Fused leaves!"); 
 
-            //p.setLeafShape = fusedLeaves;
+            /*p.setLeafShape = fusedLeaves;
             addBYOHComponents(setLeafShape) = fusedLeaves;
             addBYOHComponents.setLeafShape = fusedLeaves;
             setLeafShape = fusedLeaves;
+            */
+            addBYOHComponents(setLeafShape);
+            setLeafShape = fusedLeaves;
+            return setLeafShape;
           });
 
           document.querySelector(".unfused-button").addEventListener("click", function () {
@@ -134,8 +144,9 @@
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Unfused leaves!"); 
 
-            addBYOHComponents.setLeafShape = unfusedLeaves;
+            addBYOHComponents(setLeafShape);
             setLeafShape = unfusedLeaves;
+            return setLeafShape;
           });
 
 

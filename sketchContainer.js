@@ -42,8 +42,8 @@ function preload()
   setLeafShape = leaf;
   flower = loadImage("images/flower.svg");
 
-  unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
-  fusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
+  //unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
+  //fusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
 }
 
 function setup() {
@@ -366,7 +366,7 @@ function draw() {
   };
 }
 
-function addBYOHComponents()
+function addBYOHComponents(setLeafShape)
 {
   
   parts = [];
