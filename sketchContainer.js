@@ -79,11 +79,10 @@ function setup() {
 
     let rotationRange = 10;
     var p;
-    setLeafShape = unfusedLeaves;
+    setLeafShape = leaf;
 
     for (let s = 0; s < sprouts.length; s++) 
     {
-      /*
       p = new Part(
         //"leaf",
         //leaf,
@@ -99,7 +98,6 @@ function setup() {
         true
       );
       parts.push(p);
-      */
 
       p = new Part(
         //"leaf",
@@ -116,8 +114,8 @@ function setup() {
         true
       );
       parts.push(p);
-
     }
+
     //draw flowers separately and after leaves to appear in front
     for (let s = 0; s < sprouts.length; s++) {
       p = new Part(
@@ -135,7 +133,6 @@ function setup() {
         false
         //setFlowerDown
       );
-
       parts.push(p);
     }
 
@@ -443,21 +440,28 @@ class Part {
     // }
     previousRotation = this.rotation;
   }
-  show() {
+
+  show() 
+  {
     p5graphics.push();
     p5graphics.translate(this.posX, this.posY);
+
     if (this.isRight == false) {
       p5graphics.scale(-1, 1);
     }
+
     if (this.isDown == false) {
       p5graphics.scale(1, -1);
     }
+
     // if (this.name == "flower") {
     //   this.bounce();
     // }
+
     p5graphics.image(this.img, 0, 0, this.width, this.height);
     p5graphics.pop();
   }
+
   bounce() {
     let b = previousRotation + bounceRate;
     rotate(b);
