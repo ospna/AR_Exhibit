@@ -29,6 +29,12 @@
     //var setLeafShape;
     //let fusedLeaves, unfusedLeaves;
 
+    function preload()
+    {
+      unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
+      fusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
+    }
+
     window.onload = function () 
     {
           // ---------------------------- Size Buttons --------------------------------------------- //
@@ -122,8 +128,64 @@
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Fused leaves!"); 
 
-            p.setLeafShape = fusedLeaves;
-            setLeafShape = fusedLeaves;
+            
+            for (let s = 0; s < sprouts.length; s++) 
+            {
+              p = new Part(
+                //"leaf",
+                //leaf,
+                fusedLeaves,
+                sprouts[s][0],
+                sprouts[s][1],
+                60,
+                60,
+                // setLeafSize,
+                // setLeafSize,
+                -rotationRange + random(2 * rotationRange),
+                false,
+                true
+              );
+              parts.push(p);
+
+              p = new Part(
+                //"leaf",
+                //leaf,
+                fusedLeaves,
+                sprouts[s][0],
+                sprouts[s][1],
+                60,
+                60,
+                // setLeafSize,
+                // setLeafSize,
+                -rotationRange + random(2 * rotationRange),
+                true,
+                true
+              );
+              parts.push(p);
+            }
+
+            //draw flowers separately and after leaves to appear in front
+            for (let s = 0; s < sprouts.length; s++) {
+              p = new Part(
+                //"flower",
+                flower,
+                //setFlowerShape,
+                sprouts[s][0],
+                sprouts[s][1],
+                60,
+                60,
+                // setFlowerSize,
+                // setFlowerSize,
+                -rotationRange + random(2 * rotationRange),
+                true,
+                false
+                //setFlowerDown
+              );
+              parts.push(p);
+            }
+
+           // p.setLeafShape = fusedLeaves;
+            //setLeafShape = fusedLeaves;
           });
 
           document.querySelector(".unfused-button").addEventListener("click", function () {
@@ -132,8 +194,63 @@
             // or you can just open links, trigger actions...
             alert("Your honeysuckle will have Unfused leaves!"); 
 
-            p.setLeafShape = unfusedLeaves;
-            setLeafShape = unfusedLeaves;
+            
+            for (let s = 0; s < sprouts.length; s++) 
+            {
+              p = new Part(
+                //"leaf",
+                //leaf,
+                unfusedLeaves,
+                sprouts[s][0],
+                sprouts[s][1],
+                60,
+                60,
+                // setLeafSize,
+                // setLeafSize,
+                -rotationRange + random(2 * rotationRange),
+                false,
+                true
+              );
+              parts.push(p);
+
+              p = new Part(
+                //"leaf",
+                //leaf,
+                unfusedLeaves,
+                sprouts[s][0],
+                sprouts[s][1],
+                60,
+                60,
+                // setLeafSize,
+                // setLeafSize,
+                -rotationRange + random(2 * rotationRange),
+                true,
+                true
+              );
+              parts.push(p);
+            }
+
+            //draw flowers separately and after leaves to appear in front
+            for (let s = 0; s < sprouts.length; s++) {
+              p = new Part(
+                //"flower",
+                flower,
+                //setFlowerShape,
+                sprouts[s][0],
+                sprouts[s][1],
+                60,
+                60,
+                // setFlowerSize,
+                // setFlowerSize,
+                -rotationRange + random(2 * rotationRange),
+                true,
+                false
+                //setFlowerDown
+              );
+              parts.push(p);
+            }
+            //p.setLeafShape = unfusedLeaves;
+            //setLeafShape = unfusedLeaves;
           });
 
 
