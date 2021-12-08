@@ -61,10 +61,11 @@ function setup() {
     p5graphics = createGraphics(600, 600).id('p5graphics');
     angleMode(degrees);
     createCanvas(600, 600);
-    //sprouts = [];
-    //parts = [];
-    addBYOHComponents();
+    // sprouts = [];
+    // parts = [];
+    
     createVine();
+    addBYOHComponents();
 
     /*
     for (let s = 0; s < sprouts.length; s++) 
