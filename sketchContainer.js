@@ -61,8 +61,8 @@ function setup() {
     p5graphics = createGraphics(600, 600).id('p5graphics');
     angleMode(degrees);
     createCanvas(600, 600);
-    sprouts = [];
-    parts = [];
+    //sprouts = [];
+    //parts = [];
     addBYOHComponents();
     createVine();
 
@@ -367,6 +367,9 @@ function draw() {
 
 function addBYOHComponents()
 {
+  sprouts = [];
+  parts = [];
+
   let rotationRange = 10;
   var p;
   
