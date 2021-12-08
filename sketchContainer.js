@@ -25,6 +25,8 @@ let bounceAmount, bounceRate, previousRotation;
 
 var setLeafShape;
 
+var p;
+
 /*
 // arrays for buttons/UI
 var leafShape = [leaf];
@@ -40,10 +42,14 @@ var setFlowerSize;
 var setFlowerDown;
 */
 
-function preload(){
-  //flower = setFlowerType;
+function preload()
+{
   leaf = loadImage("images/leaf.svg");
+  setLeafShape = leaf;
   flower = loadImage("images/flower.svg");
+
+  unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
+  fusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
 }
 
 /*
@@ -72,11 +78,9 @@ function setup() {
     createCanvas(600, 600);
     sprouts = [];
     parts = [];
+    addLeaves();
+    addFlowers();
     createVine();
-
-    let rotationRange = 10;
-    var p;
-    setLeafShape = leaf;
 
     /*
     for (let s = 0; s < sprouts.length; s++) 
@@ -376,6 +380,75 @@ function draw() {
       document.querySelector(".colorButtons").style.display = "none";
   };
 }
+
+function addLeaves()
+{
+  let rotationRange = 10;
+  //var p;
+  //var setLeafShape
+
+  for (let s = 0; s < sprouts.length; s++) 
+    {
+      p = new Part(
+        //"leaf",
+        //leaf,
+        setLeafShape,
+        sprouts[s][0],
+        sprouts[s][1],
+        60,
+        60,
+        // setLeafSize,
+        // setLeafSize,
+        -rotationRange + random(2 * rotationRange),
+        false,
+        true
+      );
+      parts.push(p);
+
+      p = new Part(
+        //"leaf",
+        //leaf,
+        setLeafShape,
+        sprouts[s][0],
+        sprouts[s][1],
+        60,
+        60,
+        // setLeafSize,
+        // setLeafSize,
+        -rotationRange + random(2 * rotationRange),
+        true,
+        true
+      );
+      parts.push(p);
+    }
+}
+
+function addFlowers()
+{
+  let rotationRange = 10;
+  //var p;
+
+  //draw flowers separately and after leaves to appear in front
+  for (let s = 0; s < sprouts.length; s++) {
+    p = new Part(
+      //"flower",
+      flower,
+      //setFlowerShape,
+      sprouts[s][0],
+      sprouts[s][1],
+      60,
+      60,
+      // setFlowerSize,
+      // setFlowerSize,
+      -rotationRange + random(2 * rotationRange),
+      true,
+      false
+      //setFlowerDown
+    );
+    parts.push(p);
+  }
+}
+
 
 function createVine() {
   x1 = width / 2; // starts in middle near bottom of sketch
