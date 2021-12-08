@@ -29,11 +29,13 @@
     //var setLeafShape;
     //let fusedLeaves, unfusedLeaves;
 
+    /*
     function preload()
     {
       unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
       fusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
     }
+    */
 
     window.onload = function () 
     {

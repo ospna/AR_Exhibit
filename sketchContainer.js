@@ -61,8 +61,6 @@ function setup() {
     p5graphics = createGraphics(600, 600).id('p5graphics');
     angleMode(degrees);
     createCanvas(600, 600);
-    // sprouts = [];
-    // parts = [];
     
     createVine();
     addBYOHComponents();
@@ -372,7 +370,8 @@ function addBYOHComponents()
   }
 }
 
-function createVine() {
+function createVine() 
+{
   sprouts = [];
 
   x1 = width / 2; // starts in middle near bottom of sketch
