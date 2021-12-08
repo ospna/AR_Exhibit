@@ -83,6 +83,7 @@ function setup() {
 
     for (let s = 0; s < sprouts.length; s++) 
     {
+      /*
       p = new Part(
         //"leaf",
         //leaf,
@@ -98,6 +99,7 @@ function setup() {
         true
       );
       parts.push(p);
+      */
 
       p = new Part(
         //"leaf",
