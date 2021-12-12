@@ -88,12 +88,6 @@
 
             <a-asset-item id="chrysantha" src="3D_models/models/Colored.Lonicera.Chrysantha.glb"></a-asset-item>
 
-            <a-assets>
-                <a-asset-item id="tree" src="/path/to/tree.gltf"></a-asset-item>
-              </a-assets>
-            
-              <a-entity gltf-model="#tree"></a-entity>
-
             <!-- <img src="images/honeysuckle.jpg" id="honeysuckle"> -->
         </a-assets>
 
@@ -156,7 +150,12 @@
             <button class="green-button"></button>
         </div>
         
-          <a-entity gltf-model="#chrysantha" class="models"></a-entity>
+        <div class="models">
+            <a-entity 
+                gltf-model="#chrysantha" scale="0.2 0.2 0.2">
+            </a-entity>
+        </div>
+
 
         -
         <!--
@@ -165,13 +164,6 @@
         </div>
         */
     -->
-
-        <!--
-        <a-entity 
-            obj-model=”obj: url(/path/to/nameOfFile.obj); 
-            mtl: url(/path/to/nameOfFile.mtl)”>
-        </a-entity>
-        -->
 
         <a-entity camera></a-entity>
     </a-scene>
