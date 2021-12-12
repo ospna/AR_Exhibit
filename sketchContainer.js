@@ -166,7 +166,10 @@ markerPaper.addChild( container6 );
     x:0, y:0, z:1.0,
     //red:0, green:0, blue:255,
     width:1, height:1,
-    asset:'p5graphics' 
+    asset:<a-entity 
+              obj-model="obj: url(/3D_models/colored_chrysantha/Colored.Lonicera.Chrysantha.obj); 
+              mtl: url(3D_models/colored_chrysantha/Colored.Lonicera.Chrysantha.mtl)">
+          </a-entity>
     // this plane is textured by a p5.graphics object
     // https://p5js.org/reference/#/p5.Graphics
     // find the simple code drawing random ellipsed in the draw loop below
