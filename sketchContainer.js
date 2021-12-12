@@ -57,7 +57,7 @@ function setup() {
     markerFlower = world.getMarker('patt3');
     markerLeaf = world.getMarker('patt4');
     markerColor = world.getMarker('patt5');
-    //markerPaper = world.getMarker('patt6');
+    markerPaper = world.getMarker('patt6');
 
     p5graphics = createGraphics(600, 600).id('p5graphics');
     angleMode(degrees);
