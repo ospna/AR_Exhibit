@@ -86,6 +86,9 @@
             <!-- Fused Leaf Fusion -->
             <img src="images/AR Media/fused_leaves-01.svg" id="fused_leaves-01">
 
+            <a-asset-item id="chrysantha-obj" src="3D_models/colored_chrysantha/Colored.Lonicera.Chrysantha.obj"></a-asset-item>
+            <a-asset-item id="chrysantha-mtl" src="3D_models/colored_chrysantha/Colored.Lonicera.Chrysantha.mtl"></a-asset-item>
+
             <!-- <img src="images/honeysuckle.jpg" id="honeysuckle"> -->
         </a-assets>
 
@@ -148,11 +151,8 @@
             <button class="green-button"></button>
         </div>
 
-        <div class="3d_models" style="visibility: hidden;">
-            <a-entity 
-                obj-model="obj: url(/3D_models/colored_chrysantha/Colored.Lonicera.Chrysantha.obj); 
-                mtl: url(3D_models/colored_chrysantha/Colored.Lonicera.Chrysantha.mtl)">
-            </a-entity>
+        <div class="models" style="visibility: hidden;">
+            <a-entity obj-model="obj: #chrysantha-obj; mtl: #chrysantha-mtl"></a-entity>
         </div>
 
         <!--
