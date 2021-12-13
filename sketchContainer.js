@@ -302,12 +302,6 @@ function draw() {
 
   if (markerPaper.isVisible() == true)  // 3D Model Tester
   { 
-    /*
-      document.querySelector(".color-button").style.visibility = "hidden";
-      document.querySelector(".color-button").style.display = "none";
-      
-      document.querySelector(".navButtons").style.visibility = "hidden";
-      document.querySelector(".navButtons").style.display = "none";
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -318,9 +312,8 @@ function draw() {
       document.querySelector(".leafFusionButtons").style.display = "none";
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
-      */
       document.querySelector(".models").style.visibility = "visible";
-      //document.querySelector(".3d_models").style.display = "none";
+      document.querySelector(".models").style.display = "flex";
   };
   
   
