@@ -5,10 +5,6 @@
     <!-- A-Frame libraries -->
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 
-    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
-  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.4/dist/aframe-extras.min.js"></script>
-
   <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
 
     <!-- AR.js Library -->
@@ -47,7 +43,7 @@
         init: function () {
             // Set up initial state and variables.
             this.toggle = false;
-            this.vid = document.querySelector("#vid")
+            this.vid = document.querySelector("#animation")
             this.vid.pause();
         },
         tick:function(){
@@ -66,10 +62,8 @@
       </script>
 </head>
 
-<body style='margin : 0px; overflow: hidden;'>
-    <div style='position: fixed; top: 10px; width:inherit; text-align: center; z-index: 1;'>
-      <a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - Check out the repository !
-    </div>
+<body>
+
     <!-- modal box to tell the user to rotate their device into landscape mode - the AR toolkit only reliably renders in landscape mode -->
     <!-- <div id="portrait_warning">
         <h1>Rotate your device into landscape mode!</h1>
@@ -86,9 +80,10 @@
 
             <!--
             <video src="animations/IntroWhite.mp4" id="animation" autoplay loop="true"></video> 
+            <video id="animation" src="animations/IntroWhite.mp4" loop="true">
             -->
 
-            <video id="animation" src="animations/IntroWhite.mp4" loop="true">
+            <video src="animations/IntroWhite.mp4" id="animation" autoplay loop="true"></video>
 
             <!-- Fused Leaf Fusion -->
             <img src="images/AR Media/fused_leaves-01.svg" id="fused_leaves-01">
@@ -110,7 +105,7 @@
         <a-marker id="hiro" type="pattern" url="markers/patt.hiro"></a-marker>
 
         <a-marker id="patt6" type="pattern" url="markers/pattern-HS2.patt" vidhandler>
-            <a-plane position='0 0 1' scale="1 1 1" width="1" rotation="-90 0 0" material='transparent:true; opacity: 0.7; src:#vid'></a-plane>
+            <a-plane position='0 0 1' scale="1 1 1" width="1" rotation="-90 0 0" material='transparent:true; opacity: 0.7; src:#animation'></a-plane>
         </a-marker>
     
         <header>
