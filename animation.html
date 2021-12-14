@@ -68,7 +68,7 @@
     </div> -->
 
     <!-- Define A-Frame VR Scene and set it up so that it will be manipulated through AR.js -->
-    <a-scene id="ARScene" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono;'>
+    <a-scene id="ARScene" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono; canvasWidth: 240; canvasHeight: 180'>
 
         <!-- Essentially not needed anymore -->
         <!-- set up graphics we want to use as assets, same as in A-Frame VR-->
@@ -77,7 +77,7 @@
             <img src="images/honeysuckle.jpg" id="honeysuckle">
 
             <!--
-            <video src="animations/IntroWhite.mp4" id="animation" autoplay loop="true"></video> -->
+            <video src="animations/IntroWhite.mp4" id="animation" autoplay loop="true"></video> 
 
             <video id="animation" src="animations/IntroWhite.mp4" loop="true" crossorigin></video>
 
@@ -107,8 +107,6 @@
                <img>
             </div>
         </header>
-
-    <a-marker-camera src="patt6"></a-marker-camera>
     </a-scene>
 </body>
 </html>
