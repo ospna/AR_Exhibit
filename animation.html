@@ -41,7 +41,7 @@
         init: function () {
             // Set up initial state and variables.
             this.toggle = false;
-            this.vid = document.querySelector("#vid")
+            this.vid = document.querySelector("#animation")
             this.vid.pause();
         },
         tick:function(){
@@ -80,10 +80,12 @@
             <video src="animations/IntroWhite.mp4" id="animation" autoplay loop="true"></video> 
             -->
 
-            <video id="animation" src="animations/IntroWhite.mp4" loop="true"></video>
+            <video id="animation" src="animations/IntroWhite.mp4" loop="true">
 
             <!-- Fused Leaf Fusion -->
             <img src="images/AR Media/fused_leaves-01.svg" id="fused_leaves-01">
+
+            <video id="vid" src="https://cdn.glitch.com/b62367d1-ceab-454b-b664-b032f995ed86%2FBig_Buck_Bunny_Trailer_1080p.ogv.720p.webm?1532370072191" loop="true" crossorigin></video>
 
             <!---------------------------- NEED TO FIX THIS ----------------
             <a-asset-item id="chrysantha" src="/3D_models/models/Colored.Lonicera.Chrysantha.glb"></a-asset-item>
