@@ -313,7 +313,6 @@ function draw() {
   };
 
   
-  
   if(markerSize.isVisible() == false && markerPetal.isVisible() == false && markerFlower.isVisible() == false && markerLeaf.isVisible() == false && markerColor.isVisible() == false)
   {
       document.querySelector(".navButtons").style.visibility = "hidden";
