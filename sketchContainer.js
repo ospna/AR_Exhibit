@@ -301,6 +301,7 @@ function draw() {
   };
 
   
+  /*
   if (markerPaper.isVisible() == true)  // 3D Model Tester
   { 
       document.querySelector(".sizeButtons").style.visibility = "hidden";
@@ -316,7 +317,7 @@ function draw() {
       document.querySelector(".models").style.visibility = "visible";
       document.querySelector(".models").style.display = "flex";
   };
-
+*/
   
   
   if(markerSize.isVisible() == false && markerPetal.isVisible() == false && markerFlower.isVisible() == false && markerLeaf.isVisible() == false && markerColor.isVisible() == false)
