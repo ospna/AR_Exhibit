@@ -69,7 +69,7 @@
     </div> -->
 
     <!-- Define A-Frame VR Scene and set it up so that it will be manipulated through AR.js -->
-    <a-scene id="ARScene" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono;'>
+    <a-scene id="ARScene" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
 
         <header>
             <div class="logo">
@@ -99,7 +99,7 @@
         <a-marker id="hiro" preset="hiro"></a-marker>
 
         <a-marker id="patt6" type="pattern" url="markers/pattern-HS2.patt" vidhandler>
-            <a-plane position='0 0 1' scale="2 2 2" width="2" rotation="-90 0 0" material='transparent:true; opacity: 0.7; src:#animation'></a-plane>
+            <a-plane position='1 2 -2' scale="2 2 2" width="2" rotation="-90 0 0" material='transparent:true; opacity: 0.7; src:#animation'></a-plane>
         </a-marker>
     </a-scene>
 </body>
