@@ -1,185 +1,23 @@
 <!doctype html>
 <html lang="en-us">
-
-<head>
-    <!-- A-Frame libraries -->
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-
-    <!-- AR.js Library -->
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-
-    <!-- P5 libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
-
-    <!-- Craig's AFrameP5 AR library -->
-    <script src="https://craignyu.github.io/aframep5-ar/libraries/aframep5_ar.js"></script>
-
-    <!-- P5 Sketch -->
-    <!-- <script src="part.js"></script> -->
-    <script src="sketchContainer.js"></script>
-
-    <!-- Button Interactions -->
-    <script src="functions.js"></script>
-
-    <!-- CSS Stylesheet -->
-    <link rel='stylesheet' type='text/css' href="style.css">
-
-    <!-- FunkyDori Text Font-->
-    <link rel="stylesheet" href="https://use.typekit.net/oih4pvt.css">
-
-    <!-- Custom Styles -->
-    <style type="text/css">
-        body {
-            margin: 0px;
-            overflow: hidden;
-        }
-    </style>
-
-</head>
-
 <body>
-
-    <!-- modal box to tell the user to rotate their device into landscape mode - the AR toolkit only reliably renders in landscape mode -->
-    <!-- <div id="portrait_warning">
-        <h1>Rotate your device into landscape mode!</h1>
-    </div> -->
-
-    <!-- Define A-Frame VR Scene and set it up so that it will be manipulated through AR.js -->
-    <a-scene id="ARScene" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono;'>
-
-        <!-- Essentially not needed anymore -->
-        <!-- set up graphics we want to use as assets, same as in A-Frame VR-->
-        
-        <a-assets>
-            <img src="images/honeysuckle.jpg" id="honeysuckle">
-
-            <!-- Radial Petal Orientation -->
-            <img src="images/AR Media/Radial/radial_pendulus_large-01.svg" id="radial_pendulus_large-01">
-            <img src="images/AR Media/Radial/radial_pendulus_medium-01.svg" id="radial_pendulus_medium-01">
-            <img src="images/AR Media/Radial/radial_pendulus_small-01.svg" id="radial_pendulus_small-01">
-
-            <img src="images/AR Media/Radial/radial_upright_large-01.svg" id="radial_upright_large-01">
-            <img src="images/AR Media/Radial/radial_upright_medium-01.svg" id="radial_upright_medium-01">
-            <img src="images/AR Media/Radial/radial_upright_small-01.svg" id="radial_upright_small-01">
-            
-            <!-- 2+2+1 Petal Orientation -->
-            <img src="images/AR Media/221/221_pendulus_large-01.svg" id="221_pendulus_large-01">
-            <img src="images/AR Media/221/221_pendulus_medium-01.svg" id="221_pendulus_medium-01">
-            <img src="images/AR Media/221/221_pendulus_small-01.svg" id="221_pendulus_small-01">
-
-            <img src="images/AR Media/221/221_upright_large-01.svg" id="221_upright_large-01">
-            <img src="images/AR Media/221/221_upright_medium-01.svg" id="221_upright_medium-01">
-            <img src="images/AR Media/221/221_upright_small-01.svg" id="221_upright_small-01">
-
-            <!-- 4+1 Petal Orientation -->
-            <img src="images/AR Media/41/41_pendulus_large-01.svg" id="41_pendulus_large-01">
-            <img src="images/AR Media/41/41_pendulus_medium-01.svg" id="41_pendulus_medium-01">
-            <img src="images/AR Media/41/41_pendulus_small-01.svg" id="41_pendulus_small-01">
-
-            <img src="images/AR Media/41/41_upright_large-01.svg" id="41_upright_large-01">
-            <img src="images/AR Media/41/41_upright_medium-01.svg" id="41_upright_medium-01">
-            <img src="images/AR Media/41/41_upright_small-01.svg" id="41_upright_small-01">
-
-            <!-- Unfused Leaf Fusion -->
-            <img src="images/AR Media/unfused_leaves-01.svg" id="unfused_leaves-01">
-
-            <!-- Fused Leaf Fusion -->
-            <img src="images/AR Media/fused_leaves-01.svg" id="fused_leaves-01">
-
-            <!---
-            <a-asset-item id="chrysantha" src="/3D_models/models/Colored.Lonicera.Chrysantha.glb"></a-asset-item>
-
-            <a-asset-item id="chrysantha-obj" src="/3D_models/3D_obj_models/colored_chrysantha/Colored.Lonicera.Chrysantha.obj"></a-asset-item>
-            <a-asset-item id="chrysantha-mtl" src="/3D_models/3D_obj_models/colored_chrysantha/Colored.Lonicera.Chrysantha.mtl"></a-asset-item>
-
-            <-- <img src="images/honeysuckle.jpg" id="honeysuckle"> -->
-        </a-assets>
-
-        <!-- set up all of the AR markers we will be working with along with links to their 'pattern' files -->
-        <!-- note that we aren't putting any geometry inside of marker here - we will do that in the p5 sketch -->
-
-        <a-marker id="patt1" type="pattern" url="markers/pattern-flower-size.patt"></a-marker> <!--Marker 1-->
-        <a-marker id="patt2" type="pattern" url="markers/pattern-petal_orientation.patt"></a-marker> <!--Marker 2-->
-        <a-marker id="patt3" type="pattern" url="markers/pattern-flower_orientation.patt"></a-marker> <!--Marker 3-->
-        <a-marker id="patt4" type="pattern" url="markers/pattern-leaf_fusion.patt"></a-marker> <!--Marker 4-->
-        <a-marker id="patt5" type="pattern" url="markers/pattern-flower_color.patt"></a-marker> <!--Marker 5-->
-        
-        <a-marker id="hiro" type="pattern" url="markers/patt.hiro"></a-marker>
-        <a-marker id="patt6" type="pattern" url="markers/pattern-HS2.patt"></a-marker>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     
-        <header>
-            <div class="logo">
-               <img>
-            </div>
-        </header>
-
-        <div class="navButtons" style="visibility: hidden; display: none;">
-            <button class="size-button"> <a> Size </a> </button>
-            <button class="petal-button"> <a> Petal </a> </button>
-            <button class="flower-button"> <a> Flower </a> </button>
-            <button class="leaf-button"> <a> Leaf </a> </button>
-            <button class="color-button"> <a> Color </a> </button>
-        </div>
-
-        <div class="sizeButtons" style="visibility: hidden; display: none;">
-            <button class="small-scale-button"></button>
-            <button class="medium-scale-button"></button>
-            <button class="large-scale-button"></button>
-        </div>
-
-        <div class="petalOrientButtons" style="visibility: hidden; display: none;">
-            <button class="radial-button"></button>
-            <button class="two21-button"></button>
-            <button class="four1-button"></button>
-        </div>
-
-        <div class="flowerOrientButtons" style="visibility: hidden; display: none;">
-            <button class="pendulus-button"></button>
-            <button class="upright-button"></button>
-        </div>
-
-        <div class="leafFusionButtons" style="visibility: hidden; display: none;">
-            <button class="fused-button"></button>
-            <button class="unfused-button"></button>
-        </div>
-
-        <div class="colorButtons" style="visibility: hidden; display: none;">
-            <button class="white-button"></button>
-            <button class="yellow-button"></button>
-            <button class="orange-button"></button>
-            <button class="pink-button"></button>
-            <button class="red-button"></button>
-            <button class="purple-button"></button>
-            <button class="blue-button"></button>
-            <button class="green-button"></button>
-        </div>
-        
-         <!--
-        <div class="models" style="visibility: hidden; display: none;">
-            <--
+    <body style='margin: 0px; overflow: hidden;'>
+      <a-scene embedded arjs='sourceType: webcam;'>
+        <a-marker id="patt6" type="pattern" url="markers/pattern-HS2.patt">
+              
+            <!-- Adding an OBJ file to an AR Project-->
             <a-entity 
-                    gltf-model="#chrysantha" scale=".5 .5 .5">
-                </a-entity>
-                ->    
-                <a-entity obj-model="obj: #chrysantha-obj; mtl: #chrysantha-mtl"></a-entity>
-        </div>
-
-        <--
-        <div class="models">
-            <a-entity 
-                gltf-model="#chrysantha" scale="5 5 5">
+                obj-model="obj: url(3D_models/3D_obj_models/colored_morrowi/colred.lonicera.morrowii.obj); 
+                mtl: url(3D_models/3D_obj_models/colored_morrowi/colred.lonicera.morrowii.mtl)">
             </a-entity>
-        </div>
-    -->
-
-        <!--
-        <div class="models" style="visibility: hidden;">
-            <a-entity obj-model="obj: #chrysantha-obj; mtl: #chrysantha-mtl"></a-entity>
-        </div>
-        */
-    -->
-
-    <a-entity camera></a-entity>
-    </a-scene>
+                  
+          </a-marker>
+      <a-entity camera>
+      </a-entity>
+      </a-scene>
+    </body>
 </body>
 </html>
