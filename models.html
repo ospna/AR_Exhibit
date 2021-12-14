@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <!-- A-Frame libraries -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+    <!-- AR.js Library -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+    <!-- P5 libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+
+    <!-- Craig's AFrameP5 AR library -->
+    <script src="https://craignyu.github.io/aframep5-ar/libraries/aframep5_ar.js"></script>
+
+    <!-- P5 Sketch -->
+    <!-- <script src="part.js"></script> -->
+    <script src="sketchContainer.js"></script>
+
+    <!-- Button Interactions -->
+    <script src="functions.js"></script>
+
+    <!-- CSS Stylesheet -->
+    <link rel='stylesheet' type='text/css' href="style.css">
+
+    <!-- FunkyDori Text Font-->
+    <link rel="stylesheet" href="https://use.typekit.net/oih4pvt.css">
+
+    <!-- Custom Styles -->
+    <style type="text/css">
+        body {
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- modal box to tell the user to rotate their device into landscape mode - the AR toolkit only reliably renders in landscape mode -->
+    <!-- <div id="portrait_warning">
+        <h1>Rotate your device into landscape mode!</h1>
+    </div> -->
+
+    <!-- Define A-Frame VR Scene and set it up so that it will be manipulated through AR.js -->
+    <a-scene id="ARScene" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono;'>
+
+        <!-- Essentially not needed anymore -->
+        <!-- set up graphics we want to use as assets, same as in A-Frame VR-->
+        
+        <a-assets>
+            <img src="images/honeysuckle.jpg" id="honeysuckle">
+
+            <!-- Radial Petal Orientation -->
+            <img src="images/AR Media/Radial/radial_pendulus_large-01.svg" id="radial_pendulus_large-01">
+            <img src="images/AR Media/Radial/radial_pendulus_medium-01.svg" id="radial_pendulus_medium-01">
+            <img src="images/AR Media/Radial/radial_pendulus_small-01.svg" id="radial_pendulus_small-01">
+
+            <img src="images/AR Media/Radial/radial_upright_large-01.svg" id="radial_upright_large-01">
+            <img src="images/AR Media/Radial/radial_upright_medium-01.svg" id="radial_upright_medium-01">
+            <img src="images/AR Media/Radial/radial_upright_small-01.svg" id="radial_upright_small-01">
+            
+            <!-- 2+2+1 Petal Orientation -->
+            <img src="images/AR Media/221/221_pendulus_large-01.svg" id="221_pendulus_large-01">
+            <img src="images/AR Media/221/221_pendulus_medium-01.svg" id="221_pendulus_medium-01">
+            <img src="images/AR Media/221/221_pendulus_small-01.svg" id="221_pendulus_small-01">
+
+            <img src="images/AR Media/221/221_upright_large-01.svg" id="221_upright_large-01">
+            <img src="images/AR Media/221/221_upright_medium-01.svg" id="221_upright_medium-01">
+            <img src="images/AR Media/221/221_upright_small-01.svg" id="221_upright_small-01">
+
+            <!-- 4+1 Petal Orientation -->
+            <img src="images/AR Media/41/41_pendulus_large-01.svg" id="41_pendulus_large-01">
+            <img src="images/AR Media/41/41_pendulus_medium-01.svg" id="41_pendulus_medium-01">
+            <img src="images/AR Media/41/41_pendulus_small-01.svg" id="41_pendulus_small-01">
+
+            <img src="images/AR Media/41/41_upright_large-01.svg" id="41_upright_large-01">
+            <img src="images/AR Media/41/41_upright_medium-01.svg" id="41_upright_medium-01">
+            <img src="images/AR Media/41/41_upright_small-01.svg" id="41_upright_small-01">
+
+            <!-- Unfused Leaf Fusion -->
+            <img src="images/AR Media/unfused_leaves-01.svg" id="unfused_leaves-01">
+
+            <!-- Fused Leaf Fusion -->
+            <img src="images/AR Media/fused_leaves-01.svg" id="fused_leaves-01">
+
+            <!---------------------------- NEED TO FIX THIS ----------------
+            <a-asset-item id="chrysantha" src="/3D_models/models/Colored.Lonicera.Chrysantha.glb"></a-asset-item>
+
+            <a-asset-item id="chrysantha-obj" src="/3D_models/3D_obj_models/colored_chrysantha/Colored.Lonicera.Chrysantha.obj"></a-asset-item>
+            <a-asset-item id="chrysantha-mtl" src="/3D_models/3D_obj_models/colored_chrysantha/Colored.Lonicera.Chrysantha.mtl"></a-asset-item>
+
+            <-- <img src="images/honeysuckle.jpg" id="honeysuckle"> -->
+        </a-assets>
+
+        <!-- set up all of the AR markers we will be working with along with links to their 'pattern' files -->
+        <!-- note that we aren't putting any geometry inside of marker here - we will do that in the p5 sketch -->
+        
+        <a-marker id="hiro" type="pattern" url="markers/patt.hiro"></a-marker>
+        <a-marker id="patt6" type="pattern" url="markers/pattern-HS2.patt"></a-marker>
+    
+        <header>
+            <div class="logo">
+               <img>
+            </div>
+        </header>
+
+         <!--
+        <div class="models" style="visibility: hidden; display: none;">
+            <--
+            <a-entity 
+                    gltf-model="#chrysantha" scale=".5 .5 .5">
+                </a-entity>
+                ->    
+                <a-entity obj-model="obj: #chrysantha-obj; mtl: #chrysantha-mtl"></a-entity>
+        </div>
+
+        <--
+        <div class="models">
+            <a-entity 
+                gltf-model="#chrysantha" scale="5 5 5">
+            </a-entity>
+        </div>
+    -->
+
+        <!--
+        <div class="models" style="visibility: hidden;">
+            <a-entity obj-model="obj: #chrysantha-obj; mtl: #chrysantha-mtl"></a-entity>
+        </div>
+        */
+    -->
+
+    <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
