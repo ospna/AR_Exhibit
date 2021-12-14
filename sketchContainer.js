@@ -91,18 +91,16 @@ container5 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
 
-/*
 container6 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
-*/
 
 markerSize.addChild( container1 );
 markerPetal.addChild( container2 );
 markerFlower.addChild( container3 );
 markerLeaf.addChild( container4 );
 markerColor.addChild( container5 );
-//markerPaper.addChild( container6 );
+markerPaper.addChild( container6 );
 
 // intent behing this 'container" box was that *it* would rotate to face the camera using a single line of code,
 // rather than rotating every plane contained in the box individually.
@@ -163,6 +161,14 @@ markerColor.addChild( container5 );
     // find the simple code drawing random ellipsed in the draw loop below
   });
   container5.addChild( plane5 );
+
+  plane6 = new Plane({
+    x:0, y:0, z:1.0,
+    //red:0, green:0, blue:255,
+    width:1, height:1,
+    asset:'animation' 
+  });
+  container6.addChild( plane6 );
 }
 
 function draw() {
@@ -176,14 +182,14 @@ function draw() {
     let rot3 = markerFlower.tag.object3D.rotation;
     let rot4 = markerLeaf.tag.object3D.rotation;
     let rot5 = markerColor.tag.object3D.rotation;
-    //let rot6 = markerPaper.tag.object3D.rotation;
+    let rot6 = markerPaper.tag.object3D.rotation;
 
     let normalRot1 = degrees(rot1.z);
     let normalRot2 = degrees(rot2.z);
     let normalRot3 = degrees(rot3.z);
     let normalRot4 = degrees(rot4.z);
     let normalRot5 = degrees(rot5.z);
-    //let normalRot6 = degrees(rot6.z);
+    let normalRot6 = degrees(rot6.z);
 
     p5graphics.noFill();
     p5graphics.strokeWeight(4);
@@ -301,23 +307,11 @@ function draw() {
   };
 
   
-  /*
   if (markerPaper.isVisible() == true)  // 3D Model Tester
   { 
-      document.querySelector(".sizeButtons").style.visibility = "hidden";
-      document.querySelector(".sizeButtons").style.display = "none";
-      document.querySelector(".petalOrientButtons").style.visibility = "hidden";
-      document.querySelector(".petalOrientButtons").style.display = "none";
-      document.querySelector(".flowerOrientButtons").style.visibility = "hidden";
-      document.querySelector(".flowerOrientButtons").style.display = "none";
-      document.querySelector(".leafFusionButtons").style.visibility = "hidden";
-      document.querySelector(".leafFusionButtons").style.display = "none";
-      document.querySelector(".colorButtons").style.visibility = "hidden";
-      document.querySelector(".colorButtons").style.display = "none";
-      document.querySelector(".models").style.visibility = "visible";
-      document.querySelector(".models").style.display = "flex";
+      plane6.rotateY(normalRot6);
   };
-*/
+
   
   
   if(markerSize.isVisible() == false && markerPetal.isVisible() == false && markerFlower.isVisible() == false && markerLeaf.isVisible() == false && markerColor.isVisible() == false)
