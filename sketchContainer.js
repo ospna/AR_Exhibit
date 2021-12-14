@@ -20,13 +20,11 @@ let sprouts;
 let parts;
 
 //Leaf and flower variables for parts
-var leaf, flower, fusedLeaves, unfusedLeaves;
+var setLeafShape, leaf, flower, fusedLeaves, unfusedLeaves;
 
 //Unused, originally intended to have honeysuckle go back and forth
 let bounceAmount, bounceRate, previousRotation;
 
-
-var setLeafShape;
 function preload()
 {
   //Set leaf and flower images
@@ -173,6 +171,7 @@ function draw() {
     p5graphics.noFill();
     p5graphics.strokeWeight(4);
     p5graphics.stroke(0, 200, 0);
+    
     // Create stem with coordinates
     p5graphics.bezier(x1, y1, x2, y2, x3, y3, x4, y4);
     p5graphics.fill(255);
