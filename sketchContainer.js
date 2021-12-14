@@ -201,10 +201,8 @@ function draw() {
     p5graphics.background(0,0,0,0);
 
     // Adjust UI depending on which target is visible
-  if (markerSize.isVisible() == true) // SIZE TAB
-  {
-        //document.querySelector(".size-button").style.visibility = "visible";
-        //document.querySelector(".size-button").style.display = "flex";
+    if (markerSize.isVisible() == true) // SIZE TAB
+    {
         document.querySelector(".sizeButtons").style.visibility = "visible";
         document.querySelector(".sizeButtons").style.display = "flex";
         document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -216,12 +214,10 @@ function draw() {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
         plane1.rotateY(normalRot1);
-  };
+    };
 
-  if (markerPetal.isVisible() == true) // PETAL ORIENTATION TAB
-  {
-        //document.querySelector(".petal-button").style.visibility = "visible";
-        //document.querySelector(".petal-button").style.display = "flex";
+    if (markerPetal.isVisible() == true) // PETAL ORIENTATION TAB
+    {
         document.querySelector(".sizeButtons").style.visibility = "hidden";
         document.querySelector(".sizeButtons").style.display = "none";
         document.querySelector(".petalOrientButtons").style.visibility = "visible";
@@ -233,12 +229,10 @@ function draw() {
         document.querySelector(".colorButtons").style.visibility = "hidden";
         document.querySelector(".colorButtons").style.display = "none";
         plane2.rotateY(normalRot2);
-  };
+    };
 
-  if (markerFlower.isVisible() == true)  // FLOWER ORIENTATION TAB
-  {
-      //document.querySelector(".flower-button").style.visibility = "visible";
-      //document.querySelector(".flower-button").style.display = "flex";
+    if (markerFlower.isVisible() == true)  // FLOWER ORIENTATION TAB
+    {
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -250,14 +244,10 @@ function draw() {
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
       plane3.rotateY(normalRot3);
-  };
+    };
   
-  if (markerLeaf.isVisible() == true)  // LEAF FUSION TAB
-  {
-    /*
-      document.querySelector(".leaf-button").style.visibility = "hidden";
-      document.querySelector(".leaf-button").style.display = "none";
-      */
+    if (markerLeaf.isVisible() == true)  // LEAF FUSION TAB
+    {
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -271,12 +261,8 @@ function draw() {
       plane4.rotateY(normalRot4);
   };
 
-  if (markerColor.isVisible() == true)  // COLOR TAB
-  { 
-    /*
-      document.querySelector(".color-button").style.visibility = "hidden";
-      document.querySelector(".color-button").style.display = "none";
-      */
+    if (markerColor.isVisible() == true)  // COLOR TAB
+    { 
       document.querySelector(".sizeButtons").style.visibility = "hidden";
       document.querySelector(".sizeButtons").style.display = "none";
       document.querySelector(".petalOrientButtons").style.visibility = "hidden";
@@ -288,17 +274,16 @@ function draw() {
       document.querySelector(".colorButtons").style.visibility = "visible";
       document.querySelector(".colorButtons").style.display = "grid";
       plane5.rotateY(normalRot5);
-  };
-
+    };
   
-  if (markerPaper.isVisible() == true)  // 3D Model Tester
-  { 
+    if (markerPaper.isVisible() == true)  // TESTER MARKER
+    { 
       plane6.rotateY(normalRot6);
-  };
+    };
 
-  
-  if(markerSize.isVisible() == false && markerPetal.isVisible() == false && markerFlower.isVisible() == false && markerLeaf.isVisible() == false && markerColor.isVisible() == false)
-  {
+    // HOME PAGE
+    if(markerSize.isVisible() == false && markerPetal.isVisible() == false && markerFlower.isVisible() == false && markerLeaf.isVisible() == false && markerColor.isVisible() == false)
+    {
       document.querySelector(".navButtons").style.visibility = "hidden";
       document.querySelector(".navButtons").style.display = "none";
       document.querySelector(".sizeButtons").style.visibility = "hidden";
@@ -311,8 +296,7 @@ function draw() {
       document.querySelector(".leafFusionButtons").style.display = "none";
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
-
-  };
+    };
 }
 
 

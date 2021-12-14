@@ -1,41 +1,24 @@
-/* shows a warning message when the screen is rotated into portrait mode -- necessary to prevent issues on mobile devices 
-        @media screen and (orientation:portrait) {
-            #portrait_warning {
-                position: fixed;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                background: white;
-                z-index: 1000;
-                display: block;
-            }
-        }
-        */
 
-     /* hides the rotational warning when the screen is in landscape mode */
-     @media screen and (orientation:landscape) {
-        #portrait_warning {
-            display: none;
-        }
+/* hides the rotational warning when the screen is in landscape mode */
+@media screen and (orientation:landscape) {
+    #portrait_warning {
+        display: none;
     }
-
-.debug {
-        position: absolute;
-        top: 2%;
-        right: 2%;
-        width: 10%;
-        height: 5%;
-        background-color: darkgrey;
-        border: black;
-        z-index: 1000;
-        display: block;
 }
 
-header 
-{
-    /*background-color: white;*/
+.debug {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 10%;
+    height: 5%;
+    background-color: darkgrey;
+    border: black;
+    z-index: 1000;
+    display: block;
+}
+
+header {
     background-color: #151f2f;
     display: flex;
     align-items: center;
@@ -51,69 +34,14 @@ header
     opacity: 80%;
 }
 
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
 /*----------------------------------------------------------------------*/
 
-/* Logo & Navigation */
-
-/*
-nav 
-{
-    display: flex;
-    text-align: center;
-    font-family: funkydori, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0px 5px;
-    margin: 1px auto;
-    justify-content: center;
-    z-index: 1005;
-}
-
-nav ul 
-{
-    display: flex;
-    text-decoration: none;
-    font-family: funkydori, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    list-style-type: none;
-    padding: 0 8px;
-    margin: 1px auto;
-}
-*/
-
-.navButtons {
-    position: fixed;
-    left: 50%;
-    width: 8em;
-    height: 6em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1500;
-    float: left;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    font-family: funkydori, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: 1.25em;
-}
-
-.navButtons a{
-    font-size: 1.25rem;
-    font-family: funkydori, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
+/* Logo & UI Buttons */
 
 .logo {
     background: url(images/logo_whitetext.png) no-repeat;
@@ -123,117 +51,6 @@ nav ul
     height:100%;
     clear:both;
     z-index: 1500;
-
-    /*
-    text-align: center;
-    font-size: 2.5rem;
-    font-family: funkydori,sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    margin: 0px auto;
-    padding: 5px 0;
-    text-decoration: none;
-    color: white;
-    */
-}
-  
-/*
-.logo a{
-    text-decoration: none;
-    /*color: white;*
-    font-size: 2.5rem;
-    font-family: funkydori,sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    z-index: 1500;
-}
-
-/*
-.logo-button {
-    border-radius: 50%;
-    border: black;
-    margin: 0 auto;
-    padding-bottom: 1em;
-    z-index: 2000;
-    background:url('images/logo.jpg');
-    background-size: cover;
-    color: black;
-    width: 8em;
-    height: 6em;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-*/
-
-.size-button {
-    border-radius: 2px;
-    border: black;
-    background: turquoise;
-    color: black;
-    width: 6em;
-    height: 3em;
-    margin-left: .5em;
-    z-index: 1000;
-}
-
-.petal-button {
-    border-radius: 2px;
-    border: black;
-    background: skyblue;
-    color: black;
-    width: 6em;
-    height: 3em;
-    margin-left: .5em;
-    z-index: 1000;
-}
-
-.flower-button {
-    border-radius: 2px;
-    border: black;
-    background: pink;
-    color: black;
-    width: 6em;
-    height: 3em;
-    margin-left: .5em;
-    z-index: 1000;
-}
-
-.leaf-button {
-    border-radius: 2px;
-    border: black;
-    background: lightgreen;
-    color: black;
-    width: 6em;
-    height: 3em;
-    margin-left: .5em;
-    z-index: 1000;
-}
-
-.color-button {
-    border-radius: 2px;
-    border: black;
-    background: magenta;
-    color: black;
-    width: 6em;
-    height: 3em;
-    margin-left: .5em;
-    z-index: 1000;
-}
-
-.petalOrientButtons {
-    position: fixed;
-    left: 50%;
-    bottom: 5%;
-    width: 50em;
-    height: 5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1500;
-    float: left;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
 }
 
 .sizeButtons {
@@ -251,7 +68,7 @@ nav ul
     margin: 0 auto;
 }
 
-.flowerOrientButtons {
+.petalOrientButtons {
     position: fixed;
     left: 50%;
     bottom: 5%;
@@ -267,6 +84,21 @@ nav ul
 }
 
 .leafFusionButtons {
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    width: 50em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1500;
+    float: left;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+.flowerOrientButtons {
     position: fixed;
     left: 50%;
     bottom: 5%;
@@ -297,17 +129,6 @@ nav ul
     transform: translate(-50%, -50%);
     margin: 0 auto;
 }
-
-/*
-.models {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-*/
-
 
 /* ---------------------------- Size Buttons --------------------------------------------- */
 

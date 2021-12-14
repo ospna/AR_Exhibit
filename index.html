@@ -15,7 +15,6 @@
     <script src="https://craignyu.github.io/aframep5-ar/libraries/aframep5_ar.js"></script>
 
     <!-- P5 Sketch -->
-    <!-- <script src="part.js"></script> -->
     <script src="sketchContainer.js"></script>
 
     <!-- Button Interactions -->
@@ -26,15 +25,6 @@
 
     <!-- FunkyDori Text Font-->
     <link rel="stylesheet" href="https://use.typekit.net/oih4pvt.css">
-
-    <!-- Custom Styles -->
-    <style type="text/css">
-        body {
-            margin: 0px;
-            overflow: hidden;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -47,9 +37,7 @@
     <!-- Define A-Frame VR Scene and set it up so that it will be manipulated through AR.js -->
     <a-scene id="ARScene" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono;'>
 
-        <!-- Essentially not needed anymore -->
         <!-- set up graphics we want to use as assets, same as in A-Frame VR-->
-        
         <a-assets>
             <img src="images/honeysuckle.jpg" id="honeysuckle">
 
@@ -85,14 +73,6 @@
 
             <!-- Fused Leaf Fusion -->
             <img src="images/AR Media/fused_leaves-01.svg" id="fused_leaves-01">
-
-            <!---
-            <a-asset-item id="chrysantha" src="/3D_models/models/Colored.Lonicera.Chrysantha.glb"></a-asset-item>
-
-            <a-asset-item id="chrysantha-obj" src="/3D_models/3D_obj_models/colored_chrysantha/Colored.Lonicera.Chrysantha.obj"></a-asset-item>
-            <a-asset-item id="chrysantha-mtl" src="/3D_models/3D_obj_models/colored_chrysantha/Colored.Lonicera.Chrysantha.mtl"></a-asset-item>
-
-            <-- <img src="images/honeysuckle.jpg" id="honeysuckle"> -->
         </a-assets>
 
         <!-- set up all of the AR markers we will be working with along with links to their 'pattern' files -->
@@ -112,14 +92,6 @@
                <img>
             </div>
         </header>
-
-        <div class="navButtons" style="visibility: hidden; display: none;">
-            <button class="size-button"> <a> Size </a> </button>
-            <button class="petal-button"> <a> Petal </a> </button>
-            <button class="flower-button"> <a> Flower </a> </button>
-            <button class="leaf-button"> <a> Leaf </a> </button>
-            <button class="color-button"> <a> Color </a> </button>
-        </div>
 
         <div class="sizeButtons" style="visibility: hidden; display: none;">
             <button class="small-scale-button"></button>
@@ -153,31 +125,6 @@
             <button class="blue-button"></button>
             <button class="green-button"></button>
         </div>
-        
-         <!--
-        <div class="models" style="visibility: hidden; display: none;">
-            <--
-            <a-entity 
-                    gltf-model="#chrysantha" scale=".5 .5 .5">
-                </a-entity>
-                ->    
-                <a-entity obj-model="obj: #chrysantha-obj; mtl: #chrysantha-mtl"></a-entity>
-        </div>
-
-        <--
-        <div class="models">
-            <a-entity 
-                gltf-model="#chrysantha" scale="5 5 5">
-            </a-entity>
-        </div>
-    -->
-
-        <!--
-        <div class="models" style="visibility: hidden;">
-            <a-entity obj-model="obj: #chrysantha-obj; mtl: #chrysantha-mtl"></a-entity>
-        </div>
-        */
-    -->
 
     <a-entity camera></a-entity>
     </a-scene>
