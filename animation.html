@@ -68,7 +68,7 @@
     </div> -->
 
     <!-- Define A-Frame VR Scene and set it up so that it will be manipulated through AR.js -->
-    <a-scene id="ARScene" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono; canvasWidth: 240; canvasHeight: 180'>
+    <a-scene id="ARScene" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono;'>
 
         <!-- Essentially not needed anymore -->
         <!-- set up graphics we want to use as assets, same as in A-Frame VR-->
@@ -80,7 +80,7 @@
             <video src="animations/IntroWhite.mp4" id="animation" autoplay loop="true"></video> 
             -->
 
-            <video id="animation" src="animations/IntroWhite.mp4" loop="true" crossorigin></video>
+            <video id="animation" src="animations/IntroWhite.mp4" loop="true"></video>
 
             <!-- Fused Leaf Fusion -->
             <img src="images/AR Media/fused_leaves-01.svg" id="fused_leaves-01">
@@ -100,7 +100,7 @@
         <a-marker id="hiro" type="pattern" url="markers/patt.hiro"></a-marker>
 
         <a-marker id="patt6" type="pattern" url="markers/pattern-HS2.patt" vidhandler>
-            <a-plane position='0 0 1' scale="2 2 2" width="1" rotation="-90 0 0" material='transparent:true;opacity: 0.7;src:#animation'></a-plane>
+            <a-plane position='0 0 1' scale="1 1 1" width="1" rotation="-90 0 0" material='transparent:true; opacity: 0.7; src:#animation'></a-plane>
         </a-marker>
     
         <header>
