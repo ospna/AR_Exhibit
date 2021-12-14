@@ -2,7 +2,7 @@
 var world;
 
 // create variables to hold our markers
-var markerSize, markerPetal, markerFlower, markerLeaf, markerColor, markerPaper;
+var markerSize, markerPetal, markerFlower, markerLeaf, markerColor, //markerPaper;
 
 // create variables to hold each plane
 var plane1, plane2, plane3, plane4, plane5;
@@ -46,7 +46,7 @@ function setup() {
     markerFlower = world.getMarker('patt3');
     markerLeaf = world.getMarker('patt4');
     markerColor = world.getMarker('patt5');
-    markerPaper = world.getMarker('patt6');
+    //markerPaper = world.getMarker('patt6');
 
     //Crate graphics, set angle mode to degrees, create canvas
     p5graphics = createGraphics(600, 600).id('p5graphics');
@@ -244,7 +244,7 @@ function draw() {
       document.querySelector(".colorButtons").style.visibility = "hidden";
       document.querySelector(".colorButtons").style.display = "none";
       plane4.rotateY(normalRot4);
-  };
+    };
 
     if (markerColor.isVisible() == true)  // COLOR MARKER
     { 
@@ -278,7 +278,6 @@ function draw() {
       document.querySelector(".colorButtons").style.display = "none";
     };
 }
-
 
 function addBYOHComponents() // Function that creates all of the parts for the honeysuckle
 // Creates 2 leaves and 1 flower for each location along the stem
