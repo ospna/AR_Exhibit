@@ -1,49 +1,38 @@
 // create a variable to hold our world object
 var world;
 
-// create a variable to hold our marker
+// create variables to hold our markers
 var markerSize, markerPetal, markerFlower, markerLeaf, markerColor, markerPaper;
 
 // create variables to hold each plane
 var plane1, plane2, plane3, plane4, plane5;
 
+// Create p5Graphics object
 let p5graphics;
 
+// Variables for creating stem and its locations
 let x1, x2, x3, x4, y1, y2, y3, y4, r, posNeg;
 
+// Sprouts array
 let sprouts;
 
+// Parts array
 let parts;
 
+//Leaf and flower variables for parts
 var leaf, flower, fusedLeaves, unfusedLeaves;
 
+//Unused, originally intended to have honeysuckle go back and forth
 let bounceAmount, bounceRate, previousRotation;
 
-var setLeafShape;
 
-/*
-// arrays for buttons/UI
-var leafShape = [leaf];
-var leafSize = [60, 40, 80];
-var flowerShape = [flower];
-var flowerSize = [60, 40, 80];
-var flowerUp = [true, false];
-// variables for contructors
 var setLeafShape;
-var setLeafSize;
-var setFlowerShape;
-var setFlowerSize;
-var setFlowerDown;
-*/
-
 function preload()
 {
+  //Set leaf and flower images
   leaf = loadImage("images/leaf.svg");
   setLeafShape = leaf;
   flower = loadImage("images/flower.svg");
-
-  //unfusedLeaves = loadImage("images/AR Media/unfused_leaves-01.svg");
-  //fusedLeaves = loadImage("images/AR Media/fused_leaves-01.svg");
 }
 
 function setup() {
@@ -51,7 +40,7 @@ function setup() {
     // create our world (this also creates a p5 canvas for us)
     world = new World('ARScene');
 
-    // grab a reference to the marker that we set up on the HTML side (connect to it using its 'id')
+    // grab a reference to the markers that we set up on the HTML side (connect to it using its 'id')
     markerSize = world.getMarker('patt1');
     markerPetal = world.getMarker('patt2');
     markerFlower = world.getMarker('patt3');
@@ -59,10 +48,12 @@ function setup() {
     markerColor = world.getMarker('patt5');
     markerPaper = world.getMarker('patt6');
 
+    //Crate graphics, set angle mode to degrees, create canvas
     p5graphics = createGraphics(600, 600).id('p5graphics');
     angleMode(degrees);
     createCanvas(600, 600);
     
+    //Calls create vine function and addBYOHComponents function
     createVine();
     addBYOHComponents();
 
@@ -71,6 +62,7 @@ function setup() {
   // the x-axis runs left and right
   // -0.5, 0, -0.5 is the top left corner
 
+  // Create containers for each marker
 container1 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
@@ -95,6 +87,7 @@ container6 = new Box({
   x:0, y:0, z:0, width: 1, depth: 1, height: 1,rotationX:270.0,opacity:0
 });
 
+// Containers to markers
 markerSize.addChild( container1 );
 markerPetal.addChild( container2 );
 markerFlower.addChild( container3 );
@@ -191,32 +184,23 @@ function draw() {
     let normalRot5 = degrees(rot5.z);
     let normalRot6 = degrees(rot6.z);
 
+    //Set options for creating the stem of the honeysuckle
     p5graphics.noFill();
     p5graphics.strokeWeight(4);
     p5graphics.stroke(0, 200, 0);
+    // Create stem with coordinates
     p5graphics.bezier(x1, y1, x2, y2, x3, y3, x4, y4);
     p5graphics.fill(255);
 
-    for (let s = 0; s < sprouts.length; s++) {
-      p5graphics.circle(sprouts[s][0], sprouts[s][1], 5);
-      // p5graphics.image(flower, sprouts[s][0], sprouts[s][1], 60, 60);
-      // p5graphics.image(leaf, sprouts[s][0], sprouts[s][1], 60, 60);
-    }
-
-    // p5graphics.image(flower, sprouts[0][0], sprouts[0][1], 60, 60);
+    // Show all of the parts
     for (let p = 0; p < parts.length; p++) {
       parts[p].show();
     }
 
+    //Transparent background
     p5graphics.background(0,0,0,0);
-    //plane4.rotateY(plane4.getRotationY()+2);
-   //var markerPosition = marker.getScreenPosition();
-    //var markerRotation = marker.getRotationY();
-  
-    // container.rotateY(normalRot);
-    // should be able to just rotate the containing box, but it ain't working
-    // so have to rotate the individual objects (planes) instead
 
+    // Adjust UI depending on which target is visible
   if (markerSize.isVisible() == true) // SIZE TAB
   {
         //document.querySelector(".size-button").style.visibility = "visible";
@@ -331,7 +315,9 @@ function draw() {
   };
 }
 
-function addBYOHComponents()
+
+function addBYOHComponents() // Function that creates all of the parts for the honeysuckle
+// Creates 2 leaves and 1 flower for each location along the stem
 {
   parts = [];
 
@@ -393,7 +379,7 @@ function addBYOHComponents()
   }
 }
 
-function createVine() 
+function createVine() // Create vine with all the locations, place locations in sprouts array
 {
   sprouts = [];
 
@@ -459,8 +445,11 @@ class Part {
     previousRotation = this.rotation;
   }
 
+  // Show all of the parts
   show() 
   {
+    // Same as p5 code created by Ault, but now it has the p5graphics prefix to make it appear correctly
+    // Otherwise it does not work
     p5graphics.push();
     p5graphics.translate(this.posX, this.posY);
 
@@ -472,7 +461,7 @@ class Part {
       p5graphics.scale(1, -1);
     }
 
-    // if (this.name == "flower") {
+    // if (this.name == "flower") { //Make flower bounce
     //   this.bounce();
     // }
 
@@ -480,6 +469,7 @@ class Part {
     p5graphics.pop();
   }
 
+  // Bounce
   bounce() {
     let b = previousRotation + bounceRate;
     rotate(b);
