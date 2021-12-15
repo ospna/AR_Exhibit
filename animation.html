@@ -18,6 +18,7 @@
     <!-- CSS Stylesheet -->
     <link rel='stylesheet' type='text/css' href="style.css">
 
+    <!-- Make a component which will play the video only when the marker is visible and pause if not -->
     <script>
         AFRAME.registerComponent('vidhandler', {
         // ...
@@ -59,8 +60,7 @@
         </a-assets>
 
         <!-- set up all of the AR markers we will be working with along with links to their 'pattern' files -->
-        <a-marker id="hiro" preset="hiro"></a-marker>
-
+        <!-- create the plane inline and set the property according with the animation as its material -->
         <a-marker id="patt6" type="pattern" url="markers/pattern-HS2.patt" vidhandler>
             <a-plane position='0 0 -1' scale="1 1 1" width="1" rotation="-90 0 0" material='transparent:true; opacity: 0.7; src:#animation'></a-plane>
         </a-marker>
