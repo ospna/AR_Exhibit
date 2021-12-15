@@ -18,14 +18,6 @@
     <!-- CSS Stylesheet -->
     <link rel='stylesheet' type='text/css' href="style.css">
 
-    <!-- Custom Styles -->
-    <style type="text/css">
-        body {
-            margin: 0px;
-            overflow: hidden;
-        }
-    </style>
-
     <script>
         AFRAME.registerComponent('vidhandler', {
         // ...
@@ -52,45 +44,30 @@
 </head>
 
 <body>
-    
-
-    <!-- modal box to tell the user to rotate their device into landscape mode - the AR toolkit only reliably renders in landscape mode -->
-    <!-- <div id="portrait_warning">
-        <h1>Rotate your device into landscape mode!</h1>
-    </div> -->
-
     <!-- Define A-Frame VR Scene and set it up so that it will be manipulated through AR.js -->
-    <a-scene id="ARScene1" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono;'>
-
+    <a-scene>
+        
         <header>
             <div class="logo">
                <img>
             </div>
         </header>
 
-        <!-- Essentially not needed anymore -->
-        <!-- set up graphics we want to use as assets, same as in A-Frame VR-->
-        
+        <!-- set up graphics we want to use as assets, same as in A-Frame VR-->        
         <a-assets>
-            <img src="images/honeysuckle.jpg" id="honeysuckle">
-
-            <!--
-            <video src="animations/IntroWhite.mp4" id="animation" autoplay loop="true"></video> 
-            <video id="animation" src="animations/IntroWhite.mp4" loop="true">
-            -->
-
-            <video src="animations/IntroWhite.mp4" id="animation" autoplay loop="true" muted webkit-playsinline playsinline crossorigin>
-
+            <video muted id="animation" autoplay loop="true" src="animations/IntroWhite.mp4" webkit-playsinline playsinline>
         </a-assets>
 
         <!-- set up all of the AR markers we will be working with along with links to their 'pattern' files -->
-        <!-- note that we aren't putting any geometry inside of marker here - we will do that in the p5 sketch -->
-
         <a-marker id="hiro" preset="hiro"></a-marker>
 
         <a-marker id="patt6" type="pattern" url="markers/pattern-HS2.patt" vidhandler>
-            <a-plane position='0 0 -10' scale="1 1 1" width="1" rotation="-90 0 0" material='transparent:true; opacity: 0.7; src:#animation'></a-plane>
+            <a-plane position='0 0 -1' scale="1 1 1" width="1" rotation="-90 0 0" material='transparent:true; opacity: 0.7; src:#animation'></a-plane>
         </a-marker>
+
+        <!-- Using the asset management system. -->
+        <a-video src="#animation" width="16" height="9" position="0 0 -10"></a-video>
+        
     </a-scene>
 </body>
 </html>
