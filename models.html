@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <a-scene embedded arjs='sourceType: webcam;'>
+  <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono;'>
 
     <header>
       <div class="logo"><img>
@@ -25,8 +25,8 @@
 
       <!-- Adding an OBJ file to an AR Project-->
       <a-entity 
-      obj-model="obj: url(3D_models/Lonicera_Morrowii/lonicera.morrowii.obj); 
-      mtl: url(3D_models/Lonicera_Morrowii/lonicera.morrowii.mtl)">
+      obj-model="obj: url(3D_models/Lonicera_Morrowii/loniceramorrowii.obj); 
+      mtl: url(3D_models/Lonicera_Morrowii/loniceramorrowii.mtl)">
       </a-entity>
             
     </a-marker>
